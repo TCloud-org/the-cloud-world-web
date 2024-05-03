@@ -4,23 +4,23 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import { LandingPage } from "./pages/LandingPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { AppHeader } from "./layoutComponents/AppHeader";
+import { AppFooter } from "./layoutComponents/AppFooter";
 
 function App() {
   const Wrapper = () => {
     const { token } = theme.useToken();
     return (
       <Layout style={{ minHeight: "100vh" }}>
+        <AppHeader />
         <Content
           style={{
-            padding: 24,
-            margin: 0,
-            minHeight: 280,
             background: token.colorBgContainer,
-            borderRadius: token.borderRadiusLG,
           }}
         >
           <Outlet />
         </Content>
+        <AppFooter />
       </Layout>
     );
   };

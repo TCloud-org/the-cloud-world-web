@@ -3,11 +3,30 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.hover {
+  cursor    : pointer;
+  transition: all 0.3s;
+}
+
+.hover:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.link {
+  font-weight: 500;
+  color      : #000;
+  transition : color 0.3s;
+}
+
+.link:hover {
+  color: blue;
 }
