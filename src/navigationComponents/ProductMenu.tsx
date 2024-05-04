@@ -19,8 +19,10 @@ export const ProductMenu = () => {
     >
       <Row gutter={[16, 16]}>
         <Col {...Span[2]} style={{ width: menuItemWidth }}>
-          <Flex vertical gap={16}>
-            <Typography.Text strong>Optimization</Typography.Text>
+          <Flex vertical gap={8}>
+            <Typography.Text strong style={{ marginLeft: 8 }}>
+              Optimization
+            </Typography.Text>
             <IconMenuItem icon={<PartitionOutlined />}>
               Step Workflow
             </IconMenuItem>
@@ -28,8 +30,10 @@ export const ProductMenu = () => {
         </Col>
 
         <Col {...Span[2]} style={{ width: menuItemWidth }}>
-          <Flex vertical gap={16}>
-            <Typography.Text strong>Automation</Typography.Text>
+          <Flex vertical gap={8}>
+            <Typography.Text strong style={{ marginLeft: 8 }}>
+              Automation
+            </Typography.Text>
             <IconMenuItem icon={<SendOutlined />}>
               Email Notification Workflow
             </IconMenuItem>

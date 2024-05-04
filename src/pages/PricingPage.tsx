@@ -5,7 +5,7 @@ import { PricingTier } from "../dataDisplayComponents/PricingTier";
 
 const options = [
   {
-    value: "API Workflow",
+    value: "Step Workflow",
   },
   {
     value: "Email Notification",
@@ -20,7 +20,7 @@ const plans = [
     price: 0,
     features: [
       "Up to 1 user (individual)",
-      "Up to 3,000 workflow states",
+      "Up to 3,000 step workflow states",
       "Email support available",
     ],
   },
@@ -31,7 +31,7 @@ const plans = [
     price: 9,
     features: [
       "Up to 3 user (individual)",
-      "Up to 300,000 workflow states",
+      "Up to 300,000 step workflow states",
       "24/7 email support",
     ],
   },
@@ -43,7 +43,7 @@ const plans = [
     price: 49,
     features: [
       "Up to 100 users (business)",
-      "Up to 2,000,000 workflow states",
+      "Up to 2,000,000 step workflow states",
       "Metrics",
       "24/7 email support",
     ],
