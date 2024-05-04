@@ -27,8 +27,9 @@ code {
 }
 
 .landing-button {
-  color     : #4312e5;
-  transition: all 0.3s;
+  color      : #4312e5;
+  transition : all 0.3s;
+  font-weight: 600;
 }
 
 .landing-button:hover {
