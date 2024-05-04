@@ -39,10 +39,12 @@ export const AppHeader = () => {
       style={{
         display: "flex",
         alignItems: "center",
+        position: "sticky",
+        top: 0,
+        zIndex: 999,
         justifyContent: "space-between",
         background: token.colorBgContainer,
-        borderBottom: "1px solid",
-        borderBottomColor: token.colorBorderSecondary,
+        boxShadow: token.boxShadowTertiary,
       }}
     >
       <Flex align="center" flex={1}>
@@ -65,7 +67,10 @@ export const AppHeader = () => {
         ))}
       </Flex>
 
-      <Flex flex={1} justify="flex-end">
+      <Flex flex={1} justify="flex-end" align="center" gap={32}>
+        <a href="/documentation" className="link">
+          Documentation
+        </a>
         <Button type="primary" onClick={handleLogin}>
           Login
         </Button>
