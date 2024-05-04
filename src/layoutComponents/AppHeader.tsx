@@ -1,11 +1,12 @@
 import { Button, Dropdown, Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { ProductMenu } from "../navigationComponents/ProductMenu";
 import { DownOutlined } from "@ant-design/icons";
+import { CSSProperties, useEffect, useState } from "react";
 
-const items = [
+const renderItems = (props: { isFlipColor: boolean }) => [
   {
     label: "Products",
     render: () => (
@@ -20,8 +21,19 @@ const items = [
           style={{ cursor: "pointer" }}
           className="rotate-trigger"
         >
-          <Typography.Text className="link">Products</Typography.Text>
-          <DownOutlined style={{ fontSize: "8px" }} className="link rotate" />
+          <Typography.Text
+            className="link"
+            style={{ color: !props.isFlipColor ? undefined : "white" }}
+          >
+            Products
+          </Typography.Text>
+          <DownOutlined
+            style={{
+              fontSize: "8px",
+              color: !props.isFlipColor ? undefined : "white",
+            }}
+            className="link rotate"
+          />
         </Flex>
       </Dropdown>
     ),
@@ -40,8 +52,19 @@ const items = [
           style={{ cursor: "pointer" }}
           className="rotate-trigger"
         >
-          <Typography.Text className="link ">Solutions</Typography.Text>
-          <DownOutlined style={{ fontSize: "8px" }} className="link rotate" />
+          <Typography.Text
+            className="link"
+            style={{ color: !props.isFlipColor ? undefined : "white" }}
+          >
+            Solutions
+          </Typography.Text>
+          <DownOutlined
+            style={{
+              fontSize: "8px",
+              color: !props.isFlipColor ? undefined : "white",
+            }}
+            className="link rotate"
+          />
         </Flex>
       </Dropdown>
     ),
@@ -56,12 +79,48 @@ const items = [
   },
 ];
 
+const flipColor: any = {
+  "": true,
+};
+
+export const HeaderHeight = 64;
+
 export const AppHeader = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { token } = theme.useToken();
+  const [scrollStart, setScrollStart] = useState<boolean>(false);
+
+  const currentPath = location.pathname.split("/").splice(-1)[0];
+  const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
+
+  const controlNavbar = () => {
+    if (window.scrollY > 20) {
+      setScrollStart(true);
+    } else {
+      setScrollStart(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   const handleLogin = () => {
     window.open("https://www.tc-workflow.com", "_blank");
+  };
+
+  const headerScrollStyle: CSSProperties = {
+    background: token.colorBgContainer,
+    boxShadow: token.boxShadowTertiary,
+  };
+
+  const headerStyle: CSSProperties = {
+    background: "transparent",
+    boxShadow: "none",
   };
 
   return (
@@ -69,12 +128,13 @@ export const AppHeader = () => {
       style={{
         display: "flex",
         alignItems: "center",
-        position: "sticky",
+        position: "fixed",
         top: 0,
         zIndex: 999,
+        width: "100%",
         justifyContent: "space-between",
-        background: token.colorBgContainer,
-        boxShadow: token.boxShadowTertiary,
+        transition: "all 0.3s",
+        ...(scrollStart ? headerScrollStyle : headerStyle),
       }}
     >
       <Flex align="center" flex={1}>
@@ -84,18 +144,27 @@ export const AppHeader = () => {
           onClick={() => navigate("/")}
           style={{ padding: 16, cursor: "pointer" }}
         >
-          <AppLogo />
-          <Typography.Text strong>The Cloud World</Typography.Text>
+          <AppLogo flip={isFlipColor} />
+          <Typography.Text
+            strong
+            style={{ color: !isFlipColor ? "black" : "white" }}
+          >
+            The Cloud World
+          </Typography.Text>
         </Flex>
       </Flex>
 
       <Flex align="center" flex={2} justify="center" gap={32}>
-        {items.map((item, i) => (
+        {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
           <div key={i}>
             {item.render ? (
               item.render()
             ) : (
-              <a href={item.href} className="link">
+              <a
+                href={item.href}
+                style={{ color: !isFlipColor ? undefined : "white" }}
+                className="link"
+              >
                 {item.label}
               </a>
             )}
@@ -104,10 +173,19 @@ export const AppHeader = () => {
       </Flex>
 
       <Flex flex={1} justify="flex-end" align="center" gap={32}>
-        <a href="/documentation" className="link">
+        <a
+          href="/documentation"
+          className="link"
+          style={{ color: !isFlipColor ? undefined : "white" }}
+        >
           Documentation
         </a>
-        <Button type="primary" onClick={handleLogin}>
+        <Button
+          type={!isFlipColor ? "primary" : "default"}
+          onClick={handleLogin}
+          className={!isFlipColor ? undefined : "landing-button"}
+          style={{ fontWeight: 400 }}
+        >
           Login
         </Button>
       </Flex>

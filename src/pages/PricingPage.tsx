@@ -2,6 +2,7 @@ import { AutoComplete, Col, Flex, Row, Typography, theme } from "antd";
 import { useState } from "react";
 import { Span } from "../config/layoutConfig";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 const options = [
   {
@@ -65,7 +66,9 @@ export const PricingPage = () => {
         align="center"
         gap={16}
       >
-        <Typography.Title level={3}>
+        <div style={{ height: HeaderHeight }} />
+
+        <Typography.Title level={3} style={{ marginTop: 0 }}>
           Compare our plans and find yours
         </Typography.Title>
 

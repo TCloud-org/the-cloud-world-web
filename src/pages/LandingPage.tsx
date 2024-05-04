@@ -10,6 +10,7 @@ import { Button, Col, Flex, Row, Typography, theme } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingImage } from "../dataDisplayComponents/LandingImage";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 interface Elevation {
   icon?: ReactNode;
@@ -54,28 +55,31 @@ export const LandingPage = () => {
 
   return (
     <Flex vertical>
-      <Flex style={{ backgroundColor: token.colorPrimary, padding: 64 }}>
-        <Flex vertical gap={32} flex={1}>
-          <Typography.Title
-            level={1}
-            style={{ color: token.colorWhite, margin: 0 }}
-          >
-            Effortless API Optimization Infrastructure
-          </Typography.Title>
-          <Typography.Paragraph style={{ color: token.colorWhite }}>
-            Dive into our innovative solutions designed to revolutionize your
-            onboarding and streamline asynchronous processes. Experience the
-            power of optimized API latency and slashed maintenance costs,
-            tailored for businesses of all sizes and industries.
-          </Typography.Paragraph>
+      <Flex vertical style={{ backgroundColor: token.colorPrimary }}>
+        <div style={{ height: HeaderHeight }} />
+        <Flex style={{ padding: 64 }}>
+          <Flex vertical gap={32} flex={1}>
+            <Typography.Title
+              level={1}
+              style={{ color: token.colorWhite, margin: 0 }}
+            >
+              Effortless API Optimization Infrastructure
+            </Typography.Title>
+            <Typography.Paragraph style={{ color: token.colorWhite }}>
+              Dive into our innovative solutions designed to revolutionize your
+              onboarding and streamline asynchronous processes. Experience the
+              power of optimized API latency and slashed maintenance costs,
+              tailored for businesses of all sizes and industries.
+            </Typography.Paragraph>
 
-          <Flex>
-            <Button className="landing-button">Request demo</Button>
+            <Flex>
+              <Button className="landing-button">Request demo</Button>
+            </Flex>
           </Flex>
-        </Flex>
 
-        <Flex flex={1}>
-          <LandingImage />
+          <Flex flex={1}>
+            <LandingImage />
+          </Flex>
         </Flex>
       </Flex>
 

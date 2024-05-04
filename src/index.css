@@ -27,15 +27,16 @@ code {
 }
 
 .landing-button {
-  color      : #4312e5;
-  transition : all 0.3s;
-  font-weight: 600;
+  background-color: #4312e5;
+  border-color    : #fff;
+  color           : #fff;
+  transition      : all 0.3s;
+  font-weight     : 600;
 }
 
 .landing-button:hover {
-  background-color: #4312e5 !important;
-  border-color    : #fff !important;
-  color           : #fff !important;
+  background-color: #fff !important;
+  color           : #4312e5 !important;
 }
 
 .menu-hover {
