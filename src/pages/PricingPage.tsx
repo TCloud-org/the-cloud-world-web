@@ -19,8 +19,8 @@ const plans = [
     description: `With limited usage and access, the Free plan provides a great way to get started with our platform at no cost.`,
     price: 0,
     features: [
-      "Limited to 1 user (individual)",
-      "Limited to 3,000 workflow states",
+      "Up to 1 user (individual)",
+      "Up to 3,000 workflow states",
       "Email support available",
     ],
   },
@@ -30,8 +30,8 @@ const plans = [
     description: `The Individual Plan provides increased usage limits and access to additional features, making it suitable for small-scale projects or personal use.`,
     price: 9,
     features: [
-      "Limited to 1 user (individual)",
-      "Limited to 300,000 workflow states",
+      "Up to 3 user (individual)",
+      "Up to 300,000 workflow states",
       "24/7 email support",
     ],
   },
@@ -42,8 +42,8 @@ const plans = [
     description: `With expanded usage limits, advanced features, and priority support, the Business plan offers everything you need to grow and manage your business efficiently.`,
     price: 49,
     features: [
-      "Limited to 100 users (business)",
-      "Limited to 2,000,000 workflow states",
+      "Up to 100 users (business)",
+      "Up to 2,000,000 workflow states",
       "Metrics",
       "24/7 email support",
     ],
