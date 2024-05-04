@@ -1,15 +1,15 @@
-import { Button, Col, Flex, Row, Typography, theme } from "antd";
-import { LandingImage } from "../dataDisplayComponents/LandingImage";
-import { Span } from "../config/layoutConfig";
 import {
   AddTaskRounded,
   FastForwardRounded,
-  ForumRounded,
+  HistoryToggleOffRounded,
   ManageHistoryRounded,
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
+import { Button, Col, Flex, Row, Typography, theme } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
+import { Span } from "../config/layoutConfig";
+import { LandingImage } from "../dataDisplayComponents/LandingImage";
 
 interface Elevation {
   icon?: ReactNode;
@@ -44,10 +44,9 @@ const elevateWith: Elevation[] = [
     subtitle: "Offer visibility into queries, errors, reports, and processes",
   },
   {
-    icon: <ForumRounded />,
-    title: "Shared forum",
-    subtitle:
-      "Accessible to discussion, issue reporting, and feedback channels",
+    icon: <HistoryToggleOffRounded />,
+    title: "Version control",
+    subtitle: "Comprehensive version control for all your resources",
   },
 ];
 export const LandingPage = () => {
