@@ -4,7 +4,7 @@ export const LandingImage = () => {
   const { token } = theme.useToken();
 
   return (
-    <Flex vertical align="center">
+    <Flex vertical align="center" style={{ position: "relative" }}>
       <Image
         src="https://tcw-images.s3.us-west-2.amazonaws.com/3556947.jpg"
         preview={false}
@@ -15,6 +15,13 @@ export const LandingImage = () => {
         }}
         className="shadow"
       />
+      <a
+        href="http://www.freepik.com"
+        style={{ position: "absolute", bottom: 16, fontSize: "8px" }}
+        className="link"
+      >
+        Designed by slidesgo / Freepik
+      </a>
     </Flex>
   );
 };
