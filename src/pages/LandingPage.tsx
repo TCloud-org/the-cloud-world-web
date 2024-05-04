@@ -1,4 +1,4 @@
-import { Flex, Typography, theme } from "antd";
+import { Button, Flex, Typography, theme } from "antd";
 import { LandingImage } from "../dataDisplayComponents/LandingImage";
 
 export const LandingPage = () => {
@@ -20,6 +20,10 @@ export const LandingPage = () => {
             power of optimized API latency and slashed maintenance costs,
             tailored for businesses of all sizes and industries.
           </Typography.Paragraph>
+
+          <Flex>
+            <Button className="landing-button">Request demo</Button>
+          </Flex>
         </Flex>
 
         <Flex flex={1}>

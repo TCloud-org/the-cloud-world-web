@@ -26,6 +26,17 @@ code {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
+.landing-button {
+  color     : #4312e5;
+  transition: all 0.3s;
+}
+
+.landing-button:hover {
+  background-color: #4312e5 !important;
+  border-color    : #fff !important;
+  color           : #fff !important;
+}
+
 .menu-hover {
   cursor    : pointer;
   transition: all 0.3s;

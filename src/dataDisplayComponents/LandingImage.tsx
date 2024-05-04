@@ -1,8 +1,6 @@
-import { Flex, Image, theme } from "antd";
+import { Flex, Image } from "antd";
 
 export const LandingImage = () => {
-  const { token } = theme.useToken();
-
   return (
     <Flex vertical align="center" style={{ position: "relative" }}>
       <Image
