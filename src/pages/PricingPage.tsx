@@ -68,12 +68,14 @@ export const PricingPage = () => {
         <Typography.Title level={3}>
           Compare our plans and find yours
         </Typography.Title>
+
         <Typography.Paragraph
           style={{ padding: "0 16px", textAlign: "center" }}
         >
           Select from best plans, ensuring a perfect match for your business.
           Need more or less? Customize your subscription for a seamless fit
         </Typography.Paragraph>
+
         <AutoComplete
           options={options}
           placeholder="Search products"
@@ -90,6 +92,7 @@ export const PricingPage = () => {
           }
         />
       </Flex>
+
       <Row gutter={[priceGap, priceGap]} style={{ padding: priceGap }}>
         {plans.map((plan, i) => (
           <Col {...Span["3"]} key={i}>
