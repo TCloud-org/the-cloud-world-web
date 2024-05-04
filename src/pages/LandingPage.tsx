@@ -11,6 +11,7 @@ import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingImage } from "../dataDisplayComponents/LandingImage";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { LandingDetails } from "../dataDisplayComponents/LandingDetails";
 
 interface Elevation {
   icon?: ReactNode;
@@ -83,7 +84,7 @@ export const LandingPage = () => {
         </Flex>
       </Flex>
 
-      <Flex vertical align="center" style={{ padding: "128px 0" }} gap={64}>
+      <Flex vertical align="center" style={{ padding: "128px 32px" }} gap={64}>
         <Typography.Title
           level={2}
           style={{ width: "40%", textAlign: "center", margin: 0 }}
@@ -94,19 +95,14 @@ export const LandingPage = () => {
         <Row gutter={[64, 64]}>
           {elevateWith.map((item, i) => (
             <Col
-              {...Span[2]}
+              {...Span[3]}
               key={i}
               style={{
                 display: "flex",
                 flexDirection: "column",
               }}
             >
-              <Flex
-                vertical
-                gap={8}
-                align="center"
-                style={{ padding: " 0 128px" }}
-              >
+              <Flex vertical gap={8} align="center">
                 {item.icon &&
                   cloneElement(item.icon as ReactElement, {
                     style: {
@@ -127,6 +123,8 @@ export const LandingPage = () => {
           ))}
         </Row>
       </Flex>
+
+      <LandingDetails />
     </Flex>
   );
 };

@@ -6,3 +6,5 @@ export const Span = {
   "6": { xs: 24, sm: 24, md: 24, lg: 4, xl: 4, xxl: 4 },
   "8": { xs: 24, sm: 24, md: 24, lg: 3, xl: 3, xxl: 3 },
 };
+
+export const lightColor = "#f8fafb";
