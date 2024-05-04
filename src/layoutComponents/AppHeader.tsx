@@ -1,7 +1,9 @@
-import { Button, Flex, Typography, theme } from "antd";
+import { Button, Dropdown, Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
+import { ProductMenu } from "../navigationComponents/ProductMenu";
+import { DownOutlined } from "@ant-design/icons";
 
 const items = [
   {
@@ -11,6 +13,18 @@ const items = [
   {
     label: "Products",
     href: "/products",
+    render: () => (
+      <Dropdown
+        placement="bottom"
+        menu={{ items: [] }}
+        dropdownRender={() => <ProductMenu />}
+      >
+        <Flex align="center" gap={6} style={{ cursor: "pointer" }}>
+          <Typography.Text className="link">Products</Typography.Text>
+          <DownOutlined style={{ fontSize: "8px" }} className="link" />
+        </Flex>
+      </Dropdown>
+    ),
   },
   {
     label: "Solutions",
@@ -61,9 +75,15 @@ export const AppHeader = () => {
 
       <Flex align="center" flex={2} justify="center" gap={32}>
         {items.map((item, i) => (
-          <a href={item.href} className="link" key={i}>
-            {item.label}
-          </a>
+          <div key={i}>
+            {item.render ? (
+              item.render()
+            ) : (
+              <a href={item.href} className="link">
+                {item.label}
+              </a>
+            )}
+          </div>
         ))}
       </Flex>
 

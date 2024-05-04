@@ -26,6 +26,15 @@ code {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
+.menu-hover {
+  cursor    : pointer;
+  transition: all 0.3s;
+}
+
+.menu-hover:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
 .gradient1 {
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
