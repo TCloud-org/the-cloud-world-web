@@ -9,32 +9,45 @@ import {
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
-import { CSSProperties, ReactElement, cloneElement } from "react";
+import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 
-const elevateWith = [
+interface Elevation {
+  icon?: ReactNode;
+  title: string;
+  subtitle?: string;
+}
+const elevateWith: Elevation[] = [
   {
     icon: <AddTaskRounded />,
     title: "Simplicity",
+    subtitle: "Simple use, simple integration",
   },
   {
     icon: <ManageHistoryRounded />,
     title: "Ease of management",
+    subtitle: "Easy to manage resources",
   },
   {
     icon: <RestartAltRounded />,
     title: "Fault tolerant",
+    subtitle: "Support retry, rerun, and custom state transition",
   },
   {
     icon: <FastForwardRounded />,
     title: "Quick processing time",
+    subtitle:
+      "Effectively process each workflow state to deliver low-latency responses",
   },
   {
     icon: <VisibilityRounded />,
-    title: "Transparency",
+    title: "Data Transparency",
+    subtitle: "Offer visibility into queries, errors, reports, and processes",
   },
   {
     icon: <ForumRounded />,
     title: "Shared forum",
+    subtitle:
+      "Accessible to discussion, issue reporting, and feedback channels",
   },
 ];
 export const LandingPage = () => {
@@ -75,28 +88,36 @@ export const LandingPage = () => {
           Let automation elevate your background tasks with the highest
           efficiency
         </Typography.Title>
-        <Row
-          gutter={[64, 64]}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <Row gutter={[64, 64]}>
           {elevateWith.map((item, i) => (
             <Col
               {...Span[2]}
               key={i}
-              style={{ display: "flex", justifyContent: "center" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
             >
-              <Flex vertical gap={8} align="center">
+              <Flex
+                vertical
+                gap={8}
+                align="center"
+                style={{ padding: " 0 128px" }}
+              >
                 {item.icon &&
                   cloneElement(item.icon as ReactElement, {
                     style: {
                       fontSize: 32,
                     } as CSSProperties,
                   })}
-                <Typography.Text style={{ fontSize: 24 }}>
+                <Typography.Text style={{ fontSize: 22, textAlign: "center" }}>
                   {item.title}
+                </Typography.Text>
+                <Typography.Text
+                  type="secondary"
+                  style={{ fontSize: 18, textAlign: "center" }}
+                >
+                  {item.subtitle}
                 </Typography.Text>
               </Flex>
             </Col>
