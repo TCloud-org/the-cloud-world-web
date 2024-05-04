@@ -21,6 +21,14 @@ code {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
+.gradient1 {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.gradient2 {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
 .link {
   font-weight: 500;
   color      : #000;

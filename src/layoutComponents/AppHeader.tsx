@@ -17,6 +17,10 @@ const items = [
     href: "/solutions",
   },
   {
+    label: "Pricing",
+    href: "/pricing",
+  },
+  {
     label: "About",
     href: "/about",
   },
@@ -37,15 +41,16 @@ export const AppHeader = () => {
         alignItems: "center",
         justifyContent: "space-between",
         background: token.colorBgContainer,
+        borderBottom: "1px solid",
+        borderBottomColor: token.colorBorderSecondary,
       }}
     >
       <Flex align="center" flex={1}>
         <Flex
           align="center"
-          className="hover"
           gap={8}
           onClick={() => navigate("/")}
-          style={{ padding: 16 }}
+          style={{ padding: 16, cursor: "pointer" }}
         >
           <AppLogo />
           <Typography.Text strong>The Cloud World</Typography.Text>

@@ -6,6 +6,8 @@ import { LandingPage } from "./pages/LandingPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { AppHeader } from "./layoutComponents/AppHeader";
 import { AppFooter } from "./layoutComponents/AppFooter";
+import { AboutPage } from "./pages/AboutPage";
+import { PricingPage } from "./pages/PricingPage";
 
 function App() {
   const Wrapper = () => {
@@ -33,6 +35,14 @@ function App() {
         {
           path: "/",
           element: <LandingPage />,
+        },
+        {
+          path: "/pricing",
+          element: <PricingPage />,
+        },
+        {
+          path: "/about",
+          element: <AboutPage />,
         },
       ],
     },
