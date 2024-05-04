@@ -7,28 +7,44 @@ import { DownOutlined } from "@ant-design/icons";
 
 const items = [
   {
-    label: "Home",
-    href: "/",
-  },
-  {
     label: "Products",
-    href: "/products",
     render: () => (
       <Dropdown
         placement="bottom"
         menu={{ items: [] }}
         dropdownRender={() => <ProductMenu />}
       >
-        <Flex align="center" gap={6} style={{ cursor: "pointer" }}>
+        <Flex
+          align="center"
+          gap={6}
+          style={{ cursor: "pointer" }}
+          className="rotate-trigger"
+        >
           <Typography.Text className="link">Products</Typography.Text>
-          <DownOutlined style={{ fontSize: "8px" }} className="link" />
+          <DownOutlined style={{ fontSize: "8px" }} className="link rotate" />
         </Flex>
       </Dropdown>
     ),
   },
   {
     label: "Solutions",
-    href: "/solutions",
+    render: () => (
+      <Dropdown
+        placement="bottom"
+        menu={{ items: [] }}
+        dropdownRender={() => <ProductMenu />}
+      >
+        <Flex
+          align="center"
+          gap={6}
+          style={{ cursor: "pointer" }}
+          className="rotate-trigger"
+        >
+          <Typography.Text className="link ">Solutions</Typography.Text>
+          <DownOutlined style={{ fontSize: "8px" }} className="link rotate" />
+        </Flex>
+      </Dropdown>
+    ),
   },
   {
     label: "Pricing",

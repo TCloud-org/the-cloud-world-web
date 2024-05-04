@@ -68,3 +68,17 @@ code {
 .shadow {
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.15);
 }
+
+.rotate,
+.rotate-trigger {
+  transition: all 0.3s;
+}
+
+.rotate-trigger:hover .rotate {
+  transition: all 0.3s;
+
+}
+
+.rotate-trigger:hover>.rotate {
+  transform: rotate(-180deg);
+}
