@@ -31,7 +31,6 @@ code {
   border-color    : #fff;
   color           : #fff;
   transition      : all 0.3s;
-  font-weight     : 600;
 }
 
 .landing-button:hover {
