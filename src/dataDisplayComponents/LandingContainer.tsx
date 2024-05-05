@@ -1,22 +1,22 @@
-import { Flex } from "antd";
-import { lightColor } from "../config/layoutConfig";
+import { Row } from "antd";
 import { ReactNode } from "react";
+import { lightColor } from "../config/layoutConfig";
 
 export const LandingContainer = (props: {
   light?: boolean;
   children?: ReactNode;
 }) => {
   return (
-    <Flex
+    <Row
       style={{
         padding: "128px 64px",
         backgroundColor: props.light ? lightColor : undefined,
+        justifyContent: "center",
+        alignItems: "center",
       }}
-      justify="center"
-      align="center"
-      gap={32}
+      gutter={[32, 32]}
     >
       {props.children}
-    </Flex>
+    </Row>
   );
 };

@@ -54,87 +54,119 @@ export const ContactPage = () => {
             <Flex
               flex={1}
               className="shadow"
-              style={{ borderRadius: token.borderRadius, padding: 32 }}
+              style={{
+                borderRadius: token.borderRadius,
+                padding: 32,
+                background: token.colorBgContainer,
+              }}
             >
               <Form style={{ width: "100%" }}>
-                <Form.Item>
-                  <Typography.Text strong style={{ fontSize: 18 }}>
-                    Leave your message and we will connect you with our teams
-                  </Typography.Text>
-                </Form.Item>
-                <Flex align="center" gap={20}>
-                  <Form.Item style={{ flex: 1 }}>
-                    <Input placeholder="First name" />
-                  </Form.Item>
-                  <Form.Item style={{ flex: 1 }}>
-                    <Input placeholder="Last name" />
-                  </Form.Item>
-                </Flex>
+                <Row gutter={20}>
+                  <Col {...Span[1]}>
+                    <Form.Item>
+                      <Typography.Text strong style={{ fontSize: 18 }}>
+                        Leave your message and we will connect you with our
+                        teams
+                      </Typography.Text>
+                    </Form.Item>
+                  </Col>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Input placeholder="First name" />
+                    </Form.Item>
+                  </Col>
 
-                <Flex align="center" gap={20}>
-                  <Form.Item style={{ flex: 1 }}>
-                    <Input placeholder="Work email" />
-                  </Form.Item>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Input placeholder="Last name" />
+                    </Form.Item>
+                  </Col>
 
-                  <Form.Item style={{ flex: 1 }}>
-                    <Input placeholder="Company" />
-                  </Form.Item>
-                </Flex>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Input placeholder="Work email" />
+                    </Form.Item>
+                  </Col>
 
-                <Flex align="center" gap={20}>
-                  <Form.Item style={{ flex: 1 }}>
-                    <Input placeholder="Phone number" />
-                  </Form.Item>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Input placeholder="Company" />
+                    </Form.Item>
+                  </Col>
 
-                  <Form.Item style={{ flex: 1 }}>
-                    <Select options={CompanySizes} placeholder="Company size" />
-                  </Form.Item>
-                </Flex>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Input placeholder="Phone number" />
+                    </Form.Item>
+                  </Col>
 
-                <Form.Item>
-                  <AutoComplete
-                    options={Countries}
-                    placeholder="Country"
-                    allowClear
-                    filterOption={(inputValue, option) =>
-                      option!.label
-                        .toLowerCase()
-                        .indexOf(inputValue.toLowerCase()) !== -1
-                    }
-                    suffixIcon={<DownOutlined />}
-                  />
-                </Form.Item>
+                  <Col {...Span[2]}>
+                    <Form.Item style={{ flex: 1 }}>
+                      <Select
+                        options={CompanySizes}
+                        placeholder="Company size"
+                      />
+                    </Form.Item>
+                  </Col>
 
-                <Form.Item>
-                  <Select placeholder="How can we help you?" />
-                </Form.Item>
+                  <Col {...Span[1]}>
+                    <Form.Item>
+                      <AutoComplete
+                        options={Countries}
+                        placeholder="Country"
+                        allowClear
+                        filterOption={(inputValue, option) =>
+                          option!.label
+                            .toLowerCase()
+                            .indexOf(inputValue.toLowerCase()) !== -1
+                        }
+                        suffixIcon={<DownOutlined />}
+                      />
+                    </Form.Item>
+                  </Col>
 
-                <Form.Item>
-                  <Input.TextArea
-                    placeholder="Message"
-                    autoSize={{ minRows: 5, maxRows: 10 }}
-                  />
-                </Form.Item>
+                  <Col {...Span[1]}>
+                    <Form.Item>
+                      <Select placeholder="How can we help you?" />
+                    </Form.Item>
+                  </Col>
 
-                <Form.Item noStyle>
-                  <Button type="primary" style={{ width: "100%" }}>
-                    Submit
-                  </Button>
-                </Form.Item>
-                <Divider style={{ backgroundColor: token.colorBorder }} />
+                  <Col {...Span[1]}>
+                    <Form.Item>
+                      <Input.TextArea
+                        placeholder="Message"
+                        autoSize={{ minRows: 5, maxRows: 10 }}
+                      />
+                    </Form.Item>
+                  </Col>
 
-                <Form.Item noStyle>
-                  <Typography.Text>
-                    By submitting this form, you agree to our{" "}
-                    <Typography.Link href="https://www.tc-workflow.com/terms-and-conditions">
-                      Terms and Conditions
-                    </Typography.Link>{" "}
-                    and{" "}
-                    <Typography.Link href="https://www.tc-workflow.com/privacy-policy">
-                      Privacy Policy
-                    </Typography.Link>
-                  </Typography.Text>
-                </Form.Item>
+                  <Col {...Span[1]}>
+                    <Form.Item noStyle>
+                      <Button type="primary" style={{ width: "100%" }}>
+                        Submit
+                      </Button>
+                    </Form.Item>
+                  </Col>
+
+                  <Col {...Span[1]}>
+                    <Divider style={{ backgroundColor: token.colorBorder }} />
+                  </Col>
+
+                  <Col {...Span[1]}>
+                    <Form.Item noStyle>
+                      <Typography.Text>
+                        By submitting this form, you agree to our{" "}
+                        <Typography.Link href="https://www.tc-workflow.com/terms-and-conditions">
+                          Terms and Conditions
+                        </Typography.Link>{" "}
+                        and{" "}
+                        <Typography.Link href="https://www.tc-workflow.com/privacy-policy">
+                          Privacy Policy
+                        </Typography.Link>
+                      </Typography.Text>
+                    </Form.Item>
+                  </Col>
+                </Row>
               </Form>
             </Flex>
           </Col>
