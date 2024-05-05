@@ -1,7 +1,10 @@
 import { Button, Flex, Typography } from "antd";
 import { LandingContainer } from "./LandingContainer";
+import { useNavigate } from "react-router-dom";
 
 export const LandingContactSales = () => {
+  const navigate = useNavigate();
+
   return (
     <LandingContainer light>
       <Flex vertical gap={32} align="center">
@@ -17,7 +20,9 @@ export const LandingContactSales = () => {
         </Typography.Paragraph>
 
         <Flex justify="center">
-          <Button type="primary">Speak to our team</Button>
+          <Button type="primary" onClick={() => navigate("/contact")}>
+            Speak to our team
+          </Button>
         </Flex>
       </Flex>
     </LandingContainer>
