@@ -27,7 +27,7 @@ code {
 }
 
 .landing-button {
-  background-color: #4312e5;
+  background-color: #000;
   border-color    : #fff;
   color           : #fff;
   transition      : all 0.3s;
@@ -35,8 +35,23 @@ code {
 }
 
 .landing-button:hover {
+  border-color    : #000 !important;
   background-color: #fff !important;
-  color           : #4312e5 !important;
+  color           : #000 !important;
+}
+
+.landing-button-inverse {
+  background-color: #fff;
+  border-color    : #000;
+  color           : #000;
+  transition      : all 0.3s;
+  font-weight     : 600;
+}
+
+.landing-button-inverse:hover {
+  border-color    : #fff !important;
+  background-color: #000 !important;
+  color           : #fff !important;
 }
 
 .menu-hover {
@@ -82,4 +97,425 @@ code {
 
 .rotate-trigger:hover>.rotate {
   transform: rotate(-180deg);
+}
+
+/* *** Magic starts HERE */
+:root {
+  --diameter: 35vmax;
+}
+
+.aurora {
+  background: #000;
+  position  : relative;
+}
+
+.aurora:before,
+.aurora:after {
+  content      : '';
+  display      : block;
+  position     : absolute;
+  width        : 1px;
+  height       : 1px;
+  border-radius: 100%;
+  opacity      : 0.18;
+}
+
+.aurora:before {
+  box-shadow: 0 0 var(--diameter) var(--diameter) red;
+  animation : hue 5s linear infinite, move1 10s linear infinite;
+}
+
+.aurora:after {
+  box-shadow: 0 0 var(--diameter) var(--diameter) cyan;
+  animation : hue 10s linear infinite, move2 20s linear infinite;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes move1 {
+  0% {
+    top : 0vh;
+    left: 50vw;
+  }
+
+  25% {
+    left: 0vw;
+  }
+
+  50% {
+    top: 100vh;
+  }
+
+  75% {
+    left: 100vw;
+  }
+
+  100% {
+    top : 0vh;
+    left: 50vw;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top : 50vh;
+    left: 100vw;
+  }
+
+  25% {
+    top: 100vh;
+  }
+
+  50% {
+    left: 0vw;
+  }
+
+  75% {
+    top: 0vh;
+  }
+
+  100% {
+    top : 50vh;
+    left: 100vw;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+.gradient3 {
+  background-color: #000;
+  overflow        : hidden;
+}
+
+@keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: .8;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  65% {
+    opacity: .5;
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: .8;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  65% {
+    opacity: .5;
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: .8;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  65% {
+    opacity: .5;
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade_text {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: .8;
+  }
+
+  25% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  65% {
+    opacity: .5;
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.text_fade {
+  -webkit-animation: fade_text 8s infinite ease-in;
+  -moz-animation   : fade_text 8s infinite ease-in;
+  -o-animation     : fade_text 8s infinite ease-in;
+  animation        : fade_text 8s infinite ease-in;
+}
+
+.gradient3>div#bg {
+  position     : absolute;
+  width        : .001vmin;
+  height       : .001vmin;
+  border-radius: 50%;
+  opacity      : .25;
+}
+
+.gradient3>div#bg:nth-child(2) {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #ff00ff;
+  box-shadow        : 0 0 45vmax 45vmax #ff00ff;
+  -webkit-animation : hue 10s 0s linear infinite, move1 19s 0s linear infinite;
+  animation         : hue 10s 0s linear infinite, move1 19s 0s linear infinite;
+}
+
+.gradient3>div#bg:nth-child(3) {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #ffffff;
+  box-shadow        : 0 0 45vmax 45vmax #ffffff;
+  -webkit-animation : hue 15s 0s linear infinite, move2 25s 0s linear infinite;
+  animation         : hue 15s 0s linear infinite, move2 25s 0s linear infinite;
+}
+
+.gradient3>div#bg:nth-child(4) {
+  -webkit-box-shadow: 0 0 45vmax 45vmax #00ffff;
+  box-shadow        : 0 0 45vmax 45vmax #00ffff;
+  -webkit-animation : hue 20s 0s linear infinite, move3 15s 0s linear infinite;
+  animation         : hue 20s 0s linear infinite, move3 15s 0s linear infinite;
+  opacity           : .2;
+}
+
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter        : hue-rotate(0deg);
+  }
+
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    filter        : hue-rotate(360deg);
+  }
+}
+
+@keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter        : hue-rotate(0deg);
+  }
+
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    filter        : hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    top : 0vh;
+    left: 50vw;
+  }
+
+  25% {
+    left: 0vw;
+  }
+
+  50% {
+    top: 100vh;
+  }
+
+  75% {
+    left: 100vw;
+  }
+
+  100% {
+    top : 0vh;
+    left: 50vw;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    top : 0vh;
+    left: 50vw;
+  }
+
+  25% {
+    left: 0vw;
+  }
+
+  50% {
+    top: 100vh;
+  }
+
+  75% {
+    left: 100vw;
+  }
+
+  100% {
+    top : 0vh;
+    left: 50vw;
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    top : 50vh;
+    left: 100vw;
+  }
+
+  25% {
+    top: 100vh;
+  }
+
+  50% {
+    left: 0vw;
+  }
+
+  75% {
+    top: 0vh;
+  }
+
+  100% {
+    top : 50vh;
+    left: 100vw;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top : 50vh;
+    left: 100vw;
+  }
+
+  25% {
+    top: 100vh;
+  }
+
+  50% {
+    left: 0vw;
+  }
+
+  75% {
+    top: 0vh;
+  }
+
+  100% {
+    top : 50vh;
+    left: 100vw;
+  }
+}
+
+@-webkit-keyframes move3 {
+  0% {
+    top : 100vh;
+    left: 50vw;
+  }
+
+  25% {
+    left: 100vw;
+  }
+
+  50% {
+    top: 0vh;
+  }
+
+  75% {
+    left: 0vw;
+  }
+
+  100% {
+    top : 100vh;
+    left: 50vw;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    top : 100vh;
+    left: 50vw;
+  }
+
+  25% {
+    left: 100vw;
+  }
+
+  50% {
+    top: 0vh;
+  }
+
+  75% {
+    left: 0vw;
+  }
+
+  100% {
+    top : 100vh;
+    left: 50vw;
+  }
 }

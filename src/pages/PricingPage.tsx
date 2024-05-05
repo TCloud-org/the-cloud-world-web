@@ -62,18 +62,29 @@ export const PricingPage = () => {
       <Flex
         vertical
         style={{ padding: "32px 256px" }}
-        className="gradient1"
         align="center"
         gap={16}
+        className="gradient3"
       >
+        <div id="bg"></div>
+        <div id="bg"></div>
+        <div id="bg"></div>
+        <div id="bg"></div>
         <div style={{ height: HeaderHeight }} />
 
-        <Typography.Title level={3} style={{ marginTop: 0 }}>
+        <Typography.Title
+          level={3}
+          style={{ marginTop: 0, color: token.colorWhite }}
+        >
           Compare our plans and find yours
         </Typography.Title>
 
         <Typography.Paragraph
-          style={{ padding: "0 16px", textAlign: "center" }}
+          style={{
+            padding: "0 16px",
+            textAlign: "center",
+            color: token.colorWhite,
+          }}
         >
           Select from best plans, ensuring a perfect match for your business.
           Need more or less? Customize your subscription for a seamless fit

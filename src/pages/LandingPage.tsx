@@ -57,7 +57,7 @@ export const LandingPage = () => {
 
   return (
     <Flex vertical>
-      <Flex vertical style={{ backgroundColor: token.colorPrimary }}>
+      <Flex vertical className="aurora">
         <div style={{ height: HeaderHeight }} />
         <Flex style={{ padding: 64 }}>
           <Flex vertical gap={32} flex={1}>
