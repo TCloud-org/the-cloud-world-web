@@ -20,7 +20,7 @@ export const ContactPage = () => {
   const { token } = theme.useToken();
 
   return (
-    <Flex vertical>
+    <Flex vertical className="aurora-light">
       <Flex vertical>
         <div style={{ height: HeaderHeight }} />
 

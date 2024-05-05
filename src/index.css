@@ -123,13 +123,20 @@ code {
   --diameter: 35vmax;
 }
 
+.aurora-light {
+  background: #fff;
+  position  : relative;
+}
+
 .aurora {
   background: #000;
   position  : relative;
 }
 
 .aurora:before,
-.aurora:after {
+.aurora:after,
+.aurora-light:before,
+.aurora-light:after {
   content      : '';
   display      : block;
   position     : absolute;
@@ -139,12 +146,14 @@ code {
   opacity      : 0.18;
 }
 
-.aurora:before {
+.aurora:before,
+.aurora-light:before {
   box-shadow: 0 0 var(--diameter) var(--diameter) red;
   animation : hue 5s linear infinite, move1 10s linear infinite;
 }
 
-.aurora:after {
+.aurora:after,
+.aurora-light:after {
   box-shadow: 0 0 var(--diameter) var(--diameter) cyan;
   animation : hue 10s linear infinite, move2 20s linear infinite;
 }
