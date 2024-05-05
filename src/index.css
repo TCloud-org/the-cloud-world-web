@@ -66,7 +66,6 @@ code {
 .gradient1 {
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   background-size : 200% 200%;
-  /* Ensures the gradient covers the whole element */
   animation       : gradientAnimation 8s infinite linear;
 }
 

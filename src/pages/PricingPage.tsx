@@ -85,6 +85,7 @@ export const PricingPage = () => {
           variant="borderless"
           value={value}
           onChange={setValue}
+          allowClear
           style={{
             width: "60%",
             backgroundColor: "white",
