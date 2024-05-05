@@ -5,8 +5,9 @@ import { IconMenuItem } from "../dataEntryComponents/IconMenuItem";
 
 const menuItemWidth = 300;
 
-export const ProductMenu = () => {
+export const ProductMenu = (props: { onOpen?: (e: boolean) => void }) => {
   const { token } = theme.useToken();
+  const { onOpen = () => {} } = props;
 
   return (
     <Flex
@@ -23,7 +24,11 @@ export const ProductMenu = () => {
             <Typography.Text strong style={{ marginLeft: 8 }}>
               Optimization
             </Typography.Text>
-            <IconMenuItem icon={<PartitionOutlined />}>
+            <IconMenuItem
+              icon={<PartitionOutlined />}
+              href="/products/step-workflow"
+              onOpen={onOpen}
+            >
               Step Workflow
             </IconMenuItem>
           </Flex>
@@ -34,7 +39,7 @@ export const ProductMenu = () => {
             <Typography.Text strong style={{ marginLeft: 8 }}>
               Automation
             </Typography.Text>
-            <IconMenuItem icon={<SendOutlined />}>
+            <IconMenuItem icon={<SendOutlined />} onOpen={onOpen}>
               Email Notification Workflow
             </IconMenuItem>
           </Flex>

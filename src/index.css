@@ -118,6 +118,17 @@ code {
   transform: rotate(-180deg);
 }
 
+.button-outline {
+  border          : 1px solid #4312e5;
+  background-color: white;
+  transition      : all 0.3s;
+}
+
+.button-outline:hover {
+  background-color: #4312e5 !important;
+  color           : white !important;
+}
+
 /* *** Magic starts HERE */
 :root {
   --diameter: 35vmax;

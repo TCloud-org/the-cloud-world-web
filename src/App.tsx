@@ -9,6 +9,7 @@ import { AppFooter } from "./layoutComponents/AppFooter";
 import { AboutPage } from "./pages/AboutPage";
 import { PricingPage } from "./pages/PricingPage";
 import { ContactPage } from "./pages/ContactPage";
+import { StepWorkflowPage } from "./pages/StepWorkflowPage";
 
 function App() {
   const Wrapper = () => {
@@ -48,6 +49,10 @@ function App() {
         {
           path: "/contact",
           element: <ContactPage />,
+        },
+        {
+          path: "/products/step-workflow",
+          element: <StepWorkflowPage />,
         },
       ],
     },

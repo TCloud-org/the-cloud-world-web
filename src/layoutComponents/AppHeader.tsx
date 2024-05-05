@@ -5,38 +5,12 @@ import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { ProductMenu } from "../navigationComponents/ProductMenu";
 import { DownOutlined } from "@ant-design/icons";
 import { CSSProperties, useEffect, useState } from "react";
+import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 
 const renderItems = (props: { isFlipColor: boolean }) => [
   {
     label: "Products",
-    render: () => (
-      <Dropdown
-        placement="bottom"
-        menu={{ items: [] }}
-        dropdownRender={() => <ProductMenu />}
-      >
-        <Flex
-          align="center"
-          gap={6}
-          style={{ cursor: "pointer" }}
-          className="rotate-trigger"
-        >
-          <Typography.Text
-            className="link"
-            style={{ color: !props.isFlipColor ? undefined : "white" }}
-          >
-            Products
-          </Typography.Text>
-          <DownOutlined
-            style={{
-              fontSize: "8px",
-              color: !props.isFlipColor ? undefined : "white",
-            }}
-            className="link rotate"
-          />
-        </Flex>
-      </Dropdown>
-    ),
+    render: () => <ProductsDropdown isFlipColor={props.isFlipColor} />,
   },
   {
     label: "Solutions",

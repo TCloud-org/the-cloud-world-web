@@ -7,4 +7,8 @@ export const Span = {
   "8": { xs: 24, sm: 24, md: 24, lg: 3, xl: 3, xxl: 3 },
 };
 
+export const createSpan = (span: number) => {
+  return { xs: 24, sm: 24, md: 24, lg: span, xl: span, xxl: span };
+};
+
 export const lightColor = "#f8fafb";
