@@ -5,6 +5,7 @@ import { lightColor } from "../config/layoutConfig";
 export const LandingContainer = (props: {
   light?: boolean;
   children?: ReactNode;
+  className?: string;
 }) => {
   return (
     <Row
@@ -15,6 +16,7 @@ export const LandingContainer = (props: {
         alignItems: "center",
       }}
       gutter={[32, 32]}
+      className={props.className}
     >
       {props.children}
     </Row>
