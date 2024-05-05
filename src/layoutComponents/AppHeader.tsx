@@ -155,7 +155,7 @@ export const AppHeader = () => {
           Documentation
         </a>
         <Button
-          type={!isFlipColor ? "primary" : "default"}
+          type={!isFlipColor ? "primary" : "text"}
           onClick={handleLogin}
           className={!isFlipColor ? undefined : "landing-button"}
           style={{ fontWeight: 400 }}
