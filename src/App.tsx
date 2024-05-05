@@ -8,7 +8,7 @@ import { AppHeader } from "./layoutComponents/AppHeader";
 import { AppFooter } from "./layoutComponents/AppFooter";
 import { AboutPage } from "./pages/AboutPage";
 import { PricingPage } from "./pages/PricingPage";
-import { ContactPage } from "@mui/icons-material";
+import { ContactPage } from "./pages/ContactPage";
 
 function App() {
   const Wrapper = () => {

@@ -14,6 +14,7 @@ import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
 import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { useNavigate } from "react-router-dom";
 
 interface Elevation {
   icon?: ReactNode;
@@ -55,6 +56,11 @@ const elevateWith: Elevation[] = [
 ];
 export const LandingPage = () => {
   const { token } = theme.useToken();
+  const navigate = useNavigate();
+
+  const routeToContact = () => {
+    navigate("/contact");
+  };
 
   return (
     <Flex vertical>
@@ -76,7 +82,9 @@ export const LandingPage = () => {
             </Typography.Paragraph>
 
             <Flex>
-              <Button className="landing-button">Request demo</Button>
+              <Button className="landing-button" onClick={routeToContact}>
+                Request demo
+              </Button>
             </Flex>
           </Flex>
 
