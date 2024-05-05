@@ -1,8 +1,9 @@
-import { AutoComplete, Col, Flex, Row, Typography, theme } from "antd";
+import { AutoComplete, Button, Col, Flex, Row, Typography, theme } from "antd";
 import { useState } from "react";
 import { Span } from "../config/layoutConfig";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { CalculatorOutlined } from "@ant-design/icons";
 
 const options = [
   {
@@ -95,6 +96,14 @@ export const PricingPage = () => {
             option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
           }
         />
+
+        <Button
+          style={{ position: "absolute", right: 48, bottom: 32 }}
+          icon={<CalculatorOutlined />}
+          type="link"
+        >
+          Price Calculator
+        </Button>
       </Flex>
 
       <Row gutter={[priceGap, priceGap]} style={{ padding: priceGap }}>
