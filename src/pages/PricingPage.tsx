@@ -64,27 +64,16 @@ export const PricingPage = () => {
         style={{ padding: "32px 256px" }}
         align="center"
         gap={16}
-        className="gradient3"
+        className="gradient1"
       >
-        <div id="bg"></div>
-        <div id="bg"></div>
-        <div id="bg"></div>
-        <div id="bg"></div>
         <div style={{ height: HeaderHeight }} />
 
-        <Typography.Title
-          level={3}
-          style={{ marginTop: 0, color: token.colorWhite }}
-        >
+        <Typography.Title level={3} style={{ marginTop: 0 }}>
           Compare our plans and find yours
         </Typography.Title>
 
         <Typography.Paragraph
-          style={{
-            padding: "0 16px",
-            textAlign: "center",
-            color: token.colorWhite,
-          }}
+          style={{ padding: "0 16px", textAlign: "center" }}
         >
           Select from best plans, ensuring a perfect match for your business.
           Need more or less? Customize your subscription for a seamless fit

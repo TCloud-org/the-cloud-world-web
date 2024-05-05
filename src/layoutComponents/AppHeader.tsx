@@ -81,7 +81,6 @@ const renderItems = (props: { isFlipColor: boolean }) => [
 
 const flipColor: any = {
   "": true,
-  pricing: true,
 };
 
 export const HeaderHeight = 64;
