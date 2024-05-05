@@ -9,7 +9,7 @@ export const StepWorkflowPage = () => {
   const navigate = useNavigate();
 
   return (
-    <Flex vertical>
+    <Flex vertical className="aurora-light">
       <div style={{ height: HeaderHeight }} />
       <Row gutter={[64, 64]} style={{ padding: 64 }}>
         <Col {...createSpan(10)}>
