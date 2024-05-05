@@ -11,7 +11,8 @@ import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingImage } from "../dataDisplayComponents/LandingImage";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { LandingDetails } from "../dataDisplayComponents/LandingDetails";
+import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
+import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
 
 interface Elevation {
   icon?: ReactNode;
@@ -124,7 +125,9 @@ export const LandingPage = () => {
         </Row>
       </Flex>
 
-      <LandingDetails />
+      <LandingSimpleIntegration />
+
+      <LandingFlexibility />
     </Flex>
   );
 };

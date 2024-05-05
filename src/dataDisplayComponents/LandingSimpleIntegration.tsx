@@ -1,7 +1,7 @@
 import { Flex, Image, Typography } from "antd";
 import { lightColor } from "../config/layoutConfig";
 
-export const LandingDetails = () => {
+export const LandingSimpleIntegration = () => {
   return (
     <Flex
       style={{ backgroundColor: lightColor, padding: "128px 32px" }}

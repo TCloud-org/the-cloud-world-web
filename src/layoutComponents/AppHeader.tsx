@@ -95,7 +95,7 @@ export const AppHeader = () => {
   const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
 
   const controlNavbar = () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 10) {
       setScrollStart(true);
     } else {
       setScrollStart(false);
