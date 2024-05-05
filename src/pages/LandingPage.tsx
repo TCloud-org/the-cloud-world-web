@@ -66,7 +66,7 @@ export const LandingPage = () => {
     <Flex vertical>
       <Flex vertical className="aurora">
         <div style={{ height: HeaderHeight }} />
-        <Row gutter={[32, 32]} style={{ padding: 64 }}>
+        <Row gutter={[32, 32]} style={{ padding: "128px 64px" }}>
           <Col {...Span[2]}>
             <Flex vertical gap={32}>
               <Typography.Title
@@ -101,7 +101,7 @@ export const LandingPage = () => {
         </Row>
       </Flex>
 
-      <Flex vertical align="center" style={{ padding: "128px 32px" }} gap={64}>
+      <Flex vertical align="center" style={{ padding: "128px 64px" }} gap={64}>
         <Typography.Title
           level={2}
           style={{ width: "40%", textAlign: "center", margin: 0 }}
