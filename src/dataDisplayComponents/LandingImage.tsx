@@ -2,23 +2,24 @@ import { Flex, Image } from "antd";
 
 export const LandingImage = () => {
   return (
-    <Flex vertical align="center" style={{ position: "relative" }}>
+    <Flex
+      vertical
+      align="center"
+      style={{ position: "relative", backgroundColor: "transparent" }}
+    >
       <Image
-        src="https://tcw-images.s3.us-west-2.amazonaws.com/3556947.jpg"
+        src="https://tcw-images.s3.us-west-2.amazonaws.com/landing-bg.png"
         preview={false}
-        width="70%"
         style={{
           overflow: "hidden",
-          borderRadius: 999,
         }}
-        className="shadow"
       />
       <a
-        href="http://www.freepik.com"
-        style={{ position: "absolute", bottom: 16, fontSize: "8px" }}
+        href="https://storyset.com/business"
+        style={{ position: "absolute", bottom: 32, fontSize: "8px" }}
         className="link"
       >
-        Designed by slidesgo / Freepik
+        Business illustrations by Storyset
       </a>
     </Flex>
   );

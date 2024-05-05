@@ -13,6 +13,7 @@ import { LandingImage } from "../dataDisplayComponents/LandingImage";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
 import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
+import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 
 interface Elevation {
   icon?: ReactNode;
@@ -59,7 +60,7 @@ export const LandingPage = () => {
     <Flex vertical>
       <Flex vertical className="aurora">
         <div style={{ height: HeaderHeight }} />
-        <Flex style={{ padding: 64 }}>
+        <Flex style={{ padding: 64 }} gap={32}>
           <Flex vertical gap={32} flex={1}>
             <Typography.Title
               level={1}
@@ -128,6 +129,8 @@ export const LandingPage = () => {
       <LandingSimpleIntegration />
 
       <LandingFlexibility />
+
+      <LandingContactSales />
     </Flex>
   );
 };

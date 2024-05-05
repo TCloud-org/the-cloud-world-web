@@ -8,6 +8,7 @@ import { AppHeader } from "./layoutComponents/AppHeader";
 import { AppFooter } from "./layoutComponents/AppFooter";
 import { AboutPage } from "./pages/AboutPage";
 import { PricingPage } from "./pages/PricingPage";
+import { ContactPage } from "@mui/icons-material";
 
 function App() {
   const Wrapper = () => {
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/about",
           element: <AboutPage />,
+        },
+        {
+          path: "/contact",
+          element: <ContactPage />,
         },
       ],
     },

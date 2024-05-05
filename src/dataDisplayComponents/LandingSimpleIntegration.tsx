@@ -1,14 +1,9 @@
 import { Flex, Image, Typography } from "antd";
-import { lightColor } from "../config/layoutConfig";
+import { LandingContainer } from "./LandingContainer";
 
 export const LandingSimpleIntegration = () => {
   return (
-    <Flex
-      style={{ backgroundColor: lightColor, padding: "128px 32px" }}
-      justify="center"
-      align="center"
-      gap={32}
-    >
+    <LandingContainer light>
       <Flex vertical gap={32} flex={1}>
         <Typography.Title level={2} style={{ margin: 0 }}>
           Simple integration
@@ -36,6 +31,6 @@ export const LandingSimpleIntegration = () => {
           preview={false}
         />
       </Flex>
-    </Flex>
+    </LandingContainer>
   );
 };
