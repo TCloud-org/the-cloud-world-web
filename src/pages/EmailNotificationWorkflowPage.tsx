@@ -55,6 +55,11 @@ const steps: EmailStepProps[] = [
         title: "Productivity",
         description:
           "Engineered to maximize your engineers' time investment, our solution streamlines processes and tasks. With a single, synchronized API integration, complexities are minimized, ensuring unparalleled ease of use.",
+        code: `public class Example {
+    public void execute() {
+      System.out.println("Executing...");
+    }
+}`,
       },
       {
         title: "Smooth Transition",

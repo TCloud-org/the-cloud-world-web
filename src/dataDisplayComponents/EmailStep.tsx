@@ -1,9 +1,16 @@
 import { Col, Flex, Typography, theme } from "antd";
 import { Fragment, ReactNode } from "react";
-import { Span } from "../config/layoutConfig";
+import { Span, createSpan } from "../config/layoutConfig";
 import { AnimatedCard } from "./AnimatedCard";
 import { LandingContainer } from "./LandingContainer";
 import { PlusOutlined } from "@ant-design/icons";
+import { SyntaxHighlighter } from "./SyntaxHighlighter";
+
+export interface ParagraphPoint {
+  title?: string;
+  description?: string;
+  code?: string;
+}
 
 export interface EmailStepProps {
   title?: string;
@@ -11,7 +18,7 @@ export interface EmailStepProps {
   icon?: ReactNode;
   step?: string;
   index?: number;
-  points?: { title?: string; description?: string }[];
+  points?: ParagraphPoint[];
 }
 
 export const EmailStep = (props: EmailStepProps) => {
@@ -25,13 +32,13 @@ export const EmailStep = (props: EmailStepProps) => {
         position: "relative",
       }}
     >
-      <Col {...Span[2]}>
+      <Col {...createSpan(10)}>
         <Flex justify="center" align="center">
           <AnimatedCard icon={props.icon}>{props.step}</AnimatedCard>
         </Flex>
       </Col>
 
-      <Col {...Span[2]}>
+      <Col {...createSpan(14)}>
         <Flex vertical gap={16}>
           <Typography.Title
             level={5}
@@ -49,6 +56,12 @@ export const EmailStep = (props: EmailStepProps) => {
               <Typography.Paragraph style={{ fontSize: 16 }}>
                 {point.description}
               </Typography.Paragraph>
+
+              {point.code && (
+                <SyntaxHighlighter language="java">
+                  {point.code}
+                </SyntaxHighlighter>
+              )}
             </Fragment>
           ))}
         </Flex>
