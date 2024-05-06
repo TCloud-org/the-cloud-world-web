@@ -151,6 +151,7 @@ export const AppHeader = () => {
           href="https://www.documentation.thecloudworlds.com"
           target="_blank"
           className="link"
+          rel="noreferrer"
           style={{ color: !isFlipColor ? undefined : "white" }}
         >
           Documentation

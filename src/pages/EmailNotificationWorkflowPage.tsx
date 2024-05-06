@@ -8,6 +8,7 @@ import {
 import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Span } from "../config/layoutConfig";
+import { EmailTrigger } from "../dataDisplayComponents/EmailTrigger";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 
@@ -91,7 +92,7 @@ export const EmailNotificationWorkflowPage = () => {
 
         <Col {...Span[2]}>
           <Image
-            src="https://tcw-images.s3.us-west-2.amazonaws.com/email.png"
+            src="https://tcw-images.s3.us-west-2.amazonaws.com/email-workflow.png"
             className="shadow"
             preview={false}
             style={{ borderRadius: token.borderRadiusLG }}
@@ -100,6 +101,8 @@ export const EmailNotificationWorkflowPage = () => {
       </Row>
 
       <Tenets tenets={tenets} />
+
+      <EmailTrigger />
     </Flex>
   );
 };
