@@ -590,10 +590,6 @@ video {
   width: 100%;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .grow {
   flex-grow: 1;
 }
@@ -606,30 +602,24 @@ video {
   place-content: center;
 }
 
-.justify-center {
-  justify-content: center;
+.items-center {
+  align-items: center;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.justify-center {
+  justify-content: center;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
-}
-
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-500 {
@@ -637,9 +627,9 @@ video {
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
-.bg-slate-300 {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -658,11 +648,6 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-violet-500 {
-  --tw-gradient-to: rgb(139 92 246 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #8b5cf6 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
 .to-violet-300 {
   --tw-gradient-to: #c4b5fd var(--tw-gradient-to-position);
 }
@@ -671,16 +656,8 @@ video {
   --tw-gradient-to: #8b5cf6 var(--tw-gradient-to-position);
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-4 {
@@ -702,11 +679,6 @@ video {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -716,23 +688,14 @@ video {
   font-weight: 700;
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.text-slate-900 {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
 .text-indigo-500 {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1032,9 +995,4 @@ code {
 
 .tilted {
   transform: rotateX(5deg) rotateY(5deg);
-}
-
-.hover\:bg-sky-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }

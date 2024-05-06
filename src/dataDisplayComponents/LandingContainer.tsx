@@ -1,11 +1,12 @@
 import { Row } from "antd";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { lightColor } from "../config/layoutConfig";
 
 export const LandingContainer = (props: {
   light?: boolean;
   children?: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }) => {
   return (
     <Row
@@ -14,8 +15,9 @@ export const LandingContainer = (props: {
         backgroundColor: props.light ? lightColor : undefined,
         justifyContent: "center",
         alignItems: "center",
+        ...props.style,
       }}
-      gutter={[32, 32]}
+      gutter={[64, 64]}
       className={props.className}
     >
       {props.children}

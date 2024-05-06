@@ -1,4 +1,10 @@
-import { ApiOutlined, RightOutlined } from "@ant-design/icons";
+import {
+  ApiOutlined,
+  ClockCircleOutlined,
+  IdcardOutlined,
+  RightOutlined,
+  SendOutlined,
+} from "@ant-design/icons";
 import {
   HourglassTopRounded,
   SettingsSuggestRounded,
@@ -8,7 +14,7 @@ import {
 import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Span } from "../config/layoutConfig";
-import { EmailStep } from "../dataDisplayComponents/EmailStep";
+import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 
@@ -39,28 +45,59 @@ const tenets: TenetsProps["tenets"] = [
   },
 ];
 
-const steps = [
+const steps: EmailStepProps[] = [
   {
     title: "Ease of integration",
-    description: `Engineered for maximum efficiency, our solution optimizes your
-    engineers' time investment. Seamlessly integrate with a single,
-    synchronized API, simplifying the process with unparalleled ease.
-    Featuring an intuitive interface, understanding its functionality is
-    effortlessly seamless, guaranteeing a smooth transition for your
-    team.`,
     step: "Trigger",
     icon: <ApiOutlined />,
+    points: [
+      {
+        title: "Productivity",
+        description:
+          "Engineered to maximize your engineers' time investment, our solution streamlines processes and tasks. With a single, synchronized API integration, complexities are minimized, ensuring unparalleled ease of use.",
+      },
+      {
+        title: "Smooth Transition",
+        description:
+          "Featuring an intuitive interface, our solution guarantees a smooth transition for your team. Understanding its functionality is effortless, facilitating swift adoption and enhanced productivity.",
+      },
+    ],
   },
   {
     title: "Secure",
-    description: `Engineered for maximum efficiency, our solution optimizes your
-    engineers' time investment. Seamlessly integrate with a single,
-    synchronized API, simplifying the process with unparalleled ease.
-    Featuring an intuitive interface, understanding its functionality is
-    effortlessly seamless, guaranteeing a smooth transition for your
-    team.`,
     step: "Verification",
-    icon: <ApiOutlined />,
+    icon: <IdcardOutlined />,
+    points: [
+      {
+        title: "Protect your assets",
+        description:
+          "Our robust verification system ensures the security of your email and domain ownership. With advanced encryption and authentication protocols, we safeguard your digital assets, providing peace of mind and protecting your online presence from unauthorized access or manipulation.",
+      },
+    ],
+  },
+  {
+    title: "Timing",
+    step: "Delay",
+    icon: <ClockCircleOutlined />,
+    points: [
+      {
+        title: "Introduce delayed delivery options",
+        description:
+          "Empower your email communication with the ability to schedule delays before sending. With our feature-rich platform, you can strategically time your email deliveries, optimizing engagement and ensuring messages reach recipients at the most opportune moments.",
+      },
+    ],
+  },
+  {
+    title: "Deployment",
+    step: "Email",
+    icon: <SendOutlined />,
+    points: [
+      {
+        title: "Automated email deployment",
+        description:
+          "Elevate your email campaigns with our automated system, allowing you to craft personalized messages with customizable subjects and bodies. Targeted delivery to your specified recipients ensures efficient communication, saving time and maximizing impact.",
+      },
+    ],
   },
 ];
 
@@ -128,7 +165,7 @@ export const EmailNotificationWorkflowPage = () => {
       <Tenets tenets={tenets} />
 
       {steps.map((step, i) => (
-        <EmailStep {...step} key={i} />
+        <EmailStep {...step} key={i} index={i} />
       ))}
     </Flex>
   );
