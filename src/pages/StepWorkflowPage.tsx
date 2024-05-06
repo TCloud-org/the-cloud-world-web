@@ -1,3 +1,4 @@
+import { RightOutlined } from "@ant-design/icons";
 import {
   Button,
   Col,
@@ -8,14 +9,13 @@ import {
   Typography,
   theme,
 } from "antd";
-import { createSpan } from "../config/layoutConfig";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { RightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
-import { StepWorkflowTenets } from "../dataDisplayComponents/StepWorkflowTenets";
-import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
+import { Span } from "../config/layoutConfig";
 import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
+import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
+import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
+import { StepWorkflowTenets } from "../dataDisplayComponents/StepWorkflowTenets";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 export const StepWorkflowPage = () => {
   const { token } = theme.useToken();
@@ -24,10 +24,10 @@ export const StepWorkflowPage = () => {
   const routeToContact = () => navigate("/contact");
 
   return (
-    <Flex vertical className="aurora-light">
+    <Flex vertical>
       <div style={{ height: HeaderHeight }} />
       <Row gutter={[64, 64]} style={{ padding: "128px 64px" }}>
-        <Col {...createSpan(12)}>
+        <Col {...Span[2]}>
           <Flex vertical gap={16}>
             <Typography.Title level={1} style={{ marginTop: 0, fontSize: 44 }}>
               Streamline asynchronous processes: Unlock business efficiency
@@ -60,7 +60,7 @@ export const StepWorkflowPage = () => {
             </Flex>
           </Flex>
         </Col>
-        <Col {...createSpan(12)}>
+        <Col {...Span[2]}>
           <Image
             src="https://tcw-images.s3.us-west-2.amazonaws.com/api-workflow-1.png"
             className="shadow"
