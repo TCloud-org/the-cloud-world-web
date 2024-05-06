@@ -17,6 +17,7 @@ import { Span } from "../config/layoutConfig";
 import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -172,6 +173,23 @@ export const EmailNotificationWorkflowPage = () => {
       {steps.map((step, i) => (
         <EmailStep {...step} key={i} index={i} />
       ))}
+
+      <LandingContainer light>
+        <Flex vertical gap={32} align="center">
+          <Typography.Title
+            level={2}
+            style={{ margin: 0, textAlign: "center" }}
+          >
+            Let automation do the work for you
+          </Typography.Title>
+
+          <Flex justify="center">
+            <Button type="primary" onClick={routeToContact}>
+              Speak to our team
+            </Button>
+          </Flex>
+        </Flex>
+      </LandingContainer>
     </Flex>
   );
 };
