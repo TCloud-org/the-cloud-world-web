@@ -1,4 +1,4 @@
-import { RightOutlined } from "@ant-design/icons";
+import { ApiOutlined, RightOutlined } from "@ant-design/icons";
 import {
   HourglassTopRounded,
   SettingsSuggestRounded,
@@ -8,7 +8,7 @@ import {
 import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Span } from "../config/layoutConfig";
-import { EmailTrigger } from "../dataDisplayComponents/EmailTrigger";
+import { EmailStep } from "../dataDisplayComponents/EmailStep";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 
@@ -36,6 +36,31 @@ const tenets: TenetsProps["tenets"] = [
     title: "Secure",
     description:
       "Ensure your email is secured with advanced encryption, multi-factor authentication, and continuous monitoring, providing comprehensive protection against unauthorized access and safeguarding your sensitive information with the utmost care.",
+  },
+];
+
+const steps = [
+  {
+    title: "Ease of integration",
+    description: `Engineered for maximum efficiency, our solution optimizes your
+    engineers' time investment. Seamlessly integrate with a single,
+    synchronized API, simplifying the process with unparalleled ease.
+    Featuring an intuitive interface, understanding its functionality is
+    effortlessly seamless, guaranteeing a smooth transition for your
+    team.`,
+    step: "Trigger",
+    icon: <ApiOutlined />,
+  },
+  {
+    title: "Secure",
+    description: `Engineered for maximum efficiency, our solution optimizes your
+    engineers' time investment. Seamlessly integrate with a single,
+    synchronized API, simplifying the process with unparalleled ease.
+    Featuring an intuitive interface, understanding its functionality is
+    effortlessly seamless, guaranteeing a smooth transition for your
+    team.`,
+    step: "Verification",
+    icon: <ApiOutlined />,
   },
 ];
 
@@ -102,7 +127,9 @@ export const EmailNotificationWorkflowPage = () => {
 
       <Tenets tenets={tenets} />
 
-      <EmailTrigger />
+      {steps.map((step, i) => (
+        <EmailStep {...step} key={i} />
+      ))}
     </Flex>
   );
 };

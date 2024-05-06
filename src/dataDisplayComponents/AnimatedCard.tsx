@@ -72,7 +72,7 @@ export const AnimatedCard = (props: {
           transformStyle: "preserve-3d",
           transform,
         }}
-        className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+        className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
       >
         <div
           style={{
@@ -83,18 +83,23 @@ export const AnimatedCard = (props: {
           className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
         >
           <div
-            className="p-5 rounded-lg bg-indigo-500"
-            style={{
-              border: `1px solid ${token.colorPrimary}`,
-              transform: "translateZ(75px)",
-            }}
+            className="flex justify-center"
+            style={{ transform: "translateZ(75px)" }}
           >
-            {cloneElement(props.icon as ReactElement, {
-              style: {
-                color: token.colorWhite,
-              } as CSSProperties,
-              className: "mx-auto text-4xl",
-            })}
+            <div
+              className="p-5 rounded-lg bg-indigo-500"
+              style={{
+                transform: "translateZ(75px)",
+                border: `1px solid ${token.colorPrimary}`,
+              }}
+            >
+              {cloneElement(props.icon as ReactElement, {
+                style: {
+                  color: token.colorWhite,
+                } as CSSProperties,
+                className: "mx-auto text-4xl",
+              })}
+            </div>
           </div>
           <p
             style={{

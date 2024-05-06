@@ -590,6 +590,10 @@ video {
   width: 100%;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -600,6 +604,10 @@ video {
 
 .place-content-center {
   place-content: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .rounded-xl {
@@ -627,6 +635,11 @@ video {
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
