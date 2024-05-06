@@ -10,6 +10,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { PricingPage } from "./pages/PricingPage";
 import { ContactPage } from "./pages/ContactPage";
 import { StepWorkflowPage } from "./pages/StepWorkflowPage";
+import { EmailNotificationWorkflowPage } from "./pages/EmailNotificationWorkflowPage";
 
 function App() {
   const Wrapper = () => {
@@ -53,6 +54,10 @@ function App() {
         {
           path: "/products/step-workflow",
           element: <StepWorkflowPage />,
+        },
+        {
+          path: "/products/email-notification-workflow",
+          element: <EmailNotificationWorkflowPage />,
         },
       ],
     },

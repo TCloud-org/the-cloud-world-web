@@ -153,19 +153,19 @@ code {
   width        : 1px;
   height       : 1px;
   border-radius: 100%;
-  opacity      : 0.18;
+  opacity      : 0.15;
 }
 
 .aurora:before,
 .aurora-light:before {
   box-shadow: 0 0 var(--diameter) var(--diameter) red;
-  animation : hue 5s linear infinite, move1 10s linear infinite;
+  animation : hue 30s linear infinite, move1 35s linear infinite;
 }
 
 .aurora:after,
 .aurora-light:after {
   box-shadow: 0 0 var(--diameter) var(--diameter) cyan;
-  animation : hue 10s linear infinite, move2 20s linear infinite;
+  animation : hue 35s linear infinite, move2 45s linear infinite;
 }
 
 @keyframes hue {

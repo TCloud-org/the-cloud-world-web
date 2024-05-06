@@ -39,7 +39,11 @@ export const ProductMenu = (props: { onOpen?: (e: boolean) => void }) => {
             <Typography.Text strong style={{ marginLeft: 8 }}>
               Automation
             </Typography.Text>
-            <IconMenuItem icon={<SendOutlined />} onOpen={onOpen}>
+            <IconMenuItem
+              icon={<SendOutlined />}
+              onOpen={onOpen}
+              href="/products/email-notification-workflow"
+            >
               Email Notification Workflow
             </IconMenuItem>
           </Flex>
