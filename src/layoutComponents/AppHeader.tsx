@@ -148,7 +148,8 @@ export const AppHeader = () => {
 
       <Flex flex={1} justify="flex-end" align="center" gap={32}>
         <a
-          href="/documentation"
+          href="https://www.documentation.thecloudworlds.com"
+          target="_blank"
           className="link"
           style={{ color: !isFlipColor ? undefined : "white" }}
         >
