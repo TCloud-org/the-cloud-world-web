@@ -14,8 +14,41 @@ import { Span } from "../config/layoutConfig";
 import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
 import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
 import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
-import { StepWorkflowTenets } from "../dataDisplayComponents/StepWorkflowTenets";
+import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import {
+  ApiRounded,
+  FastForwardRounded,
+  MonetizationOnRounded,
+  SettingsSuggestRounded,
+} from "@mui/icons-material";
+
+const tenets: TenetsProps["tenets"] = [
+  {
+    icon: <ApiRounded />,
+    title: "Ease of integration",
+    description:
+      "Make it as easy as possible for developers to integrate and use our APIs. Provide comprehensive documentation, code examples, and SDKs in popular programming languages.",
+  },
+  {
+    icon: <SettingsSuggestRounded />,
+    title: "Customization & flexibility",
+    description:
+      "Provide flexibility and customization options to meet the diverse needs of your customers. Allow developers to customize endpoints, parameters, and payloads to suit their specific requirements.",
+  },
+  {
+    icon: <MonetizationOnRounded />,
+    title: "Time saving, cost reduction",
+    description:
+      "Efficiently manage all your resources in one centralized platform, saving significant time and reducing maintenance costs.",
+  },
+  {
+    icon: <FastForwardRounded />,
+    title: "Speed",
+    description:
+      "Speed matters in business. Our API workflow ensures swift task execution and batch action capabilities, keeping you ahead of the game.",
+  },
+];
 
 export const StepWorkflowPage = () => {
   const { token } = theme.useToken();
@@ -70,7 +103,7 @@ export const StepWorkflowPage = () => {
         </Col>
       </Row>
 
-      <StepWorkflowTenets />
+      <Tenets tenets={tenets} />
 
       <StepWorkflowEntity />
 

@@ -1,8 +1,42 @@
-import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
-import { Span } from "../config/layoutConfig";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { RightOutlined } from "@ant-design/icons";
+import {
+  HourglassTopRounded,
+  SettingsSuggestRounded,
+  StoreRounded,
+  VerifiedUserRounded,
+} from "@mui/icons-material";
+import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
 import { useNavigate } from "react-router-dom";
+import { Span } from "../config/layoutConfig";
+import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
+
+const tenets: TenetsProps["tenets"] = [
+  {
+    icon: <HourglassTopRounded />,
+    title: "Timeliness",
+    description:
+      "Strive to send notifications at the right time, balancing the need to provide timely updates with respect for the recipient's time and attention. Leverage automation and scheduling tools to send notifications at optimal times based on user preferences and behavior.",
+  },
+  {
+    icon: <SettingsSuggestRounded />,
+    title: "Customization & Flexibility",
+    description:
+      "Provide a platform that supports highly customizable email templates while offering a diverse selection of simple yet elegant templates from the store, catering to varying design preferences and needs.",
+  },
+  {
+    icon: <StoreRounded />,
+    title: "Monetization Integration",
+    description:
+      "Enable customers to not only create and customize their email templates but also publish and sell their designs within the store, fostering a vibrant marketplace for email template creators and providing additional revenue opportunities for customers.",
+  },
+  {
+    icon: <VerifiedUserRounded />,
+    title: "Secure",
+    description:
+      "Ensure your email is secured with advanced encryption, multi-factor authentication, and continuous monitoring, providing comprehensive protection against unauthorized access and safeguarding your sensitive information with the utmost care.",
+  },
+];
 
 export const EmailNotificationWorkflowPage = () => {
   const { token } = theme.useToken();
@@ -64,6 +98,8 @@ export const EmailNotificationWorkflowPage = () => {
           />
         </Col>
       </Row>
+
+      <Tenets tenets={tenets} />
     </Flex>
   );
 };

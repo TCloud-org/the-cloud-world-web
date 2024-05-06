@@ -8,7 +8,7 @@ export const AppFooter = () => {
   return (
     <Footer style={{ textAlign: "center", background: token.colorBgContainer }}>
       <Divider />
-      <Flex align="center" gap={16} justify="center">
+      <Flex align="center" gap={8} justify="center">
         <AppLogo />
         <Typography.Text strong>
           The Cloud World ©{new Date().getFullYear()}
