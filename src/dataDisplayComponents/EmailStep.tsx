@@ -7,7 +7,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { SyntaxHighlighter } from "./SyntaxHighlighter";
 
 export interface ParagraphPoint {
-  title?: string;
+  title?: string | ReactNode;
   description?: string;
   code?: string;
 }

@@ -56,11 +56,17 @@ const steps: EmailStepProps[] = [
         title: "Productivity",
         description:
           "Engineered to maximize your engineers' time investment, our solution streamlines processes and tasks. With a single, synchronized API integration, complexities are minimized, ensuring unparalleled ease of use.",
-        code: `public class Example {
-    public void execute() {
-      System.out.println("Executing...");
-    }
-}`,
+        code: `final TriggerEmailNotificationWorkflowInput input = TriggerEmailNotificationWorkflowInput.builder()
+        .id(1L)
+        .clientId("EmailVerificationTeam")
+        .to(ImmutableList.of("john.doe@example.com"))
+        .bodyMap(ImmutableMap.of(
+                "customer",
+                "John Doe",
+                "verificationCode",
+                "1234"))
+        .build();
+stepWorkflowClient.triggerEmailNotificationWorkflow(input);`,
       },
       {
         title: "Smooth Transition",
