@@ -1,9 +1,9 @@
+import { PlusOutlined } from "@ant-design/icons";
 import { Col, Flex, Typography, theme } from "antd";
 import { Fragment, ReactNode } from "react";
-import { Span, createSpan } from "../config/layoutConfig";
+import { createSpan } from "../config/layoutConfig";
 import { AnimatedCard } from "./AnimatedCard";
 import { LandingContainer } from "./LandingContainer";
-import { PlusOutlined } from "@ant-design/icons";
 import { SyntaxHighlighter } from "./SyntaxHighlighter";
 
 export interface ParagraphPoint {

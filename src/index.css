@@ -281,3 +281,11 @@ code {
 .tilted {
   transform: rotateX(5deg) rotateY(5deg);
 }
+
+.segmented {
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.segmented:hover {
+  background-color: #334155;
+}
