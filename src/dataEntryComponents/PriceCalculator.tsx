@@ -19,8 +19,8 @@ const plans: SelectProps["options"] = [
 
 const price = {
   free: 0,
-  startup: 0.00005,
-  scaleup: 0.00013,
+  startup: 0.00004,
+  scaleup: 0.00011,
 };
 
 const discount = 5000;
