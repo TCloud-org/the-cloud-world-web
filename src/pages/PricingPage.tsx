@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Span } from "../config/layoutConfig";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { useNavigate } from "react-router-dom";
 
 const options = [
   {
@@ -47,6 +48,7 @@ const plans = [
 const priceGap = 32;
 
 export const PricingPage = () => {
+  const navigate = useNavigate();
   const { token } = theme.useToken();
 
   const [value, setValue] = useState<string>("");
@@ -121,6 +123,20 @@ export const PricingPage = () => {
             </Col>
           ))}
         </Row>
+      </div>
+
+      <div className="bg-slate-50 py-20 sm:py-32 text-center">
+        <Typography.Title level={3}>
+          Have questions about pricing?
+        </Typography.Title>
+
+        <Typography.Paragraph className="text-lg">
+          We're here to help
+        </Typography.Paragraph>
+
+        <Button type="primary" onClick={() => navigate("/contact")}>
+          Contact Us
+        </Button>
       </div>
     </Flex>
   );

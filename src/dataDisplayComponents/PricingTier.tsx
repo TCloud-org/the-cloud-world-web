@@ -46,7 +46,11 @@ export const PricingTier = (props: { data: any }) => {
           {data.unit}
         </Typography.Text>
 
-        <Button className="w-full" type={emphasized ? "default" : "primary"}>
+        <Button
+          className="w-full"
+          type={emphasized ? "default" : "primary"}
+          onClick={() => window.open("https://www.tc-workflow.com", "_blank")}
+        >
           Try For Free
         </Button>
 
