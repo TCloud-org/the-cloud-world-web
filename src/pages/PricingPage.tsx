@@ -1,9 +1,19 @@
 import { CalculatorOutlined } from "@ant-design/icons";
-import { AutoComplete, Button, Col, Flex, Row, Typography, theme } from "antd";
+import {
+  AutoComplete,
+  Button,
+  Col,
+  Flex,
+  Modal,
+  Row,
+  Typography,
+  theme,
+} from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
 
 const options = [
   {
@@ -85,7 +95,9 @@ export const PricingPage = () => {
   const navigate = useNavigate();
   const { token } = theme.useToken();
 
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<string>("Step Workflow");
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
   return (
     <Flex vertical>
       <Flex
@@ -133,6 +145,7 @@ export const PricingPage = () => {
           icon={<CalculatorOutlined />}
           type="link"
           className="absolute bottom-4 right-4"
+          onClick={() => setModalOpen(true)}
         >
           Price Calculator
         </Button>
@@ -186,6 +199,18 @@ export const PricingPage = () => {
           Contact Us
         </Button>
       </div>
+
+      <Modal
+        title="Price calculator"
+        centered
+        open={modalOpen}
+        onOk={() => setModalOpen(false)}
+        onCancel={() => setModalOpen(false)}
+        okButtonProps={{ style: { display: "none" } }}
+        cancelButtonProps={{ style: { display: "none" } }}
+      >
+        <PriceCalculator />
+      </Modal>
     </Flex>
   );
 };

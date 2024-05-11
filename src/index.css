@@ -289,3 +289,7 @@ code {
 .segmented:hover {
   background-color: #334155;
 }
+
+.ant-modal-mask {
+  backdrop-filter: blur(8px);
+}
