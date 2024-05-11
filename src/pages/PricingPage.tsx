@@ -52,7 +52,7 @@ export const PricingPage = () => {
   const [value, setValue] = useState<string>("");
   return (
     <Flex vertical>
-      <Flex vertical align="center" gap={16} className="bg-slate-50 px-8 py-8">
+      <Flex vertical align="center" className="bg-slate-50 px-8 py-32">
         <div style={{ height: HeaderHeight }} />
 
         <Flex vertical className="lg:px-64" gap={16} align="center">
@@ -68,7 +68,7 @@ export const PricingPage = () => {
           </Typography.Paragraph>
         </Flex>
 
-        <Flex align="center" className="w-full">
+        <Flex align="center" className="w-full mt-6">
           <div style={{ flex: 1 }} className="hidden lg:block" />
 
           <Flex flex={1} justify="center">
