@@ -128,7 +128,13 @@ export const AppHeader = () => {
         </Flex>
       </Flex>
 
-      <Flex align="center" flex={2} justify="center" gap={32}>
+      <Flex
+        align="center"
+        flex={2}
+        justify="center"
+        gap={32}
+        className="hidden lg:flex"
+      >
         {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
           <div key={i}>
             {item.render ? (
@@ -154,7 +160,7 @@ export const AppHeader = () => {
           rel="noreferrer"
           style={{ color: !isFlipColor ? undefined : "white" }}
         >
-          Documentation
+          Docs
         </a>
         <Button
           type={!isFlipColor ? "primary" : "text"}

@@ -1,44 +1,68 @@
-import { CheckCircleFilled } from "@ant-design/icons";
-import { Card, Flex, Typography, theme } from "antd";
+import { CheckCircleOutlined } from "@ant-design/icons";
+import { Button, Card, Flex, Typography, theme } from "antd";
 
 export const PricingTier = (props: { data: any }) => {
   const { token } = theme.useToken();
   const { data } = props;
 
+  const emphasized = data.emphasize;
   return (
     <Card
       bordered={false}
       style={{
-        boxShadow: "0 30px 60px 0 rgba(90, 116, 148, 0.15)",
         height: "100%",
+        backgroundColor: emphasized ? token.colorPrimary : "transparent",
       }}
     >
       <Flex vertical align="center" gap={32}>
-        <Typography.Title style={{ marginTop: 0 }} level={3}>
+        <Typography.Title
+          style={{ marginTop: 0, color: token.colorWhite }}
+          level={3}
+          className="text-white"
+        >
           {data.plan}
         </Typography.Title>
         <Typography.Paragraph
           style={{
             margin: 0,
-            height: 100,
+            height: 80,
             overflow: "auto",
           }}
+          className={emphasized ? "text-white" : "text-slate-400"}
         >
           {data.description}
         </Typography.Paragraph>
 
-        <Typography.Text style={{ fontWeight: 500, fontSize: 20 }}>
-          <Typography.Text style={{ fontSize: 32, fontWeight: 800 }}>
+        <Typography.Text
+          style={{ fontWeight: 500, fontSize: 20, textAlign: "center" }}
+          className="text-white"
+        >
+          <Typography.Text
+            style={{ fontSize: 24, fontWeight: 700 }}
+            className="text-white"
+          >
             {data.price}
           </Typography.Text>{" "}
-          USD per month
+          {data.unit}
         </Typography.Text>
 
-        {data.features.map((feature: string, i: number) => (
-          <Flex gap={16} key={i} justify="flex-start" style={{ width: "100%" }}>
-            <CheckCircleFilled style={{ color: token.colorSuccess }} />
+        <Button className="w-full" type={emphasized ? "default" : "primary"}>
+          Try For Free
+        </Button>
 
-            <Typography.Text>{feature}</Typography.Text>
+        {(data.features || []).map((feature: string, i: number) => (
+          <Flex gap={16} key={i} justify="flex-start" style={{ width: "100%" }}>
+            <CheckCircleOutlined
+              style={{
+                color: emphasized ? token.colorWhite : "rgb(148 163 184 / 1)",
+              }}
+            />
+
+            <Typography.Text
+              className={emphasized ? "text-white" : "text-slate-400"}
+            >
+              {feature}
+            </Typography.Text>
           </Flex>
         ))}
       </Flex>
