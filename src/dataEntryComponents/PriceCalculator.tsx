@@ -19,8 +19,8 @@ const plans: SelectProps["options"] = [
 
 const price = {
   free: 0,
-  startup: 0.00003,
-  scaleup: 0.00009,
+  startup: 0.00005,
+  scaleup: 0.00013,
 };
 
 const discount = 5000;
@@ -80,7 +80,7 @@ export const PriceCalculator = () => {
 
         <Form.Item
           name="numOfRequests"
-          label="How many requests of a workflow are your team making a month in average?"
+          label="How many requests of a workflow are there in a month in average?"
         >
           <InputNumber />
         </Form.Item>
@@ -110,7 +110,7 @@ export const PriceCalculator = () => {
         <Typography.Text className="flex justify-between">
           Price per unit:{" "}
           <Typography.Text strong>
-            ${price[form.getFieldValue("tier") as keyof typeof price]}
+            ${price[form.getFieldValue("tier") as keyof typeof price] || 0}
           </Typography.Text>
         </Typography.Text>
 

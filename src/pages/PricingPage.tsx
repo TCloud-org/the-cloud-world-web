@@ -42,11 +42,11 @@ const plans = [
     key: "startup",
     plan: "Startup",
     description: `Scale your usage and enjoy increased access to advanced features.`,
-    price: "$0.00003",
+    price: "$0.00005",
     unit: "per transition",
     features: [
       "Expanded access to our RESTful Step Workflow APIs",
-      "Tracking, querying, and batching",
+      "Tracking and querying",
       "Up to 30 days workflow task retention",
       "Ticket support",
       "Customer support",
@@ -56,7 +56,7 @@ const plans = [
     key: "scaleup",
     plan: "Scaleup",
     description: `Accelerate Your Growth. Scale and unlock advanced features for accelerated success.`,
-    price: "$0.00009",
+    price: "$0.00013",
     unit: "per transition",
     emphasize: true,
     features: [
