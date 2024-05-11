@@ -1,5 +1,6 @@
 import { CheckCircleOutlined } from "@ant-design/icons";
 import { Button, Card, Flex, Typography, theme } from "antd";
+import { PricingButton } from "../dataEntryComponents/PricingButton";
 
 export const PricingTier = (props: { data: any }) => {
   const { token } = theme.useToken();
@@ -46,13 +47,13 @@ export const PricingTier = (props: { data: any }) => {
           {data.unit}
         </Typography.Text>
 
-        <Button
-          className="w-full"
-          type={emphasized ? "default" : "primary"}
-          onClick={() => window.open("https://www.tc-workflow.com", "_blank")}
+        <PricingButton
+          target="_blank"
+          href="https://www.tc-workflow.com"
+          variant={emphasized ? "solid" : "outlined"}
         >
           Try For Free
-        </Button>
+        </PricingButton>
 
         {(data.features || []).map((feature: string, i: number) => (
           <Flex gap={16} key={i} justify="flex-start" style={{ width: "100%" }}>
