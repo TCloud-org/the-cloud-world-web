@@ -52,7 +52,10 @@ export const PricingTier = (props: { data: any }) => {
 
         <PricingButton
           target="_blank"
-          href={data.href || "https://www.tc-workflow.com"}
+          href={
+            data.href ||
+            `https://www.tc-workflow.com?product=StepWorkflow&tier=${data.key}`
+          }
           variant={emphasized ? "solid" : "outlined"}
         >
           {data.action || "Try For Free"}

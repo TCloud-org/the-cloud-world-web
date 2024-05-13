@@ -26,7 +26,7 @@ const options = [
 
 const plans = [
   {
-    key: "FREE",
+    key: "freeTier",
     plan: "Free Tier",
     description: `Experience our platform with limited usage and access at no cost.`,
     price: "$0",
