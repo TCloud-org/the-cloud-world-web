@@ -115,8 +115,8 @@ export const ContactPage = () => {
                   </Col>
 
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
-                      <Input placeholder="Phone number" name="phone" />
+                    <Form.Item style={{ flex: 1 }} name="phone">
+                      <Input placeholder="Phone number" />
                     </Form.Item>
                   </Col>
 
