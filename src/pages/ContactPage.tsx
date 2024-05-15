@@ -15,9 +15,16 @@ import { CompanySizes, Countries } from "../config/businessConfig";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { DownOutlined } from "@ant-design/icons";
 import { Span } from "../config/layoutConfig";
+import { wosContactMe } from "../config/wosEndpointConfig";
+import axios from "axios";
 
 export const ContactPage = () => {
   const { token } = theme.useToken();
+  const [form] = Form.useForm();
+
+  const handleSubmit = () => {
+    axios.post(wosContactMe, { ...form.getFieldsValue() });
+  };
 
   return (
     <Flex vertical>
@@ -60,7 +67,11 @@ export const ContactPage = () => {
                 background: token.colorBgContainer,
               }}
             >
-              <Form style={{ width: "100%" }}>
+              <Form
+                style={{ width: "100%" }}
+                form={form}
+                onValuesChange={(_, values) => form.setFieldsValue(values)}
+              >
                 <Row gutter={20}>
                   <Col {...Span[1]}>
                     <Form.Item>
@@ -71,37 +82,37 @@ export const ContactPage = () => {
                     </Form.Item>
                   </Col>
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
+                    <Form.Item style={{ flex: 1 }} name="firstName">
                       <Input placeholder="First name" />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
+                    <Form.Item style={{ flex: 1 }} name="lastName">
                       <Input placeholder="Last name" />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
+                    <Form.Item style={{ flex: 1 }} name="email">
                       <Input placeholder="Work email" />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
+                    <Form.Item style={{ flex: 1 }} name="company">
                       <Input placeholder="Company" />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[2]}>
                     <Form.Item style={{ flex: 1 }}>
-                      <Input placeholder="Phone number" />
+                      <Input placeholder="Phone number" name="phone" />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }}>
+                    <Form.Item style={{ flex: 1 }} name="companySize">
                       <Select
                         options={CompanySizes}
                         placeholder="Company size"
@@ -110,7 +121,7 @@ export const ContactPage = () => {
                   </Col>
 
                   <Col {...Span[1]}>
-                    <Form.Item>
+                    <Form.Item name="country">
                       <AutoComplete
                         options={Countries}
                         placeholder="Country"
@@ -126,13 +137,16 @@ export const ContactPage = () => {
                   </Col>
 
                   <Col {...Span[1]}>
-                    <Form.Item>
-                      <Select placeholder="How can we help you?" />
+                    <Form.Item name="topic">
+                      <Select
+                        placeholder="How can we help you?"
+                        options={[{ label: "General", value: "general" }]}
+                      />
                     </Form.Item>
                   </Col>
 
                   <Col {...Span[1]}>
-                    <Form.Item>
+                    <Form.Item name="message">
                       <Input.TextArea
                         placeholder="Message"
                         autoSize={{ minRows: 5, maxRows: 10 }}
@@ -142,7 +156,11 @@ export const ContactPage = () => {
 
                   <Col {...Span[1]}>
                     <Form.Item noStyle>
-                      <Button type="primary" style={{ width: "100%" }}>
+                      <Button
+                        type="primary"
+                        style={{ width: "100%" }}
+                        onClick={handleSubmit}
+                      >
                         Submit
                       </Button>
                     </Form.Item>
