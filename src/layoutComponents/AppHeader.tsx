@@ -84,7 +84,7 @@ export const AppHeader = () => {
   }, []);
 
   const handleLogin = () => {
-    window.open("https://www.tc-workflow.com", "_blank");
+    window.open("https://www.stepworkflow.thecloudworlds.com", "_blank");
   };
 
   const headerScrollStyle: CSSProperties = {

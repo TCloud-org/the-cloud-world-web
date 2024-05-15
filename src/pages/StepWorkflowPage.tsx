@@ -75,7 +75,10 @@ export const StepWorkflowPage = () => {
                 type="primary"
                 iconPosition="end"
                 onClick={() =>
-                  window.open("https://www.tc-workflow.com", "_blank")
+                  window.open(
+                    "https://www.stepworkflow.thecloudworlds.com",
+                    "_blank"
+                  )
                 }
               >
                 Get started

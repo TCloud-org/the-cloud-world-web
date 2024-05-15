@@ -156,11 +156,11 @@ export const ContactPage = () => {
                     <Form.Item noStyle>
                       <Typography.Text>
                         By submitting this form, you agree to our{" "}
-                        <Typography.Link href="https://www.tc-workflow.com/terms-and-conditions">
+                        <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/terms-and-conditions">
                           Terms and Conditions
                         </Typography.Link>{" "}
                         and{" "}
-                        <Typography.Link href="https://www.tc-workflow.com/privacy-policy">
+                        <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/privacy-policy">
                           Privacy Policy
                         </Typography.Link>
                       </Typography.Text>

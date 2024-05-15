@@ -54,7 +54,7 @@ export const PricingTier = (props: { data: any }) => {
           target="_blank"
           href={
             data.href ||
-            `https://www.tc-workflow.com?product=StepWorkflow&tier=${data.key}`
+            `https://www.stepworkflow.thecloudworlds.com?product=StepWorkflow&tier=${data.key}`
           }
           variant={emphasized ? "solid" : "outlined"}
         >
