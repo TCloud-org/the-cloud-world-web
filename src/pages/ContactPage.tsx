@@ -9,6 +9,7 @@ import {
   Row,
   Select,
   Typography,
+  message,
   theme,
 } from "antd";
 import { CompanySizes, Countries } from "../config/businessConfig";
@@ -17,17 +18,25 @@ import { DownOutlined } from "@ant-design/icons";
 import { Span } from "../config/layoutConfig";
 import { wosContactMe } from "../config/wosEndpointConfig";
 import axios from "axios";
+import { useState } from "react";
 
 export const ContactPage = () => {
   const { token } = theme.useToken();
+  const [messageApi, contextHolder] = message.useMessage();
   const [form] = Form.useForm();
 
-  const handleSubmit = () => {
-    axios.post(wosContactMe, { ...form.getFieldsValue() });
+  const [sentLoading, setSentLoading] = useState<boolean>(false);
+
+  const handleSubmit = async () => {
+    setSentLoading(true);
+    await axios.post(wosContactMe, { ...form.getFieldsValue() });
+    setSentLoading(false);
+    messageApi.success("Message sent!");
   };
 
   return (
     <Flex vertical>
+      {contextHolder}
       <Flex vertical>
         <div style={{ height: HeaderHeight }} />
 
@@ -160,6 +169,7 @@ export const ContactPage = () => {
                         type="primary"
                         style={{ width: "100%" }}
                         onClick={handleSubmit}
+                        loading={sentLoading}
                       >
                         Submit
                       </Button>
