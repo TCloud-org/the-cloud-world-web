@@ -6,7 +6,7 @@ export const PricingTier = (props: { data: any }) => {
   const { token } = theme.useToken();
   const { data } = props;
 
-  const emphasized = data.emphasize;
+  const emphasized = data.emphasized;
   return (
     <Card
       bordered={false}
@@ -33,22 +33,24 @@ export const PricingTier = (props: { data: any }) => {
           {data.description}
         </Typography.Paragraph>
 
-        <Typography.Text
-          style={{
-            fontWeight: 500,
-            fontSize: 20,
-            textAlign: "center",
-          }}
-          className="text-white h-8"
-        >
+        <Flex vertical className="text-center">
           <Typography.Text
             style={{ fontSize: 24, fontWeight: 700 }}
             className="text-white"
           >
             {data.price}
-          </Typography.Text>{" "}
-          {data.unit}
-        </Typography.Text>
+          </Typography.Text>
+          <Typography.Text
+            style={{
+              fontWeight: 500,
+              fontSize: 18,
+              textAlign: "center",
+            }}
+            className="text-white h-8"
+          >
+            {data.unit}
+          </Typography.Text>
+        </Flex>
 
         <PricingButton
           target="_blank"

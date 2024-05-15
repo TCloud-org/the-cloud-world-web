@@ -24,14 +24,22 @@ const options = [
   },
 ];
 
+export enum ProductTierType {
+  FREE_TIER = "FREE_TIER",
+  STARTUP = "STARTUP",
+  SCALEUP = "SCALEUP",
+  ENTERPRISE = "ENTERPRISE",
+}
+
 const plans = [
   {
-    key: "freeTier",
+    key: ProductTierType.FREE_TIER,
     plan: "Free Tier",
     description: `Experience our platform with limited usage and access at no cost.`,
-    price: "$0",
-    unit: "up to 5000 transitions",
+    price: "Free",
+    unit: "$0.000025 thereafter",
     features: [
+      "Up to 5000 transitions",
       "Limited access to our RESTful Step Workflow APIs",
       "Tracking",
       "1 day workflow task retention",
@@ -39,12 +47,14 @@ const plans = [
     ],
   },
   {
-    key: "startup",
+    key: ProductTierType.STARTUP,
     plan: "Startup",
     description: `Scale your usage and enjoy increased access to advanced features.`,
-    price: "$0.00004",
+    price: "$0.00005",
     unit: "per transition",
     features: [
+      "Free first 5000 transitions",
+      "Unlimited transitions",
       "Expanded access to our RESTful Step Workflow APIs",
       "Tracking and querying",
       "Up to 30 days workflow task retention",
@@ -53,13 +63,15 @@ const plans = [
     ],
   },
   {
-    key: "scaleup",
+    key: ProductTierType.SCALEUP,
     plan: "Scaleup",
     description: `Accelerate Your Growth. Scale and unlock advanced features for accelerated success.`,
-    price: "$0.00011",
+    price: "$0.00015",
     unit: "per transition",
-    emphasize: true,
+    emphasized: true,
     features: [
+      "Free first 5000 transitions",
+      "Unlimited transitions",
       "Full access to our RESTful Step Workflow APIs",
       "Tracking, querying, batching, and analytics",
       "Up to 90 days workflow task retention",
@@ -70,11 +82,13 @@ const plans = [
     ],
   },
   {
-    key: "enterprise",
+    key: ProductTierType.ENTERPRISE,
     plan: "Enterprise",
     description: `Propel Your Business Forward. Customize your plan to suit your business needs.`,
     price: "Custom pricing",
     features: [
+      "Free first 5000 transitions",
+      "Unlimited transitions",
       "Full access to our RESTful Step Workflow APIs",
       "Tracking, querying, batching, and analytics",
       "Up to 120 days workflow task retention",

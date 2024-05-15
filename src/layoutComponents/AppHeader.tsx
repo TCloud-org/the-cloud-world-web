@@ -1,10 +1,9 @@
+import { DownOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
+import { CSSProperties, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
-import { ProductMenu } from "../navigationComponents/ProductMenu";
-import { DownOutlined } from "@ant-design/icons";
-import { CSSProperties, useEffect, useState } from "react";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 
 const renderItems = (props: { isFlipColor: boolean }) => [
@@ -18,7 +17,7 @@ const renderItems = (props: { isFlipColor: boolean }) => [
       <Dropdown
         placement="bottom"
         menu={{ items: [] }}
-        dropdownRender={() => <ProductMenu />}
+        // dropdownRender={() => <ProductMenu />}
       >
         <Flex
           align="center"
