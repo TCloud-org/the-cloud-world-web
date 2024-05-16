@@ -147,7 +147,7 @@ export const AppHeader = () => {
   const location = useLocation();
   const { token } = theme.useToken();
   const [scrollStart, setScrollStart] = useState<boolean>(false);
-  const [menuOpen, setMenuOpen] = useState<boolean>(true);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const currentPath = location.pathname.split("/").splice(-1)[0];
   const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
