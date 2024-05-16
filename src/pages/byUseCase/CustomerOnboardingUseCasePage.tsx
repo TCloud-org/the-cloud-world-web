@@ -27,9 +27,7 @@ export const CustomerOnboardingUseCasePage = () => {
             />
           </Col>
 
-          <Col {...Span[2]}>
-            <PageHeading title="Cheese" description="Ok" />
-          </Col>
+          <Col {...Span[2]}></Col>
         </LandingContainer>
       </Flex>
     </Flex>
