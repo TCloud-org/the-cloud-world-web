@@ -116,6 +116,7 @@ const renderItems = (props: { isFlipColor: boolean }) => [
 
 const flipColor: any = {
   "": true,
+  "step-workflow": true,
 };
 
 export const HeaderHeight = 64;
@@ -223,10 +224,9 @@ export const AppHeader = () => {
           <PricingButton
             href="https://www.stepworkflow.thecloudworlds.com"
             target="_blank"
+            style={{ paddingTop: "6px", paddingBottom: "6px" }}
             className={
-              !isFlipColor
-                ? "rounded-md py-1 ring-0 bg-black"
-                : "rounded-md py-1"
+              !isFlipColor ? "rounded-md ring-0 bg-black" : "rounded-md"
             }
             variant={!isFlipColor ? undefined : "solid"}
           >

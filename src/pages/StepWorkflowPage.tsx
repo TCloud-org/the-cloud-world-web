@@ -22,6 +22,7 @@ import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity"
 import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { PricingButton } from "../dataEntryComponents/PricingButton";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -58,53 +59,64 @@ export const StepWorkflowPage = () => {
 
   return (
     <Flex vertical>
-      <div style={{ height: HeaderHeight }} />
-      <Row gutter={[64, 64]} style={{ padding: "128px 64px" }}>
-        <Col {...Span[2]}>
-          <Flex vertical gap={16}>
-            <Typography.Title level={1} style={{ marginTop: 0, fontSize: 44 }}>
-              Streamline asynchronous processes: Unlock business efficiency
-            </Typography.Title>
-            <Typography.Paragraph style={{ fontSize: 18 }}>
-              TCW Step Workflow is the easiest and most comprehensive way to
-              streamline and manage asynchronous processes effortlessly.
-            </Typography.Paragraph>
-
-            <Flex align="center" gap={16}>
-              <Button
-                type="primary"
-                iconPosition="end"
-                onClick={() =>
-                  window.open(
-                    "https://www.stepworkflow.thecloudworlds.com",
-                    "_blank"
-                  )
-                }
+      <Flex vertical className="bg-img overflow-hidden items-center">
+        <div style={{ height: HeaderHeight }} />
+        <Row
+          gutter={[64, 64]}
+          style={{ padding: "128px 64px" }}
+          className="items-center max-w-screen-2xl"
+        >
+          <Col {...Span[2]}>
+            <Flex vertical gap={16}>
+              <Typography.Title
+                level={1}
+                style={{ marginTop: 0, fontSize: 44, color: "white" }}
               >
-                Get started
-              </Button>
-
-              <Button
-                iconPosition="end"
-                type="link"
-                icon={<RightOutlined style={{ fontSize: 10 }} />}
-                style={{ color: token.colorPrimary }}
-                onClick={routeToContact}
+                Streamline asynchronous processes: Unlock business efficiency
+              </Typography.Title>
+              <Typography.Paragraph
+                style={{ fontSize: 18 }}
+                className="text-white"
               >
-                Contact sales
-              </Button>
+                TCW Step Workflow is the easiest and most comprehensive way to
+                streamline and manage asynchronous processes effortlessly.
+              </Typography.Paragraph>
+
+              <Flex align="center" gap={16}>
+                <Flex>
+                  <PricingButton
+                    href="https://www.stepworkflow.thecloudworlds.com"
+                    target="_blank"
+                    variant="solid"
+                  >
+                    Get started
+                  </PricingButton>
+                </Flex>
+
+                <Flex>
+                  <Button
+                    iconPosition="end"
+                    type="link"
+                    icon={<RightOutlined style={{ fontSize: 10 }} />}
+                    style={{ color: token.colorWhite, fontWeight: 600 }}
+                    onClick={routeToContact}
+                    className="link-hover"
+                  >
+                    Contact sales
+                  </Button>
+                </Flex>
+              </Flex>
             </Flex>
-          </Flex>
-        </Col>
-        <Col {...Span[2]}>
-          <Image
-            src="https://tcw-images.s3.us-west-2.amazonaws.com/api-workflow-1.png"
-            className="shadow"
-            preview={false}
-            style={{ borderRadius: token.borderRadiusLG }}
-          />
-        </Col>
-      </Row>
+          </Col>
+          <Col {...Span[2]}>
+            <Image
+              src="https://tcw-images.s3.us-west-2.amazonaws.com/StepWorkflow.png"
+              preview={false}
+              width="200%"
+            />
+          </Col>
+        </Row>
+      </Flex>
 
       <Tenets tenets={tenets} />
 

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 export const PricingButton = (props: {
   children?: string | ReactNode;
@@ -6,6 +6,7 @@ export const PricingButton = (props: {
   target?: string;
   variant?: string;
   className?: string;
+  style?: CSSProperties;
 }) => {
   if (props.variant === "solid") {
     return (
@@ -14,7 +15,7 @@ export const PricingButton = (props: {
         color="white"
         aria-label="Pricing link"
         {...props}
-        style={{ transition: "color 0.2s" }}
+        style={{ transition: "color 0.3s", ...props.style }}
         className={`group inline-flex items-center justify-center w-full hover:text-slate-900 rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white ${props.className}`}
       />
     );
@@ -24,7 +25,7 @@ export const PricingButton = (props: {
       color="white"
       aria-label="Pricing link"
       {...props}
-      style={{ transition: "color 0.2s" }}
+      style={{ transition: "color 0.3s", ...props.style }}
       className={`group inline-flex ring-1 items-center justify-center w-full hover:text-white rounded-full py-2 px-4 text-sm font-semibold focus:outline-none ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white ${props.className}`}
     />
   );

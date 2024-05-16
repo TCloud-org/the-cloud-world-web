@@ -1,6 +1,6 @@
 import { Row } from "antd";
 import { CSSProperties, ReactNode } from "react";
-import { lightColor } from "../config/layoutConfig";
+import { SectionContainer } from "../layoutComponents/SectionContainer";
 
 export const LandingContainer = (props: {
   light?: boolean;
@@ -10,18 +10,18 @@ export const LandingContainer = (props: {
   gutter?: [number, number];
 }) => {
   return (
-    <Row
-      style={{
-        padding: "128px 64px",
-        backgroundColor: props.light ? lightColor : undefined,
-        justifyContent: "center",
-        alignItems: "center",
-        ...props.style,
-      }}
-      gutter={props.gutter}
-      className={props.className}
-    >
-      {props.children}
-    </Row>
+    <SectionContainer light={props.light} className={props.className}>
+      <Row
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          ...props.style,
+        }}
+        gutter={props.gutter}
+        className="max-w-screen-2xl"
+      >
+        {props.children}
+      </Row>
+    </SectionContainer>
   );
 };

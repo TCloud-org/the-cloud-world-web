@@ -30,6 +30,14 @@ code {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
+.link-hover {
+  transition: all 0.3s;
+}
+
+.link-hover:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
 .landing-button {
   background-color: #000;
   border-color    : #fff;
