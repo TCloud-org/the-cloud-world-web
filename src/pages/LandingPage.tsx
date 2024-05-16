@@ -6,13 +6,15 @@ import {
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
-import { Col, Flex, Row, Typography, theme } from "antd";
+import { Col, Flex, Row, Typography } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
 import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
 import { LandingImage } from "../dataDisplayComponents/LandingImage";
 import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
+import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 
@@ -55,43 +57,35 @@ const elevateWith: Elevation[] = [
   },
 ];
 export const LandingPage = () => {
-  const { token } = theme.useToken();
-
   return (
     <Flex vertical>
       <Flex vertical className="bg-img">
         <div style={{ height: HeaderHeight }} />
-        <Row gutter={[32, 32]} style={{ padding: "128px 64px" }}>
+        <LandingContainer>
           <Col {...Span[2]}>
-            <Flex vertical gap={32}>
-              <Typography.Title
-                level={1}
-                style={{ color: token.colorWhite, margin: 0 }}
-              >
-                Effortless API Optimization Infrastructure
-              </Typography.Title>
-              <Typography.Paragraph style={{ color: token.colorWhite }}>
-                Dive into our innovative solutions designed to revolutionize
-                your onboarding and streamline asynchronous processes.
-                Experience the power of optimized API latency and slashed
-                maintenance costs, tailored for businesses of all sizes and
-                industries.
-              </Typography.Paragraph>
-
-              <Flex>
-                <div>
-                  <PricingButton href="/contact" variant="solid">
-                    Request demo
-                  </PricingButton>
-                </div>
-              </Flex>
-            </Flex>
+            <PageHeading
+              title="Effortless API Optimization Infrastructure"
+              description="Dive into our innovative solutions designed to revolutionize
+              your onboarding and streamline asynchronous processes.
+              Experience the power of optimized API latency and slashed
+              maintenance costs, tailored for businesses of all sizes and
+              industries."
+              endDecorator={
+                <Flex>
+                  <div>
+                    <PricingButton href="/contact" variant="solid">
+                      Request demo
+                    </PricingButton>
+                  </div>
+                </Flex>
+              }
+            />
           </Col>
 
           <Col {...Span[2]}>
             <LandingImage />
           </Col>
-        </Row>
+        </LandingContainer>
       </Flex>
 
       <Flex vertical align="center" style={{ padding: "128px 64px" }} gap={64}>
