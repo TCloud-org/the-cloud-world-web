@@ -64,7 +64,7 @@ export const LandingPage = () => {
 
   return (
     <Flex vertical>
-      <Flex vertical>
+      <Flex vertical className="aurora">
         <div style={{ height: HeaderHeight }} />
         <Row gutter={[32, 32]} style={{ padding: "128px 64px" }}>
           <Col {...Span[2]}>
