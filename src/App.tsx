@@ -17,12 +17,16 @@ function App() {
   const Wrapper = () => {
     const { token } = theme.useToken();
     return (
-      <Layout style={{ minHeight: "100vh", maxWidth: "100vw" }}>
+      <Layout
+        style={{ minHeight: "100vh", maxWidth: "100vw" }}
+        id="outer-container"
+      >
         <AppHeader />
         <Content
           style={{
             background: token.colorBgContainer,
           }}
+          id="page-wrap"
         >
           <Outlet />
         </Content>

@@ -307,3 +307,9 @@ code {
   background-size    : cover;
   background-position: center;
 }
+
+.bg-light-img {
+  background-image   : url('https://tcw-images.s3.us-west-2.amazonaws.com/light-bg.jpg');
+  background-size    : cover;
+  background-position: center;
+}

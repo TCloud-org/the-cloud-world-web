@@ -6,6 +6,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
+import { Fade as Hamburger } from "hamburger-react";
+import { slide as Menu } from "react-burger-menu";
 
 const renderItems = (props: { isFlipColor: boolean }) => [
   {
@@ -126,6 +128,7 @@ export const AppHeader = () => {
   const location = useLocation();
   const { token } = theme.useToken();
   const [scrollStart, setScrollStart] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const currentPath = location.pathname.split("/").splice(-1)[0];
   const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
@@ -156,84 +159,117 @@ export const AppHeader = () => {
   };
 
   return (
-    <Header
-      style={{
-        display: "flex",
-        alignItems: "center",
-        position: "fixed",
-        top: 0,
-        zIndex: 999,
-        width: "100%",
-        justifyContent: "space-between",
-        transition: "all 0.3s",
-        ...(scrollStart ? headerScrollStyle : headerStyle),
-      }}
-    >
-      <Flex align="center" flex={1}>
+    <>
+      <Header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          position: "fixed",
+          top: 0,
+          zIndex: 999,
+          width: "100%",
+          justifyContent: "space-between",
+          transition: "all 0.3s",
+          ...(scrollStart ? headerScrollStyle : headerStyle),
+        }}
+        className="px-2 lg:px-8"
+      >
+        <Flex align="center" flex={1}>
+          <Flex
+            align="center"
+            gap={8}
+            onClick={() => navigate("/")}
+            style={{ padding: 16, cursor: "pointer" }}
+          >
+            <AppLogo flip={isFlipColor} />
+            <Typography.Text
+              strong
+              style={{ color: !isFlipColor ? "black" : "white" }}
+            >
+              The Cloud World
+            </Typography.Text>
+          </Flex>
+        </Flex>
+
         <Flex
           align="center"
-          gap={8}
-          onClick={() => navigate("/")}
-          style={{ padding: 16, cursor: "pointer" }}
+          flex={2}
+          justify="center"
+          gap={32}
+          className="hidden lg:flex"
         >
-          <AppLogo flip={isFlipColor} />
-          <Typography.Text
-            strong
-            style={{ color: !isFlipColor ? "black" : "white" }}
-          >
-            The Cloud World
-          </Typography.Text>
+          {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
+            <div key={i}>
+              {item.render ? (
+                item.render()
+              ) : (
+                <a
+                  href={item.href}
+                  style={{ color: !isFlipColor ? undefined : "white" }}
+                  className="link"
+                >
+                  {item.label}
+                </a>
+              )}
+            </div>
+          ))}
         </Flex>
-      </Flex>
 
-      <Flex
-        align="center"
-        flex={2}
-        justify="center"
-        gap={32}
-        className="hidden lg:flex"
-      >
-        {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
-          <div key={i}>
-            {item.render ? (
-              item.render()
-            ) : (
-              <a
-                href={item.href}
-                style={{ color: !isFlipColor ? undefined : "white" }}
-                className="link"
-              >
-                {item.label}
-              </a>
-            )}
-          </div>
-        ))}
-      </Flex>
-
-      <Flex flex={1} justify="flex-end" align="center" gap={32}>
-        <a
-          href="https://www.documentation.thecloudworlds.com"
-          target="_blank"
-          className="link"
-          rel="noreferrer"
-          style={{ color: !isFlipColor ? undefined : "white" }}
-        >
-          Docs
-        </a>
-        <div>
-          <PricingButton
-            href="https://www.stepworkflow.thecloudworlds.com"
+        <Flex flex={1} justify="flex-end" align="center" gap={32}>
+          <a
+            href="https://www.documentation.thecloudworlds.com"
             target="_blank"
-            style={{ paddingTop: "6px", paddingBottom: "6px" }}
-            className={
-              !isFlipColor ? "rounded-md ring-0 bg-black" : "rounded-md"
-            }
-            variant={!isFlipColor ? undefined : "solid"}
+            className="link"
+            rel="noreferrer"
+            style={{ color: !isFlipColor ? undefined : "white" }}
           >
-            Login
-          </PricingButton>
-        </div>
-      </Flex>
-    </Header>
+            Docs
+          </a>
+          <div>
+            <PricingButton
+              href="https://www.stepworkflow.thecloudworlds.com"
+              target="_blank"
+              style={{ paddingTop: "6px", paddingBottom: "6px" }}
+              className={
+                !isFlipColor ? "rounded-md ring-0 bg-black" : "rounded-md"
+              }
+              variant={!isFlipColor ? undefined : "solid"}
+            >
+              Login
+            </PricingButton>
+          </div>
+
+          <div className="block lg:hidden">
+            <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={20} />
+          </div>
+        </Flex>
+      </Header>
+      <Menu
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        pageWrapId={"page-wrap"}
+        outerContainerId={"outer-container"}
+        right
+        burgerButtonClassName="hidden"
+      >
+        <Flex vertical className="bg-white h-full">
+          {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
+            <div key={i}>
+              {item.render ? (
+                item.render()
+              ) : (
+                <a
+                  href={item.href}
+                  style={{ color: !isFlipColor ? undefined : "white" }}
+                  className="link"
+                >
+                  {item.label}
+                </a>
+              )}
+            </div>
+          ))}
+        </Flex>
+      </Menu>
+    </>
   );
 };

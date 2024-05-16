@@ -116,7 +116,7 @@ export const PricingPage = () => {
       <Flex
         vertical
         align="center"
-        className="bg-slate-50 px-16 py-32 relative"
+        className="px-16 py-32 relative bg-light-img"
       >
         <div style={{ height: HeaderHeight }} />
 
