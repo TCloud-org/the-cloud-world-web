@@ -15,14 +15,14 @@ export const LandingContactSales = (props: {
   } = props;
   return (
     <LandingContainer className="bg-transparent bg-img w-full" gutter={[0, 0]}>
-      <Flex vertical gap={32} align="center">
+      <Flex vertical gap={32} align="center" className="text-center">
         <Typography.Title level={2} style={{ margin: 0, color: "white" }}>
           {title}
         </Typography.Title>
 
         <Typography.Paragraph
           style={{ textAlign: "center" }}
-          className="text-white text-lg px-4 lg:px-60"
+          className="text-white text-lg px-0 lg:px-60"
         >
           {description}
         </Typography.Paragraph>
