@@ -17,7 +17,7 @@ export const LandingContainer = (props: {
           alignItems: "center",
           ...props.style,
         }}
-        gutter={props.gutter}
+        gutter={props.gutter || [64, 64]}
         className="max-w-screen-2xl"
       >
         {props.children}
