@@ -1,13 +1,15 @@
-import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
 import { Col, Flex, Row, Typography, theme } from "antd";
 import { Span } from "../config/layoutConfig";
 import { IconMenuItem } from "../dataEntryComponents/IconMenuItem";
 
 const menuItemWidth = 300;
 
-export const ProductMenu = (props: { onOpen?: (e: boolean) => void }) => {
+export const ProductMenu = (props: {
+  onOpen?: (e: boolean) => void;
+  menu?: any[];
+}) => {
   const { token } = theme.useToken();
-  const { onOpen = () => {} } = props;
+  const { onOpen = () => {}, menu = [] } = props;
 
   return (
     <Flex
@@ -19,35 +21,31 @@ export const ProductMenu = (props: { onOpen?: (e: boolean) => void }) => {
       }}
     >
       <Row gutter={[16, 16]}>
-        <Col {...Span[2]} style={{ width: menuItemWidth }}>
-          <Flex vertical gap={8}>
-            <Typography.Text strong style={{ marginLeft: 8 }}>
-              Optimization
-            </Typography.Text>
-            <IconMenuItem
-              icon={<PartitionOutlined />}
-              href="/products/step-workflow"
-              onOpen={onOpen}
-            >
-              Step Workflow
-            </IconMenuItem>
-          </Flex>
-        </Col>
-
-        <Col {...Span[2]} style={{ width: menuItemWidth }}>
-          <Flex vertical gap={8}>
-            <Typography.Text strong style={{ marginLeft: 8 }}>
-              Automation
-            </Typography.Text>
-            <IconMenuItem
-              icon={<SendOutlined />}
-              onOpen={onOpen}
-              href="/products/email-notification-workflow"
-            >
-              Email Notification Workflow
-            </IconMenuItem>
-          </Flex>
-        </Col>
+        {menu.map((menuItem, i) => (
+          <Col {...Span[2]} style={{ width: menuItemWidth }} key={i}>
+            <Flex vertical gap={8}>
+              <Typography.Text
+                strong
+                style={{ marginLeft: 8 }}
+                className="text-slate-800 uppercase"
+              >
+                {menuItem.label}
+              </Typography.Text>
+              {(menuItem?.children || [])
+                .sort((a: any, b: any) => a.label.localeCompare(b.label))
+                .map((item: any, j: number) => (
+                  <IconMenuItem
+                    icon={item.icon}
+                    href={item.href}
+                    onOpen={onOpen}
+                    key={`${i}-${j}`}
+                  >
+                    {item.label}
+                  </IconMenuItem>
+                ))}
+            </Flex>
+          </Col>
+        ))}
       </Row>
     </Flex>
   );

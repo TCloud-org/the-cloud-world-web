@@ -25,14 +25,15 @@ export const IconMenuItem = (props: {
     >
       <Flex
         style={{
-          backgroundColor: `${token.colorPrimaryBgHover}55`,
+          backgroundColor: `${token.colorPrimaryBgHover}33`,
           borderRadius: token.borderRadius,
-          padding: 6,
+          padding: 8,
         }}
       >
-        {cloneElement(props.icon as ReactElement, {
-          style: { color: token.colorPrimary, fontSize: "12px" },
-        })}
+        {props.icon &&
+          cloneElement(props.icon as ReactElement, {
+            style: { color: token.colorPrimary },
+          })}
       </Flex>
       <Typography.Text strong>{props.children}</Typography.Text>
     </Flex>

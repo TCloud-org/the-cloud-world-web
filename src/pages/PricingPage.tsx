@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
+import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 
 const options = [
   {
@@ -200,19 +201,10 @@ export const PricingPage = () => {
         </Flex>
       </div>
 
-      <div className="bg-slate-50 py-20 sm:py-32 text-center">
-        <Typography.Title level={3}>
-          Have questions about pricing?
-        </Typography.Title>
-
-        <Typography.Paragraph className="text-lg">
-          We're here to help
-        </Typography.Paragraph>
-
-        <Button type="primary" onClick={() => navigate("/contact")}>
-          Contact Us
-        </Button>
-      </div>
+      <LandingContactSales
+        title="Have questions about pricing?"
+        description="We're here to help. Contact us to learn more about pricing"
+      />
 
       <Modal
         title="Price calculator"

@@ -16,7 +16,7 @@ function App() {
   const Wrapper = () => {
     const { token } = theme.useToken();
     return (
-      <Layout style={{ minHeight: "100vh" }}>
+      <Layout style={{ minHeight: "100vh", maxWidth: "100vw" }}>
         <AppHeader />
         <Content
           style={{

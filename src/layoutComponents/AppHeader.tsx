@@ -1,4 +1,8 @@
-import { DownOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  PartitionOutlined,
+  SendOutlined,
+} from "@ant-design/icons";
 import { Button, Dropdown, Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { CSSProperties, useEffect, useState } from "react";
@@ -9,37 +13,98 @@ import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 const renderItems = (props: { isFlipColor: boolean }) => [
   {
     label: "Products",
-    render: () => <ProductsDropdown isFlipColor={props.isFlipColor} />,
+    render: () => (
+      <ProductsDropdown
+        title="Products"
+        isFlipColor={props.isFlipColor}
+        menu={[
+          {
+            label: "Optimization",
+            children: [
+              {
+                label: "Step Workflow",
+                href: "/products/step-workflow",
+                icon: <PartitionOutlined />,
+              },
+            ],
+          },
+          {
+            label: "Automation",
+            children: [
+              {
+                label: "Email Notification Workflow",
+                href: "/products/email-notification-workflow",
+                icon: <SendOutlined />,
+              },
+            ],
+          },
+        ]}
+      />
+    ),
   },
   {
     label: "Solutions",
     render: () => (
-      <Dropdown
-        placement="bottom"
-        menu={{ items: [] }}
-        // dropdownRender={() => <ProductMenu />}
-      >
-        <Flex
-          align="center"
-          gap={6}
-          style={{ cursor: "pointer" }}
-          className="rotate-trigger"
-        >
-          <Typography.Text
-            className="link"
-            style={{ color: !props.isFlipColor ? undefined : "white" }}
-          >
-            Solutions
-          </Typography.Text>
-          <DownOutlined
-            style={{
-              fontSize: "8px",
-              color: !props.isFlipColor ? undefined : "white",
-            }}
-            className="link rotate"
-          />
-        </Flex>
-      </Dropdown>
+      <ProductsDropdown
+        title="Solutions"
+        isFlipColor={props.isFlipColor}
+        menu={[
+          {
+            label: "By Use Case",
+            children: [
+              {
+                label: "Integration Hub",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Notification Management",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Customer Onboarding",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Business Process Automation",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Compliance Processes",
+                href: "/products/step-workflow",
+              },
+            ],
+          },
+          {
+            label: "By Industry",
+            children: [
+              {
+                label: "E-commerce",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Healthcare",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Finance",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Manufacturing",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Retail",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Telecommunications",
+                href: "/products/step-workflow",
+              },
+            ],
+          },
+        ]}
+      />
     ),
   },
   {

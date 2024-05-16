@@ -64,7 +64,7 @@ export const LandingPage = () => {
 
   return (
     <Flex vertical>
-      <Flex vertical className="aurora">
+      <Flex vertical>
         <div style={{ height: HeaderHeight }} />
         <Row gutter={[32, 32]} style={{ padding: "128px 64px" }}>
           <Col {...Span[2]}>
@@ -104,7 +104,8 @@ export const LandingPage = () => {
       <Flex vertical align="center" style={{ padding: "128px 64px" }} gap={64}>
         <Typography.Title
           level={2}
-          style={{ width: "40%", textAlign: "center", margin: 0 }}
+          style={{ textAlign: "center", margin: 0 }}
+          className="px-4 lg:px-40"
         >
           Let automation elevate your background tasks with the highest
           efficiency

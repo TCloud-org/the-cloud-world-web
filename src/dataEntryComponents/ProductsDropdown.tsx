@@ -3,7 +3,11 @@ import { ProductMenu } from "../navigationComponents/ProductMenu";
 import { DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
-export const ProductsDropdown = (props: { isFlipColor?: boolean }) => {
+export const ProductsDropdown = (props: {
+  isFlipColor?: boolean;
+  title?: string;
+  menu?: any[];
+}) => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
@@ -12,7 +16,7 @@ export const ProductsDropdown = (props: { isFlipColor?: boolean }) => {
       open={open}
       menu={{ items: [] }}
       onOpenChange={(value) => setOpen(value)}
-      dropdownRender={() => <ProductMenu onOpen={setOpen} />}
+      dropdownRender={() => <ProductMenu menu={props.menu} onOpen={setOpen} />}
     >
       <Flex
         align="center"
@@ -24,7 +28,7 @@ export const ProductsDropdown = (props: { isFlipColor?: boolean }) => {
           className="link"
           style={{ color: !props.isFlipColor ? undefined : "white" }}
         >
-          Products
+          {props.title}
         </Typography.Text>
         <DownOutlined
           style={{
