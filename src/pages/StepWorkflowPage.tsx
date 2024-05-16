@@ -113,6 +113,7 @@ export const StepWorkflowPage = () => {
               src="https://tcw-images.s3.us-west-2.amazonaws.com/StepWorkflow.png"
               preview={false}
               width="200%"
+              fetchPriority="high"
             />
           </Col>
         </Row>
