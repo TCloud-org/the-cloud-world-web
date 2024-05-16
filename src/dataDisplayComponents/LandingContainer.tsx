@@ -7,6 +7,7 @@ export const LandingContainer = (props: {
   children?: ReactNode;
   className?: string;
   style?: CSSProperties;
+  gutter?: [number, number];
 }) => {
   return (
     <Row
@@ -17,7 +18,7 @@ export const LandingContainer = (props: {
         alignItems: "center",
         ...props.style,
       }}
-      gutter={[64, 64]}
+      gutter={props.gutter}
       className={props.className}
     >
       {props.children}

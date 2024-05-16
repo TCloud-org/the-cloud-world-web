@@ -10,11 +10,10 @@ import {
   theme,
 } from "antd";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { PricingTier } from "../dataDisplayComponents/PricingTier";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { PricingTier } from "../dataDisplayComponents/PricingTier";
+import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 const options = [
   {
@@ -107,7 +106,6 @@ const plans = [
 const priceGap = 16;
 
 export const PricingPage = () => {
-  const navigate = useNavigate();
   const { token } = theme.useToken();
 
   const [value, setValue] = useState<string>("Step Workflow");

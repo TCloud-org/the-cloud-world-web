@@ -1,13 +1,10 @@
-import {
-  DownOutlined,
-  PartitionOutlined,
-  SendOutlined,
-} from "@ant-design/icons";
-import { Button, Dropdown, Flex, Typography, theme } from "antd";
+import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
+import { Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { CSSProperties, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
+import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 
 const renderItems = (props: { isFlipColor: boolean }) => [
@@ -62,7 +59,7 @@ const renderItems = (props: { isFlipColor: boolean }) => [
               },
               {
                 label: "Customer Onboarding",
-                href: "/products/step-workflow",
+                href: "/solutions/by-use-case/customer-onboarding",
               },
               {
                 label: "Business Process Automation",
@@ -147,10 +144,6 @@ export const AppHeader = () => {
     };
   }, []);
 
-  const handleLogin = () => {
-    window.open("https://www.stepworkflow.thecloudworlds.com", "_blank");
-  };
-
   const headerScrollStyle: CSSProperties = {
     background: token.colorBgContainer,
     boxShadow: token.boxShadowTertiary,
@@ -226,14 +219,20 @@ export const AppHeader = () => {
         >
           Docs
         </a>
-        <Button
-          type={!isFlipColor ? "primary" : "text"}
-          onClick={handleLogin}
-          className={!isFlipColor ? undefined : "landing-button"}
-          style={{ fontWeight: 400 }}
-        >
-          Login
-        </Button>
+        <div>
+          <PricingButton
+            href="https://www.stepworkflow.thecloudworlds.com"
+            target="_blank"
+            className={
+              !isFlipColor
+                ? "rounded-md py-1 ring-0 bg-black"
+                : "rounded-md py-1"
+            }
+            variant={!isFlipColor ? undefined : "solid"}
+          >
+            Login
+          </PricingButton>
+        </div>
       </Flex>
     </Header>
   );

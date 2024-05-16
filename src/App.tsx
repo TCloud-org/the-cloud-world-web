@@ -11,6 +11,7 @@ import { PricingPage } from "./pages/PricingPage";
 import { ContactPage } from "./pages/ContactPage";
 import { StepWorkflowPage } from "./pages/StepWorkflowPage";
 import { EmailNotificationWorkflowPage } from "./pages/EmailNotificationWorkflowPage";
+import { CustomerOnboardingUseCasePage } from "./pages/byUseCase/CustomerOnboardingUseCasePage";
 
 function App() {
   const Wrapper = () => {
@@ -58,6 +59,10 @@ function App() {
         {
           path: "/products/email-notification-workflow",
           element: <EmailNotificationWorkflowPage />,
+        },
+        {
+          path: "/solutions/by-use-case/customer-onboarding",
+          element: <CustomerOnboardingUseCasePage />,
         },
       ],
     },

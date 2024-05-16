@@ -6,15 +6,15 @@ import {
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
-import { Button, Col, Flex, Row, Typography, theme } from "antd";
+import { Col, Flex, Row, Typography, theme } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
-import { LandingImage } from "../dataDisplayComponents/LandingImage";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
-import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
-import { useNavigate } from "react-router-dom";
+import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
+import { LandingImage } from "../dataDisplayComponents/LandingImage";
+import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
+import { PricingButton } from "../dataEntryComponents/PricingButton";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 interface Elevation {
   icon?: ReactNode;
@@ -56,15 +56,10 @@ const elevateWith: Elevation[] = [
 ];
 export const LandingPage = () => {
   const { token } = theme.useToken();
-  const navigate = useNavigate();
-
-  const routeToContact = () => {
-    navigate("/contact");
-  };
 
   return (
     <Flex vertical>
-      <Flex vertical className="aurora">
+      <Flex vertical className="bg-img">
         <div style={{ height: HeaderHeight }} />
         <Row gutter={[32, 32]} style={{ padding: "128px 64px" }}>
           <Col {...Span[2]}>
@@ -84,13 +79,11 @@ export const LandingPage = () => {
               </Typography.Paragraph>
 
               <Flex>
-                <Button
-                  type="text"
-                  className="landing-button"
-                  onClick={routeToContact}
-                >
-                  Request demo
-                </Button>
+                <div>
+                  <PricingButton href="/contact" variant="solid">
+                    Request demo
+                  </PricingButton>
+                </div>
               </Flex>
             </Flex>
           </Col>
