@@ -293,3 +293,9 @@ code {
 .ant-modal-mask {
   backdrop-filter: blur(8px);
 }
+
+.bg-img {
+  background-image   : url('https://tcw-images.s3.us-west-2.amazonaws.com/background.jpg');
+  background-size    : cover;
+  background-position: center;
+}

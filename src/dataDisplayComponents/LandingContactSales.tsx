@@ -1,18 +1,19 @@
-import { Button, Flex, Typography } from "antd";
+import { Flex, Typography } from "antd";
+import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { LandingContainer } from "./LandingContainer";
-import { useNavigate } from "react-router-dom";
 
 export const LandingContactSales = () => {
-  const navigate = useNavigate();
-
   return (
-    <LandingContainer light>
+    <LandingContainer className="bg-transparent bg-img">
       <Flex vertical gap={32} align="center">
-        <Typography.Title level={2} style={{ margin: 0 }}>
+        <Typography.Title level={2} style={{ margin: 0, color: "white" }}>
           Connect with an expert
         </Typography.Title>
 
-        <Typography.Paragraph style={{ textAlign: "center", width: "50%" }}>
+        <Typography.Paragraph
+          style={{ textAlign: "center" }}
+          className="text-white text-lg px-4 lg:px-60"
+        >
           We're here to help accelerate your business launch. Our platform is
           for companies that want to decouple their backend systems to handle
           various asynchronous tasks, significantly reducing latency to maximize
@@ -20,9 +21,9 @@ export const LandingContactSales = () => {
         </Typography.Paragraph>
 
         <Flex justify="center">
-          <Button type="primary" onClick={() => navigate("/contact")}>
+          <PricingButton href="/contact" variant="solid">
             Speak to our team
-          </Button>
+          </PricingButton>
         </Flex>
       </Flex>
     </LandingContainer>
