@@ -1,5 +1,11 @@
 import { RightOutlined } from "@ant-design/icons";
 import {
+  ApiRounded,
+  FastForwardRounded,
+  MonetizationOnRounded,
+  SettingsSuggestRounded,
+} from "@mui/icons-material";
+import {
   Button,
   Col,
   Divider,
@@ -11,17 +17,11 @@ import {
 } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Span } from "../config/layoutConfig";
-import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
+import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
 import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import {
-  ApiRounded,
-  FastForwardRounded,
-  MonetizationOnRounded,
-  SettingsSuggestRounded,
-} from "@mui/icons-material";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -114,22 +114,7 @@ export const StepWorkflowPage = () => {
 
       <StepWorkflowLog />
 
-      <LandingContainer light>
-        <Flex vertical gap={32} align="center">
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, textAlign: "center" }}
-          >
-            Ready to supercharge your projects? Get started today!
-          </Typography.Title>
-
-          <Flex justify="center">
-            <Button type="primary" onClick={routeToContact}>
-              Contact sales
-            </Button>
-          </Flex>
-        </Flex>
-      </LandingContainer>
+      <LandingContactSales />
     </Flex>
   );
 };

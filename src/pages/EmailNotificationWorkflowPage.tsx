@@ -15,9 +15,9 @@ import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Span } from "../config/layoutConfig";
 import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
+import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -183,22 +183,7 @@ export const EmailNotificationWorkflowPage = () => {
         <EmailStep {...step} key={i} index={i} />
       ))}
 
-      <LandingContainer light>
-        <Flex vertical gap={32} align="center">
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, textAlign: "center" }}
-          >
-            Let automation do the work for you
-          </Typography.Title>
-
-          <Flex justify="center">
-            <Button type="primary" onClick={routeToContact}>
-              Speak to our team
-            </Button>
-          </Flex>
-        </Flex>
-      </LandingContainer>
+      <LandingContactSales description="We're here to help accelerate your business launch. Our platform offers an email notification solution with rapid delivery to maximize your business's operational efficiency and enhance customer experience." />
     </Flex>
   );
 };
