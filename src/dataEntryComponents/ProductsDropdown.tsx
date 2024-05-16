@@ -1,4 +1,4 @@
-import { Dropdown, Flex, Typography } from "antd";
+import { Collapse, Dropdown, Flex, Typography } from "antd";
 import { ProductMenu } from "../navigationComponents/ProductMenu";
 import { DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
@@ -7,8 +7,36 @@ export const ProductsDropdown = (props: {
   isFlipColor?: boolean;
   title?: string;
   menu?: any[];
+  menuOpen?: boolean;
 }) => {
+  const { menu = [] } = props;
   const [open, setOpen] = useState<boolean>(false);
+
+  if (props.menuOpen) {
+    return (
+      <Collapse
+        ghost
+        items={[
+          {
+            key: props.title,
+            label: (
+              <Typography.Text style={{ fontWeight: 500 }} className="link">
+                {props.title}
+              </Typography.Text>
+            ),
+            children: (
+              <ProductMenu
+                menuOpen={props.menuOpen}
+                menu={menu}
+                onOpen={setOpen}
+              />
+            ),
+          },
+        ]}
+        expandIconPosition="right"
+      />
+    );
+  }
 
   return (
     <Dropdown
@@ -16,7 +44,7 @@ export const ProductsDropdown = (props: {
       open={open}
       menu={{ items: [] }}
       onOpenChange={(value) => setOpen(value)}
-      dropdownRender={() => <ProductMenu menu={props.menu} onOpen={setOpen} />}
+      dropdownRender={() => <ProductMenu menu={menu} onOpen={setOpen} />}
     >
       <Flex
         align="center"

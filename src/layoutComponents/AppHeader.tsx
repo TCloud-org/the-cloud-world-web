@@ -1,4 +1,8 @@
-import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
+import {
+  CloseOutlined,
+  PartitionOutlined,
+  SendOutlined,
+} from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { CSSProperties, useEffect, useState } from "react";
@@ -9,13 +13,14 @@ import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 import { Fade as Hamburger } from "hamburger-react";
 import { slide as Menu } from "react-burger-menu";
 
-const renderItems = (props: { isFlipColor: boolean }) => [
+const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
   {
     label: "Products",
     render: () => (
       <ProductsDropdown
         title="Products"
-        isFlipColor={props.isFlipColor}
+        isFlipColor={props.isFlipColor && !props.menuOpen}
+        menuOpen={props.menuOpen}
         menu={[
           {
             label: "Optimization",
@@ -46,7 +51,8 @@ const renderItems = (props: { isFlipColor: boolean }) => [
     render: () => (
       <ProductsDropdown
         title="Solutions"
-        isFlipColor={props.isFlipColor}
+        isFlipColor={props.isFlipColor && !props.menuOpen}
+        menuOpen={props.menuOpen}
         menu={[
           {
             label: "By Use Case",
@@ -114,11 +120,24 @@ const renderItems = (props: { isFlipColor: boolean }) => [
     label: "About",
     href: "/about",
   },
+  ...(props.menuOpen
+    ? [
+        {
+          label: "Docs",
+          href: "",
+        },
+        {
+          label: "Login",
+          href: "",
+        },
+      ]
+    : []),
 ];
 
 const flipColor: any = {
   "": true,
   "step-workflow": true,
+  "customer-onboarding": true,
 };
 
 export const HeaderHeight = 64;
@@ -128,7 +147,7 @@ export const AppHeader = () => {
   const location = useLocation();
   const { token } = theme.useToken();
   const [scrollStart, setScrollStart] = useState<boolean>(false);
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(true);
 
   const currentPath = location.pathname.split("/").splice(-1)[0];
   const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;
@@ -157,6 +176,7 @@ export const AppHeader = () => {
     background: "transparent",
     boxShadow: "none",
   };
+  console.log(!isFlipColor || menuOpen);
 
   return (
     <>
@@ -205,7 +225,9 @@ export const AppHeader = () => {
               ) : (
                 <a
                   href={item.href}
-                  style={{ color: !isFlipColor ? undefined : "white" }}
+                  style={{
+                    color: !isFlipColor ? undefined : "white",
+                  }}
                   className="link"
                 >
                   {item.label}
@@ -219,13 +241,13 @@ export const AppHeader = () => {
           <a
             href="https://www.documentation.thecloudworlds.com"
             target="_blank"
-            className="link"
+            className="link hidden lg:block"
             rel="noreferrer"
             style={{ color: !isFlipColor ? undefined : "white" }}
           >
             Docs
           </a>
-          <div>
+          <div className="hidden lg:block">
             <PricingButton
               href="https://www.stepworkflow.thecloudworlds.com"
               target="_blank"
@@ -240,7 +262,12 @@ export const AppHeader = () => {
           </div>
 
           <div className="block lg:hidden">
-            <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={20} />
+            <Hamburger
+              toggled={menuOpen}
+              toggle={setMenuOpen}
+              size={20}
+              color={!isFlipColor ? undefined : "white"}
+            />
           </div>
         </Flex>
       </Header>
@@ -251,23 +278,48 @@ export const AppHeader = () => {
         outerContainerId={"outer-container"}
         right
         burgerButtonClassName="hidden"
+        width={"100%"}
       >
-        <Flex vertical className="bg-white h-full">
-          {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
-            <div key={i}>
-              {item.render ? (
-                item.render()
-              ) : (
-                <a
-                  href={item.href}
-                  style={{ color: !isFlipColor ? undefined : "white" }}
-                  className="link"
-                >
-                  {item.label}
-                </a>
-              )}
+        <Flex vertical className="bg-white h-full px-4">
+          <Flex justify="space-between" className="p-4">
+            <Flex
+              align="center"
+              gap={8}
+              onClick={() => navigate("/")}
+              style={{ cursor: "pointer" }}
+            >
+              <AppLogo />
+              <Typography.Text strong>The Cloud World</Typography.Text>
+            </Flex>
+
+            <div onClick={() => setMenuOpen(false)}>
+              <CloseOutlined
+                style={{ fontSize: 20 }}
+                className="cursor-pointer"
+              />
             </div>
-          ))}
+          </Flex>
+          {renderItems({ isFlipColor: isFlipColor, menuOpen: menuOpen }).map(
+            (item, i) => (
+              <div key={i}>
+                {item.render ? (
+                  item.render()
+                ) : (
+                  <div className="mx-4 py-4">
+                    <a
+                      href={item.href}
+                      style={{
+                        color: !isFlipColor || menuOpen ? undefined : "white",
+                      }}
+                      className="link"
+                    >
+                      {item.label}
+                    </a>
+                  </div>
+                )}
+              </div>
+            )
+          )}
         </Flex>
       </Menu>
     </>
