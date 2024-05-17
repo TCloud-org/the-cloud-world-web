@@ -10,11 +10,15 @@ export const LandingContainer = (props: {
   gutter?: [number, number];
 }) => {
   return (
-    <SectionContainer light={props.light} className={props.className}>
+    <SectionContainer
+      light={props.light}
+      className={props.className}
+      style={props.style}
+    >
       <Row
         style={{
           justifyContent: "center",
-          ...props.style,
+          alignItems: "center",
         }}
         gutter={props.gutter || [64, 64]}
         className="max-w-screen-2xl"

@@ -1,6 +1,6 @@
-import { CaretRightOutlined, SearchOutlined } from "@ant-design/icons";
+import { CaretRightOutlined } from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
-import { ScreenDots } from "./ScreenDots";
+import { Screen } from "../layoutComponents/Screen";
 
 const WorkflowItem = (props: { step?: string }) => {
   const { token } = theme.useToken();
@@ -22,51 +22,21 @@ export const WorkflowMockup = (props: {
   steps?: string[];
   className?: string;
 }) => {
-  const { token } = theme.useToken();
-
   const { steps = [] } = props;
 
   return (
-    <div className={props.className}>
+    <Screen className={props.className}>
       <Flex
         vertical
-        className="rounded-lg bg-[#fefefe]"
-        style={{ boxShadow: token.boxShadow }}
-        gap={16}
+        className="dot-bg p-4 lg:p-20 rounded-lg"
+        justify="center"
+        align="center"
+        gap={32}
       >
-        <Flex
-          className="shadow-sm px-4 py-3 rounded-tl-md rounded-tr-md"
-          align="center"
-        >
-          <Flex flex={1}>
-            <ScreenDots />
-          </Flex>
-
-          <Flex flex={2} justify="center">
-            <div className="w-full bg-slate-300/20 p-1 rounded-lg">
-              <SearchOutlined
-                className="mx-1"
-                style={{ color: "rgb(148 163 184 / 1)" }}
-              />
-            </div>
-          </Flex>
-
-          <Flex flex={1}>
-            <div></div>
-          </Flex>
-        </Flex>
-        <Flex
-          vertical
-          className="dot-bg p-4 lg:p-20 rounded-lg"
-          justify="center"
-          align="center"
-          gap={32}
-        >
-          {steps.map((step, i) => (
-            <WorkflowItem key={i} step={step} />
-          ))}
-        </Flex>
+        {steps.map((step, i) => (
+          <WorkflowItem key={i} step={step} />
+        ))}
       </Flex>
-    </div>
+    </Screen>
   );
 };

@@ -18,6 +18,7 @@ import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { Screen } from "../layoutComponents/Screen";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -168,12 +169,15 @@ export const EmailNotificationWorkflowPage = () => {
         </Col>
 
         <Col {...Span[2]}>
-          <Image
-            src="https://tcw-images.s3.us-west-2.amazonaws.com/email-workflow.png"
-            className="shadow"
-            preview={false}
-            style={{ borderRadius: token.borderRadiusLG }}
-          />
+          <Screen>
+            <Flex className="px-2">
+              <Image
+                src="https://tcw-images.s3.us-west-2.amazonaws.com/email-workflow.png"
+                preview={false}
+                style={{ borderRadius: token.borderRadiusLG }}
+              />
+            </Flex>
+          </Screen>
         </Col>
       </Row>
 
