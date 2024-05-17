@@ -96,6 +96,11 @@ code {
   }
 }
 
+.dot-bg {
+  background      : white;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size : 40px 40px;
+}
 
 .gradient2 {
   background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);

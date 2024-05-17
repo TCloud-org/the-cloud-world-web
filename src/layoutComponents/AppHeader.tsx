@@ -137,7 +137,7 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
 const flipColor: any = {
   "": true,
   "step-workflow": true,
-  "customer-onboarding": true,
+  "customer-onboarding": false,
 };
 
 export const HeaderHeight = 64;

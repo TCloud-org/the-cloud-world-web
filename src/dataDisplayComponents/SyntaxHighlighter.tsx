@@ -7,6 +7,7 @@ import { useState } from "react";
 import ReactSyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Segmented } from "../dataEntryComponents/Segmented";
+import { ScreenDots } from "./ScreenDots";
 
 const textColor = "#f8fafc";
 const borderColor = "#222c3f";
@@ -37,11 +38,7 @@ export const SyntaxHighlighter = (props: {
         style={{ borderBottom: `1px solid ${borderColor}` }}
       >
         <Flex align="center" gap={16}>
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          </div>
+          <ScreenDots />
 
           <Segmented
             value="java"

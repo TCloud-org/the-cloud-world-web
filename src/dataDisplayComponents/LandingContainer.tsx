@@ -14,7 +14,6 @@ export const LandingContainer = (props: {
       <Row
         style={{
           justifyContent: "center",
-          alignItems: "center",
           ...props.style,
         }}
         gutter={props.gutter || [64, 64]}
