@@ -14,7 +14,6 @@ export const Screen = (props: { children?: ReactNode; className?: string }) => {
         vertical
         className="rounded-lg bg-[#fefefe]"
         style={{ boxShadow: token.boxShadow }}
-        gap={16}
       >
         <Flex
           className="shadow-sm px-4 py-2 rounded-tl-md rounded-tr-md"
@@ -37,7 +36,7 @@ export const Screen = (props: { children?: ReactNode; className?: string }) => {
             <div></div>
           </Flex>
         </Flex>
-        {children}
+        <div className="p-2">{children}</div>
       </Flex>
     </div>
   );

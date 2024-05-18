@@ -1,11 +1,34 @@
 import { Col, Flex, Row, Typography, theme } from "antd";
 import { Span } from "../../config/layoutConfig";
+import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
 import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
-import { HeaderHeight } from "../../layoutComponents/AppHeader";
-import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
-import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
+import { PricingButton } from "../../dataEntryComponents/PricingButton";
+import { HeaderHeight } from "../../layoutComponents/AppHeader";
+
+const benefits = [
+  {
+    title: "Enhanced Efficiency",
+    description:
+      "Streamline customer onboarding with automated API workflows, reducing manual tasks and accelerating the onboarding process.",
+  },
+  {
+    title: "Improved Accuracy",
+    description:
+      "Minimize errors with consistent, reliable API executions, ensuring accurate data handling and seamless integration.",
+  },
+  {
+    title: "Scalability",
+    description:
+      "Easily manage growing customer volumes with scalable API workflows, adapting to your business needs without compromising performance.",
+  },
+  {
+    title: "Better Customer Experience",
+    description:
+      "Provide a smoother, faster onboarding experience for your customers, increasing satisfaction and retention rates.",
+  },
+];
 
 export const CustomerOnboardingUseCasePage = () => {
   const { token } = theme.useToken();
@@ -52,29 +75,42 @@ export const CustomerOnboardingUseCasePage = () => {
       </Flex>
 
       <LandingContainer>
-        <Flex vertical>
+        <Flex vertical gap={32}>
           <Typography.Title
-            level={5}
+            level={4}
             style={{ color: token.colorInfo, margin: 0 }}
             className="text-center"
           >
             SOLUTIONS
           </Typography.Title>
 
-          <Typography.Title level={2} className="text-center">
+          <Typography.Title
+            level={2}
+            style={{ marginTop: 0, textAlign: "center", fontSize: "2.75rem" }}
+            className="px-2 lg:px-60"
+          >
             Help businesses acquire more customers faster
           </Typography.Title>
 
           <Row gutter={[64, 64]}>
-            <Col {...Span[3]}>
-              <Typography.Text>Check</Typography.Text>
-            </Col>
-            <Col {...Span[3]}>
-              <Typography.Text>Check</Typography.Text>
-            </Col>
-            <Col {...Span[3]}>
-              <Typography.Text>Check</Typography.Text>
-            </Col>
+            {benefits.map((benefit, i) => (
+              <Col
+                {...Span[4]}
+                key={i}
+                className="flex flex-col"
+                style={{
+                  borderLeft:
+                    i !== 0 ? `1px dashed ${token.colorBorder}` : "none",
+                }}
+              >
+                <Flex vertical gap={16} className="h-full">
+                  <Typography.Title level={5} style={{ margin: 0 }}>
+                    {benefit.title}
+                  </Typography.Title>
+                  <Typography.Text>{benefit.description}</Typography.Text>
+                </Flex>
+              </Col>
+            ))}
           </Row>
         </Flex>
       </LandingContainer>
