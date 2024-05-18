@@ -124,7 +124,7 @@ export const StepWorkflowPage = () => {
       <Tenets tenets={tenets} />
 
       <SectionContainer>
-        <Row gutter={[64, 64]} className="max-w-screen-2xl w-full">
+        <Row gutter={[64, 64]} className="max-w-screen-2xl">
           <Col {...Span[2]}>
             <Flex vertical gap={32}>
               <Typography.Title level={2} style={{ margin: 0 }}>
