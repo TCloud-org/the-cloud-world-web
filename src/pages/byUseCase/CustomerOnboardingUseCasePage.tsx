@@ -6,6 +6,7 @@ import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
+import { CustomerOnboardingWhyUs } from "../../dataDisplayComponents/CustomerOnboardingWhyUs";
 
 const benefits = [
   {
@@ -74,11 +75,11 @@ export const CustomerOnboardingUseCasePage = () => {
         </LandingContainer>
       </Flex>
 
-      <LandingContainer>
+      <LandingContainer light>
         <Flex vertical gap={32}>
           <Typography.Title
             level={4}
-            style={{ color: token.colorInfo, margin: 0 }}
+            style={{ color: token.colorPrimary, margin: 0 }}
             className="text-center"
           >
             SOLUTIONS
@@ -104,7 +105,10 @@ export const CustomerOnboardingUseCasePage = () => {
                 }}
               >
                 <Flex vertical gap={16} className="h-full">
-                  <Typography.Title level={5} style={{ margin: 0 }}>
+                  <Typography.Title
+                    level={5}
+                    style={{ margin: 0, color: token.colorPrimary }}
+                  >
                     {benefit.title}
                   </Typography.Title>
                   <Typography.Text>{benefit.description}</Typography.Text>
@@ -114,6 +118,8 @@ export const CustomerOnboardingUseCasePage = () => {
           </Row>
         </Flex>
       </LandingContainer>
+
+      <CustomerOnboardingWhyUs />
 
       <LandingContactSales />
     </Flex>
