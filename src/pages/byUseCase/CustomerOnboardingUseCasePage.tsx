@@ -1,4 +1,4 @@
-import { Col, Flex } from "antd";
+import { Col, Flex, Row, Typography, theme } from "antd";
 import { Span } from "../../config/layoutConfig";
 import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
@@ -8,6 +8,8 @@ import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
 import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
 
 export const CustomerOnboardingUseCasePage = () => {
+  const { token } = theme.useToken();
+
   return (
     <Flex vertical>
       <Flex vertical className="bg-light-img overflow-hidden items-center">
@@ -21,7 +23,7 @@ export const CustomerOnboardingUseCasePage = () => {
               endDecorator={
                 <Flex>
                   <div>
-                    <PricingButton href="/contact" variant="solid">
+                    <PricingButton href="/contact" className="ring-0 bg-black">
                       Request demo
                     </PricingButton>
                   </div>
@@ -50,7 +52,31 @@ export const CustomerOnboardingUseCasePage = () => {
       </Flex>
 
       <LandingContainer>
-        <div>Coming soon...</div>
+        <Flex vertical>
+          <Typography.Title
+            level={5}
+            style={{ color: token.colorInfo, margin: 0 }}
+            className="text-center"
+          >
+            SOLUTIONS
+          </Typography.Title>
+
+          <Typography.Title level={2} className="text-center">
+            Help businesses acquire more customers faster
+          </Typography.Title>
+
+          <Row gutter={[64, 64]}>
+            <Col {...Span[3]}>
+              <Typography.Text>Check</Typography.Text>
+            </Col>
+            <Col {...Span[3]}>
+              <Typography.Text>Check</Typography.Text>
+            </Col>
+            <Col {...Span[3]}>
+              <Typography.Text>Check</Typography.Text>
+            </Col>
+          </Row>
+        </Flex>
       </LandingContainer>
 
       <LandingContactSales />

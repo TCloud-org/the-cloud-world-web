@@ -23,6 +23,8 @@ import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
+import { SectionContainer } from "../layoutComponents/SectionContainer";
+import { WorkflowMockup } from "../dataDisplayComponents/WorkflowMockup";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -120,6 +122,29 @@ export const StepWorkflowPage = () => {
       </Flex>
 
       <Tenets tenets={tenets} />
+
+      <SectionContainer>
+        <Row gutter={[64, 64]} className="max-w-screen-2xl w-full">
+          <Col {...Span[2]}>
+            <Flex vertical gap={32}>
+              <Typography.Title level={2} style={{ margin: 0 }}>
+                Introducing Your Logic, Our Execution
+              </Typography.Title>
+              <Typography.Paragraph style={{ fontSize: 18 }}>
+                You have the freedom to innovate, knowing that your unique
+                vision will be executed with the highest level of expertise and
+                precision. Let us handle the technicalities while you focus on
+                what you do best.
+              </Typography.Paragraph>
+            </Flex>
+          </Col>
+          <Col {...Span[2]}>
+            <WorkflowMockup
+              steps={["Your 1st API", "Your 2nd API", "...", "Your nth API"]}
+            />
+          </Col>
+        </Row>
+      </SectionContainer>
 
       <StepWorkflowEntity />
 

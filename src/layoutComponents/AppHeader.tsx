@@ -176,7 +176,6 @@ export const AppHeader = () => {
     background: "transparent",
     boxShadow: "none",
   };
-  console.log(!isFlipColor || menuOpen);
 
   return (
     <>
