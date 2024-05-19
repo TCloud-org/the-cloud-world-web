@@ -45,9 +45,28 @@ export const CustomerOnboardingWhyUs = () => {
           demonstration={
             <WorkflowMockup
               bubble="right"
-              steps={["Start", "SetupCustomerAccount"]}
-              expand={[false, true]}
+              steps={["SetupCustomerAccount"]}
+              expand={[true]}
               showTags
+            />
+          }
+        />
+
+        <LandingInfo
+          section="Gain more insights"
+          title="Optimize customer experience with real-time data and analytics"
+          description="Enable businesses to monitor and optimize the onboarding process continuously. Insights gained from these analytics can be used to improve efficiency, identify bottlenecks, and enhance the overall customer experience."
+          demonstration={
+            <WorkflowMockup
+              bubble="left"
+              steps={[
+                "Start",
+                "SetupCustomerAccount",
+                "SetupCustomerBillingInformation",
+              ]}
+              expand={[false, false, false]}
+              showTags
+              className="relative"
             />
           }
         />
