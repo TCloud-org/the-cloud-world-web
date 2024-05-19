@@ -32,6 +32,13 @@ export const WorkflowMockup = (props: {
     return "-right-20";
   };
 
+  const pos2 = () => {
+    if (bubble === "left") {
+      return "-right-12";
+    }
+    return "-left-12";
+  };
+
   return (
     <Screen className={props.className}>
       <Flex
@@ -47,10 +54,16 @@ export const WorkflowMockup = (props: {
       </Flex>
 
       {bubble && (
-        <div
-          className={`w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-slate-100 absolute -top-20 ${pos()}`}
-          style={{ zIndex: -1 }}
-        />
+        <>
+          <div
+            className={`w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-slate-100 absolute -top-20 ${pos()}`}
+            style={{ zIndex: -1 }}
+          />
+          <div
+            className={`w-36 h-36 lg:w-48 lg:h-48 rounded-full bg-slate-100 absolute -bottom-16 ${pos2()}`}
+            style={{ zIndex: -1 }}
+          />
+        </>
       )}
     </Screen>
   );
