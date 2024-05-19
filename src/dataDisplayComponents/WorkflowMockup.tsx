@@ -77,19 +77,21 @@ const WorkflowItem = (props: { step?: string; expand?: boolean }) => {
         <Typography.Text>{props.step}</Typography.Text>
       </Flex>
 
-      <Flex gap={8} wrap="wrap">
-        {tags.map((tag, i) => (
-          <Tag
-            icon={<CheckCircleOutlined />}
-            color={tag.color}
-            className="rounded-xl"
-            style={{ margin: 0 }}
-            key={i}
-          >
-            {tag.name}
-          </Tag>
-        ))}
-      </Flex>
+      {props.step !== "..." && (
+        <Flex gap={8} wrap="wrap">
+          {tags.map((tag, i) => (
+            <Tag
+              icon={<CheckCircleOutlined />}
+              color={tag.color}
+              className="rounded-xl"
+              style={{ margin: 0 }}
+              key={i}
+            >
+              {tag.name}
+            </Tag>
+          ))}
+        </Flex>
+      )}
 
       {props.expand && (
         <Descriptions
