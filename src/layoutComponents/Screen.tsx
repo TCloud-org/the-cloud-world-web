@@ -16,7 +16,7 @@ export const Screen = (props: { children?: ReactNode; className?: string }) => {
         style={{ boxShadow: token.boxShadow }}
       >
         <Flex
-          className="shadow-sm px-4 py-2 rounded-tl-md rounded-tr-md"
+          className="border-b border-slate-200/70 px-4 py-2 rounded-tl-md rounded-tr-md"
           align="center"
         >
           <Flex flex={1}>

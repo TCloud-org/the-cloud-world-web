@@ -12,7 +12,7 @@ export const CustomerOnboardingWhyUs = () => {
         gap={128}
         justify="center"
         align="center"
-        className="w-full"
+        className="w-full max-w-screen-2xl"
       >
         <LandingSectionHeading
           title="Why us"

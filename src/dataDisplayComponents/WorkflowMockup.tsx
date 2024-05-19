@@ -1,5 +1,5 @@
-import { CaretRightOutlined } from "@ant-design/icons";
-import { Flex, Typography, theme } from "antd";
+import { CaretRightOutlined, CheckCircleOutlined } from "@ant-design/icons";
+import { Flex, Tag, Typography, theme } from "antd";
 import { Screen } from "../layoutComponents/Screen";
 
 const WorkflowItem = (props: { step?: string }) => {
@@ -7,13 +7,35 @@ const WorkflowItem = (props: { step?: string }) => {
 
   return (
     <Flex
-      align="center"
-      gap={16}
+      vertical
       className="w-full bg-white px-4 py-3 rounded-md"
       style={{ boxShadow: token.boxShadow }}
+      gap={16}
     >
-      <CaretRightOutlined />
-      <Typography.Text>{props.step}</Typography.Text>
+      <Flex align="center" gap={16}>
+        <CaretRightOutlined />
+        <Typography.Text>{props.step}</Typography.Text>
+      </Flex>
+
+      <Flex gap={8} wrap="wrap">
+        <Tag
+          icon={<CheckCircleOutlined />}
+          color="green"
+          className="rounded-xl"
+          style={{ margin: 0 }}
+        >
+          success
+        </Tag>
+
+        <Tag
+          icon={<CheckCircleOutlined />}
+          color="green"
+          className="rounded-xl"
+          style={{ margin: 0 }}
+        >
+          25 ms
+        </Tag>
+      </Flex>
     </Flex>
   );
 };
