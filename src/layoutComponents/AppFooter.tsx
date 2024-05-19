@@ -1,4 +1,4 @@
-import { Divider, Flex, Typography, theme } from "antd";
+import { Flex, Typography, theme } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
 
@@ -7,7 +7,6 @@ export const AppFooter = () => {
 
   return (
     <Footer style={{ textAlign: "center", background: token.colorBgContainer }}>
-      <Divider />
       <Flex align="center" gap={8} justify="center">
         <AppLogo />
         <Typography.Text strong>
