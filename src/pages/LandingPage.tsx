@@ -12,7 +12,6 @@ import { Span } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
 import { LandingFlexibility } from "../dataDisplayComponents/LandingFlexibility";
-import { LandingImage } from "../dataDisplayComponents/LandingImage";
 import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimpleIntegration";
 import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../dataEntryComponents/PricingButton";

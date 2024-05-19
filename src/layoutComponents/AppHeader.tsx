@@ -5,13 +5,13 @@ import {
 } from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
+import { Fade as Hamburger } from "hamburger-react";
 import { CSSProperties, useEffect, useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
-import { Fade as Hamburger } from "hamburger-react";
-import { slide as Menu } from "react-burger-menu";
 
 const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
   {
@@ -148,6 +148,10 @@ export const AppHeader = () => {
   const { token } = theme.useToken();
   const [scrollStart, setScrollStart] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   const currentPath = location.pathname.split("/").splice(-1)[0];
   const isFlipColor = (flipColor[currentPath] || false) && !scrollStart;

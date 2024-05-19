@@ -2,12 +2,11 @@ import {
   CaretDownOutlined,
   CaretRightOutlined,
   CheckCircleOutlined,
-  RightOutlined,
 } from "@ant-design/icons";
-import { Descriptions, Flex, Tag, Typography, theme } from "antd";
-import { Screen } from "../layoutComponents/Screen";
-import { Span } from "../config/layoutConfig";
 import { LaunchRounded } from "@mui/icons-material";
+import { Descriptions, Flex, Tag, Typography, theme } from "antd";
+import { Span } from "../config/layoutConfig";
+import { Screen } from "../layoutComponents/Screen";
 
 const tags = [
   { name: "success", color: "green" },
