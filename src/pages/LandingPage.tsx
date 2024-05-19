@@ -6,7 +6,7 @@ import {
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
-import { Col, Flex, Row, Typography } from "antd";
+import { Col, Flex, Image, Row, Typography } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
@@ -17,6 +17,7 @@ import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimple
 import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { Screen } from "../layoutComponents/Screen";
 
 interface Elevation {
   icon?: ReactNode;
@@ -59,7 +60,7 @@ const elevateWith: Elevation[] = [
 export const LandingPage = () => {
   return (
     <Flex vertical>
-      <Flex vertical className="bg-img">
+      <Flex vertical className="bg-img overflow-hidden">
         <div style={{ height: HeaderHeight }} />
         <LandingContainer>
           <Col {...Span[2]}>
@@ -83,7 +84,12 @@ export const LandingPage = () => {
           </Col>
 
           <Col {...Span[2]}>
-            <LandingImage />
+            <Screen className="w-[150%]">
+              <Image
+                src="https://tcw-images.s3.us-west-2.amazonaws.com/landing.png"
+                preview={false}
+              />
+            </Screen>
           </Col>
         </LandingContainer>
       </Flex>
