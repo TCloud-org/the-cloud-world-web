@@ -57,22 +57,22 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
           {
             label: "By Use Case",
             children: [
-              // {
-              //   label: "Integration Hub",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Notification Management",
-              //   href: "/products/step-workflow",
-              // },
+              {
+                label: "Integration Hub",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Notification Management",
+                href: "/products/step-workflow",
+              },
               {
                 label: "Customer Onboarding",
                 href: "/solutions/by-use-case/customer-onboarding",
               },
-              // {
-              //   label: "Business Process Automation",
-              //   href: "/products/step-workflow",
-              // },
+              {
+                label: "Business Process Automation",
+                href: "/products/step-workflow",
+              },
               {
                 label: "Compliance Process",
                 href: "/solutions/by-use-case/compliance-process",
@@ -82,30 +82,30 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
           {
             label: "By Industry",
             children: [
-              // {
-              //   label: "E-commerce",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Healthcare",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Finance",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Manufacturing",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Retail",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Telecommunications",
-              //   href: "/products/step-workflow",
-              // },
+              {
+                label: "E-commerce",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Healthcare",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Finance",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Manufacturing",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Retail",
+                href: "/products/step-workflow",
+              },
+              {
+                label: "Telecommunications",
+                href: "/products/step-workflow",
+              },
             ],
           },
         ]}
@@ -193,7 +193,7 @@ export const AppHeader = () => {
           width: "100%",
           justifyContent: "space-between",
           transition: "all 0.3s",
-          ...(scrollStart ? headerScrollStyle : headerStyle),
+          ...(scrollStart || menuOpen ? headerScrollStyle : headerStyle),
         }}
         className="px-2 lg:px-8"
       >
@@ -204,10 +204,10 @@ export const AppHeader = () => {
             onClick={() => navigate("/")}
             style={{ padding: 16, cursor: "pointer" }}
           >
-            <AppLogo flip={isFlipColor} />
+            <AppLogo flip={isFlipColor && !menuOpen} />
             <Typography.Text
               strong
-              style={{ color: !isFlipColor ? "black" : "white" }}
+              style={{ color: !isFlipColor || menuOpen ? "black" : "white" }}
             >
               The Cloud World
             </Typography.Text>
@@ -269,7 +269,7 @@ export const AppHeader = () => {
               toggled={menuOpen}
               toggle={setMenuOpen}
               size={20}
-              color={!isFlipColor ? undefined : "white"}
+              color={!isFlipColor || menuOpen ? undefined : "white"}
             />
           </div>
         </Flex>
@@ -282,26 +282,10 @@ export const AppHeader = () => {
         right
         burgerButtonClassName="hidden"
         width={"100%"}
+        className="top-[64px]"
+        overlayClassName="top-[64px]"
       >
-        <Flex vertical className="bg-white h-full px-4">
-          <Flex justify="space-between" className="p-4">
-            <Flex
-              align="center"
-              gap={8}
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer" }}
-            >
-              <AppLogo />
-              <Typography.Text strong>The Cloud World</Typography.Text>
-            </Flex>
-
-            <div onClick={() => setMenuOpen(false)}>
-              <CloseOutlined
-                style={{ fontSize: 20 }}
-                className="cursor-pointer"
-              />
-            </div>
-          </Flex>
+        <Flex vertical className="bg-white h-full px-2 overflow-auto pb-16">
           {renderItems({ isFlipColor: isFlipColor, menuOpen: menuOpen }).map(
             (item, i) => (
               <div key={i}>
