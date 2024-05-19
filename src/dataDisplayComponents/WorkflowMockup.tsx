@@ -40,7 +40,7 @@ export const WorkflowMockup = (props: {
   };
 
   return (
-    <Screen className={props.className}>
+    <Screen className={`${props.className} ${bubble ? "relative z-10" : ""}`}>
       <Flex
         vertical
         className="dot-bg p-4 lg:p-20 rounded-lg"

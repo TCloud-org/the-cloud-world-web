@@ -9,10 +9,7 @@ export const Screen = (props: { children?: ReactNode; className?: string }) => {
   const { children } = props;
 
   return (
-    <div
-      className={props.className}
-      style={{ position: "relative", zIndex: 1 }}
-    >
+    <div className={props.className}>
       <Flex
         vertical
         className="rounded-lg bg-[#fefefe]"
