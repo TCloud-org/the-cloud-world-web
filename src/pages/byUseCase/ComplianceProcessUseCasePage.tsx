@@ -29,7 +29,7 @@ const benefits: BenefitSectionProps["benefits"] = [
   {
     title: "Enhanced Data Security",
     description:
-      "Protect sensitive information with robust security measures integrated into your API workflow. Ensure data integrity and confidentiality, reducing the risk of compliance breaches and fostering trust with your customers and stakeholders.",
+      "Protect sensitive information with robust security measures integrated into your workflow. Ensure data integrity and confidentiality, reducing the risk of compliance breaches and fostering trust with your customers and stakeholders.",
   },
 ];
 

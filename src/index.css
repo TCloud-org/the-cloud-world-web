@@ -130,7 +130,12 @@ code {
 
 }
 
+.rotate-trigger:hover>.link {
+  color: blue;
+}
+
 .rotate-trigger:hover>.rotate {
+  color    : blue;
   transform: rotate(-180deg);
 }
 
