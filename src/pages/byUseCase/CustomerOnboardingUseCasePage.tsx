@@ -61,7 +61,7 @@ export const CustomerOnboardingUseCasePage = () => {
           <Col {...Span[2]} className="flex flex-col">
             <Flex className="relative h-full min-h-96">
               <WorkflowMockup
-                className="absolute top-0 bottom-0 left-0 right-0 w-[200%]"
+                className="absolute top-0 bottom-0 left-0 right-0 w-[150%]"
                 steps={[
                   "Start",
                   "VerifyCustomerIdentification",
