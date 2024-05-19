@@ -1,8 +1,68 @@
-import { CaretRightOutlined, CheckCircleOutlined } from "@ant-design/icons";
-import { Flex, Tag, Typography, theme } from "antd";
+import {
+  CaretDownOutlined,
+  CaretRightOutlined,
+  CheckCircleOutlined,
+} from "@ant-design/icons";
+import { Descriptions, Flex, Tag, Typography, theme } from "antd";
 import { Screen } from "../layoutComponents/Screen";
+import { Span } from "../config/layoutConfig";
 
-const WorkflowItem = (props: { step?: string }) => {
+const tags = [
+  { name: "success", color: "green" },
+  { name: "25 ms", color: "green" },
+  { name: "200 OK", color: "green" },
+  { name: "Completed", color: "default" },
+];
+const formatDateTime = () => {
+  const dateTime = new Date();
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short",
+  };
+  return dateTime.toLocaleString("en-US", options);
+};
+
+const info = [
+  {
+    label: "Result name",
+    children: "Completed",
+  },
+  {
+    label: "Result type",
+    children: "success",
+  },
+  {
+    label: "Latency",
+    children: "25 ms",
+  },
+  {
+    label: "Status code",
+    children: "200",
+  },
+  {
+    label: "Status",
+    children: "OK",
+  },
+  {
+    label: "Reason",
+    children: "OK",
+  },
+  {
+    label: "Completed",
+    children: formatDateTime(),
+  },
+  {
+    label: "Retried",
+    children: "-",
+  },
+];
+
+const WorkflowItem = (props: { step?: string; expand?: boolean }) => {
   const { token } = theme.useToken();
 
   return (
@@ -13,29 +73,41 @@ const WorkflowItem = (props: { step?: string }) => {
       gap={16}
     >
       <Flex align="center" gap={16}>
-        <CaretRightOutlined />
+        {props.expand ? <CaretDownOutlined /> : <CaretRightOutlined />}
         <Typography.Text>{props.step}</Typography.Text>
       </Flex>
 
       <Flex gap={8} wrap="wrap">
-        <Tag
-          icon={<CheckCircleOutlined />}
-          color="green"
-          className="rounded-xl"
-          style={{ margin: 0 }}
-        >
-          success
-        </Tag>
-
-        <Tag
-          icon={<CheckCircleOutlined />}
-          color="green"
-          className="rounded-xl"
-          style={{ margin: 0 }}
-        >
-          25 ms
-        </Tag>
+        {tags.map((tag, i) => (
+          <Tag
+            icon={<CheckCircleOutlined />}
+            color={tag.color}
+            className="rounded-xl"
+            style={{ margin: 0 }}
+            key={i}
+          >
+            {tag.name}
+          </Tag>
+        ))}
       </Flex>
+
+      {props.expand && (
+        <Descriptions
+          column={Span[1]}
+          labelStyle={{
+            fontWeight: 500,
+            color: token.colorText,
+          }}
+          contentStyle={{
+            color: token.colorText,
+          }}
+          items={info.map((item, i) => ({
+            ...item,
+            key: i,
+            span: Span[1],
+          }))}
+        />
+      )}
     </Flex>
   );
 };
@@ -44,8 +116,9 @@ export const WorkflowMockup = (props: {
   steps?: string[];
   className?: string;
   bubble?: "left" | "right";
+  expand?: boolean[];
 }) => {
-  const { steps = [], bubble } = props;
+  const { steps = [], bubble, expand = [] } = props;
 
   const pos = () => {
     if (bubble === "left") {
@@ -65,13 +138,13 @@ export const WorkflowMockup = (props: {
     <Screen className={`${props.className} ${bubble ? "relative z-10" : ""}`}>
       <Flex
         vertical
-        className="dot-bg p-4 lg:p-20 rounded-lg"
+        className="dot-bg p-4 lg:p-12 rounded-lg"
         justify="center"
         align="center"
         gap={32}
       >
         {steps.map((step, i) => (
-          <WorkflowItem key={i} step={step} />
+          <WorkflowItem key={i} step={step} expand={expand[i]} />
         ))}
       </Flex>
 

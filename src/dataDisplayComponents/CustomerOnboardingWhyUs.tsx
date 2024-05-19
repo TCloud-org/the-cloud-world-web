@@ -45,13 +45,8 @@ export const CustomerOnboardingWhyUs = () => {
           demonstration={
             <WorkflowMockup
               bubble="right"
-              steps={[
-                "Start",
-                "SetupCustomerAccount",
-                "SetupCustomerBillingInformation",
-                "SendGreetingMessageToCustomer",
-                "End",
-              ]}
+              steps={["Start", "SetupCustomerAccount"]}
+              expand={[false, true]}
             />
           }
         />
