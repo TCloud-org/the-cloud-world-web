@@ -117,6 +117,7 @@ export const StepWorkflowPage = () => {
                 src="https://tcw-images.s3.us-west-2.amazonaws.com/step-workflow-bg.png"
                 preview={false}
                 fetchPriority="high"
+                className="rounded-md"
               />
             </Screen>
           </Col>
@@ -147,6 +148,8 @@ export const StepWorkflowPage = () => {
           </Col>
         </Row>
       </SectionContainer>
+
+      <Divider />
 
       <StepWorkflowEntity />
 
