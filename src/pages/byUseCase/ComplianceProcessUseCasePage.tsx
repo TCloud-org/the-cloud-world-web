@@ -5,6 +5,33 @@ import { Span } from "../../config/layoutConfig";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
+import {
+  BenefitSection,
+  BenefitSectionProps,
+} from "../../dataDisplayComponents/BenefitSection";
+
+const benefits: BenefitSectionProps["benefits"] = [
+  {
+    title: "Automated Compliance Checks",
+    description:
+      "Streamline your compliance management with automated checks that ensure all regulatory requirements are met without manual intervention. This reduces errors and saves valuable time, allowing your team to focus on more strategic tasks.",
+  },
+  {
+    title: "Real-Time Monitoring and Reporting",
+    description:
+      "Gain instant access to compliance status with real-time monitoring and reporting. Stay ahead of potential issues and make informed decisions quickly, ensuring continuous adherence to regulations and standards.",
+  },
+  {
+    title: "Simplicity",
+    description:
+      "Simplify the complexity of compliance by managing intricate requirements through organized sub-workflows. This approach ensures that every detail is handled efficiently, reducing the risk of oversight and enhancing overall process clarity.",
+  },
+  {
+    title: "Enhanced Data Security",
+    description:
+      "Protect sensitive information with robust security measures integrated into your API workflow. Ensure data integrity and confidentiality, reducing the risk of compliance breaches and fostering trust with your customers and stakeholders.",
+  },
+];
 
 export const ComplianceProcessUseCasePage = () => {
   return (
@@ -62,6 +89,12 @@ export const ComplianceProcessUseCasePage = () => {
           </Col>
         </LandingContainer>
       </Flex>
+
+      <BenefitSection
+        benefits={benefits}
+        title="Solutions"
+        subtitle="Help businesses achieve compliance faster"
+      />
     </Flex>
   );
 };

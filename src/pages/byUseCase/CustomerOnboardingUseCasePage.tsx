@@ -8,6 +8,7 @@ import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
+import { BenefitSection } from "../../dataDisplayComponents/BenefitSection";
 
 const benefits = [
   {
@@ -76,38 +77,11 @@ export const CustomerOnboardingUseCasePage = () => {
         </LandingContainer>
       </Flex>
 
-      <LandingContainer light>
-        <Flex vertical gap={32}>
-          <LandingSectionHeading
-            title="Solutions"
-            subtitle="Help businesses acquire more customers faster"
-          />
-
-          <Row gutter={[64, 64]}>
-            {benefits.map((benefit, i) => (
-              <Col
-                {...Span[4]}
-                key={i}
-                className="flex flex-col"
-                style={{
-                  borderLeft:
-                    i !== 0 ? `1px dashed ${token.colorBorder}` : "none",
-                }}
-              >
-                <Flex vertical gap={16} className="h-full">
-                  <Typography.Title
-                    level={5}
-                    style={{ margin: 0, color: token.colorPrimary }}
-                  >
-                    {benefit.title}
-                  </Typography.Title>
-                  <Typography.Text>{benefit.description}</Typography.Text>
-                </Flex>
-              </Col>
-            ))}
-          </Row>
-        </Flex>
-      </LandingContainer>
+      <BenefitSection
+        benefits={benefits}
+        title="Solutions"
+        subtitle="Help businesses acquire more customers faster"
+      />
 
       <CustomerOnboardingWhyUs />
 
