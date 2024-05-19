@@ -1,12 +1,13 @@
 import { Col, Flex, Row, Typography, theme } from "antd";
 import { Span } from "../../config/layoutConfig";
+import { CustomerOnboardingWhyUs } from "../../dataDisplayComponents/CustomerOnboardingWhyUs";
 import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
 import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
+import { LandingSectionHeading } from "../../dataDisplayComponents/LandingSectionHeading";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
-import { CustomerOnboardingWhyUs } from "../../dataDisplayComponents/CustomerOnboardingWhyUs";
 
 const benefits = [
   {
@@ -77,21 +78,10 @@ export const CustomerOnboardingUseCasePage = () => {
 
       <LandingContainer light>
         <Flex vertical gap={32}>
-          <Typography.Title
-            level={4}
-            style={{ color: token.colorPrimary, margin: 0 }}
-            className="text-center"
-          >
-            SOLUTIONS
-          </Typography.Title>
-
-          <Typography.Title
-            level={2}
-            style={{ marginTop: 0, textAlign: "center", fontSize: "2.75rem" }}
-            className="px-2 lg:px-60"
-          >
-            Help businesses acquire more customers faster
-          </Typography.Title>
+          <LandingSectionHeading
+            title="Solutions"
+            subtitle="Help businesses acquire more customers faster"
+          />
 
           <Row gutter={[64, 64]}>
             {benefits.map((benefit, i) => (
