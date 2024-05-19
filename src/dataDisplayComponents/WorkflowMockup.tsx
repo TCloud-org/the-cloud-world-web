@@ -41,7 +41,7 @@ export const WorkflowMockup = (props: {
 
       {bubble && (
         <div
-          className={`w-96 h-96 rounded-full bg-slate-100 absolute -top-20 -${bubble}-20`}
+          className={`w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-slate-100 absolute -top-20 -${bubble}-20`}
           style={{ zIndex: -1 }}
         />
       )}
