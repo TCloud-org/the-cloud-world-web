@@ -62,7 +62,11 @@ const info = [
   },
 ];
 
-const WorkflowItem = (props: { step?: string; expand?: boolean }) => {
+const WorkflowItem = (props: {
+  step?: string;
+  expand?: boolean;
+  showTags?: boolean;
+}) => {
   const { token } = theme.useToken();
 
   return (
@@ -77,7 +81,7 @@ const WorkflowItem = (props: { step?: string; expand?: boolean }) => {
         <Typography.Text>{props.step}</Typography.Text>
       </Flex>
 
-      {props.step !== "..." && (
+      {props.showTags && (
         <Flex gap={8} wrap="wrap">
           {tags.map((tag, i) => (
             <Tag
@@ -119,8 +123,9 @@ export const WorkflowMockup = (props: {
   className?: string;
   bubble?: "left" | "right";
   expand?: boolean[];
+  showTags?: boolean;
 }) => {
-  const { steps = [], bubble, expand = [] } = props;
+  const { steps = [], bubble, expand = [], showTags } = props;
 
   const pos = () => {
     if (bubble === "left") {
@@ -146,7 +151,12 @@ export const WorkflowMockup = (props: {
         gap={32}
       >
         {steps.map((step, i) => (
-          <WorkflowItem key={i} step={step} expand={expand[i]} />
+          <WorkflowItem
+            key={i}
+            step={step}
+            expand={expand[i]}
+            showTags={showTags}
+          />
         ))}
       </Flex>
 

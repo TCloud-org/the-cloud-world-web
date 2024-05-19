@@ -47,6 +47,7 @@ export const CustomerOnboardingWhyUs = () => {
               bubble="right"
               steps={["Start", "SetupCustomerAccount"]}
               expand={[false, true]}
+              showTags
             />
           }
         />
