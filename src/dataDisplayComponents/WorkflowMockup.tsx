@@ -2,10 +2,12 @@ import {
   CaretDownOutlined,
   CaretRightOutlined,
   CheckCircleOutlined,
+  RightOutlined,
 } from "@ant-design/icons";
 import { Descriptions, Flex, Tag, Typography, theme } from "antd";
 import { Screen } from "../layoutComponents/Screen";
 import { Span } from "../config/layoutConfig";
+import { LaunchRounded } from "@mui/icons-material";
 
 const tags = [
   { name: "success", color: "green" },
@@ -63,11 +65,12 @@ const info = [
 ];
 
 const WorkflowItem = (props: {
-  step?: string;
+  step?: any;
   expand?: boolean;
   showTags?: boolean;
 }) => {
   const { token } = theme.useToken();
+  const { step } = props;
 
   return (
     <Flex
@@ -76,9 +79,19 @@ const WorkflowItem = (props: {
       style={{ boxShadow: token.boxShadow }}
       gap={16}
     >
-      <Flex align="center" gap={16}>
-        {props.expand ? <CaretDownOutlined /> : <CaretRightOutlined />}
-        <Typography.Text>{props.step}</Typography.Text>
+      <Flex justify="space-between">
+        <Flex align="center" gap={16}>
+          {props.expand ? <CaretDownOutlined /> : <CaretRightOutlined />}
+          <Typography.Text>
+            {typeof step === "string" ? step : step.name}
+          </Typography.Text>
+        </Flex>
+        {step.isSubWorkflow && (
+          <Typography.Link className="flex items-center">
+            View sub-workflow{" "}
+            <LaunchRounded style={{ fontSize: 14, marginLeft: 4 }} />
+          </Typography.Link>
+        )}
       </Flex>
 
       {props.showTags && (
@@ -119,7 +132,7 @@ const WorkflowItem = (props: {
 };
 
 export const WorkflowMockup = (props: {
-  steps?: string[];
+  steps?: any[];
   className?: string;
   bubble?: "left" | "right";
   expand?: boolean[];

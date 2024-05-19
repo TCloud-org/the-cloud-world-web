@@ -73,10 +73,10 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
               //   label: "Business Process Automation",
               //   href: "/products/step-workflow",
               // },
-              // {
-              //   label: "Compliance Processes",
-              //   href: "/products/step-workflow",
-              // },
+              {
+                label: "Compliance Process",
+                href: "/solutions/by-use-case/compliance-process",
+              },
             ],
           },
           {

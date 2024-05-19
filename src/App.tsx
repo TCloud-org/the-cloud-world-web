@@ -12,6 +12,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { StepWorkflowPage } from "./pages/StepWorkflowPage";
 import { EmailNotificationWorkflowPage } from "./pages/EmailNotificationWorkflowPage";
 import { CustomerOnboardingUseCasePage } from "./pages/byUseCase/CustomerOnboardingUseCasePage";
+import { ComplianceProcessUseCasePage } from "./pages/byUseCase/ComplianceProcessUseCasePage";
 
 function App() {
   const Wrapper = () => {
@@ -67,6 +68,10 @@ function App() {
         {
           path: "/solutions/by-use-case/customer-onboarding",
           element: <CustomerOnboardingUseCasePage />,
+        },
+        {
+          path: "/solutions/by-use-case/compliance-process",
+          element: <ComplianceProcessUseCasePage />,
         },
       ],
     },

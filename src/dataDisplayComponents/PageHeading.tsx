@@ -22,7 +22,10 @@ export const PageHeading = (props: {
         {props.title}
       </Typography.Title>
       <Typography.Paragraph
-        style={{ color: color === "light" ? token.colorWhite : undefined }}
+        style={{
+          color: color === "light" ? token.colorWhite : undefined,
+          fontSize: 18,
+        }}
       >
         {props.description}
       </Typography.Paragraph>
