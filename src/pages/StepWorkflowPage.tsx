@@ -25,6 +25,7 @@ import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { SectionContainer } from "../layoutComponents/SectionContainer";
 import { WorkflowMockup } from "../dataDisplayComponents/WorkflowMockup";
+import { Screen } from "../layoutComponents/Screen";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -111,12 +112,13 @@ export const StepWorkflowPage = () => {
             </Flex>
           </Col>
           <Col {...Span[2]}>
-            <Image
-              src="https://tcw-images.s3.us-west-2.amazonaws.com/StepWorkflow.png"
-              preview={false}
-              width="200%"
-              fetchPriority="high"
-            />
+            <Screen className="w-[150%]">
+              <Image
+                src="https://tcw-images.s3.us-west-2.amazonaws.com/step-workflow-bg.png"
+                preview={false}
+                fetchPriority="high"
+              />
+            </Screen>
           </Col>
         </Row>
       </Flex>
