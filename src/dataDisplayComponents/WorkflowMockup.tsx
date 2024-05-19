@@ -21,8 +21,9 @@ const WorkflowItem = (props: { step?: string }) => {
 export const WorkflowMockup = (props: {
   steps?: string[];
   className?: string;
+  bubble?: "left" | "right";
 }) => {
-  const { steps = [] } = props;
+  const { steps = [], bubble } = props;
 
   return (
     <Screen className={props.className}>
@@ -37,6 +38,13 @@ export const WorkflowMockup = (props: {
           <WorkflowItem key={i} step={step} />
         ))}
       </Flex>
+
+      {bubble && (
+        <div
+          className={`w-96 h-96 rounded-full bg-slate-100 absolute -top-20 -${bubble}-20`}
+          style={{ zIndex: -1 }}
+        />
+      )}
     </Screen>
   );
 };

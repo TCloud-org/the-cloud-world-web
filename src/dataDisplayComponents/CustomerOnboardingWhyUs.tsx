@@ -25,6 +25,7 @@ export const CustomerOnboardingWhyUs = () => {
           description="In today's competitive landscape, the initial impression your business leaves can determine whether you gain a lifelong customer or lose them to a competitor. With our workflow solutions, you can establish a robust process for setting up your customers, ensuring that each interaction leaves a lasting positive impression."
           demonstration={
             <WorkflowMockup
+              bubble="left"
               steps={[
                 "Start",
                 "SetupCustomerAccount",
@@ -43,6 +44,7 @@ export const CustomerOnboardingWhyUs = () => {
           position="right"
           demonstration={
             <WorkflowMockup
+              bubble="right"
               steps={[
                 "Start",
                 "SetupCustomerAccount",
