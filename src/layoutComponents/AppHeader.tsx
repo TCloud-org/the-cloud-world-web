@@ -109,12 +109,33 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
     ),
   },
   {
-    label: "Pricing",
-    href: "/pricing",
+    label: "Resources",
+    render: () => (
+      <ProductsDropdown
+        title="Resources"
+        isFlipColor={props.isFlipColor && !props.menuOpen}
+        menuOpen={props.menuOpen}
+        menu={[
+          {
+            label: "Company",
+            children: [
+              {
+                label: "About us",
+                href: "/about",
+              },
+              {
+                label: "Contact us",
+                href: "/contact",
+              },
+            ],
+          },
+        ]}
+      />
+    ),
   },
   {
-    label: "About",
-    href: "/about",
+    label: "Pricing",
+    href: "/pricing",
   },
   ...(props.menuOpen
     ? [
@@ -184,6 +205,7 @@ export const AppHeader = () => {
           display: "flex",
           alignItems: "center",
           position: "fixed",
+          overflow: "hidden",
           top: 0,
           zIndex: 999,
           width: "100%",

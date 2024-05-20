@@ -18,7 +18,7 @@ export const ComplianceProcessWhyUs = () => {
       >
         <LandingSectionHeading
           title="Why us"
-          subtitle="Make customer onboarding process faster and simpler"
+          subtitle="Eliminate the burdens of complex compliance processes"
         />
 
         <LandingInfo

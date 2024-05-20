@@ -27,7 +27,7 @@ export const IconMenuItem = (props: {
         style={{
           backgroundColor: `${token.colorPrimaryBgHover}33`,
           borderRadius: token.borderRadius,
-          padding: 8,
+          padding: 6,
         }}
       >
         {props.icon &&

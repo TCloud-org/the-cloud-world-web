@@ -1,3 +1,4 @@
+import { DownOutlined } from "@ant-design/icons";
 import {
   AutoComplete,
   Button,
@@ -12,13 +13,13 @@ import {
   message,
   theme,
 } from "antd";
-import { CompanySizes, Countries } from "../config/businessConfig";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { DownOutlined } from "@ant-design/icons";
-import { Span } from "../config/layoutConfig";
-import { wosContactMe } from "../config/wosEndpointConfig";
 import axios from "axios";
 import { useState } from "react";
+import { CompanySizes, Countries } from "../config/businessConfig";
+import { Span } from "../config/layoutConfig";
+import { wosContactMe } from "../config/wosEndpointConfig";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { BubbleWrap } from "../layoutComponents/BubbleWrap";
 
 export const ContactPage = () => {
   const { token } = theme.useToken();
@@ -67,136 +68,143 @@ export const ContactPage = () => {
           </Col>
 
           <Col {...Span[2]}>
-            <Flex
-              flex={1}
-              className="shadow"
-              style={{
-                borderRadius: token.borderRadius,
-                padding: 32,
-                background: token.colorBgContainer,
-              }}
+            <BubbleWrap
+              position="right"
+              color={token.colorPrimary}
+              size1={0}
+              size2={0}
             >
-              <Form
-                style={{ width: "100%" }}
-                form={form}
-                onValuesChange={(_, values) => form.setFieldsValue(values)}
+              <Flex
+                flex={1}
+                className="shadow"
+                style={{
+                  borderRadius: token.borderRadius,
+                  padding: 32,
+                  background: token.colorBgContainer,
+                }}
               >
-                <Row gutter={20}>
-                  <Col {...Span[1]}>
-                    <Form.Item>
-                      <Typography.Text strong style={{ fontSize: 18 }}>
-                        Leave your message and we will connect you with our
-                        teams
-                      </Typography.Text>
-                    </Form.Item>
-                  </Col>
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="firstName">
-                      <Input placeholder="First name" />
-                    </Form.Item>
-                  </Col>
+                <Form
+                  style={{ width: "100%" }}
+                  form={form}
+                  onValuesChange={(_, values) => form.setFieldsValue(values)}
+                >
+                  <Row gutter={20}>
+                    <Col {...Span[1]}>
+                      <Form.Item>
+                        <Typography.Text strong style={{ fontSize: 18 }}>
+                          Leave your message and we will connect you with our
+                          teams
+                        </Typography.Text>
+                      </Form.Item>
+                    </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="firstName">
+                        <Input placeholder="First name" />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="lastName">
-                      <Input placeholder="Last name" />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="lastName">
+                        <Input placeholder="Last name" />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="email">
-                      <Input placeholder="Work email" />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="email">
+                        <Input placeholder="Work email" />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="company">
-                      <Input placeholder="Company" />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="company">
+                        <Input placeholder="Company" />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="phone">
-                      <Input placeholder="Phone number" />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="phone">
+                        <Input placeholder="Phone number" />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[2]}>
-                    <Form.Item style={{ flex: 1 }} name="companySize">
-                      <Select
-                        options={CompanySizes}
-                        placeholder="Company size"
-                      />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[2]}>
+                      <Form.Item style={{ flex: 1 }} name="companySize">
+                        <Select
+                          options={CompanySizes}
+                          placeholder="Company size"
+                        />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Form.Item name="country">
-                      <AutoComplete
-                        options={Countries}
-                        placeholder="Country"
-                        allowClear
-                        filterOption={(inputValue, option) =>
-                          option!.label
-                            .toLowerCase()
-                            .indexOf(inputValue.toLowerCase()) !== -1
-                        }
-                        suffixIcon={<DownOutlined />}
-                      />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[1]}>
+                      <Form.Item name="country">
+                        <AutoComplete
+                          options={Countries}
+                          placeholder="Country"
+                          allowClear
+                          filterOption={(inputValue, option) =>
+                            option!.label
+                              .toLowerCase()
+                              .indexOf(inputValue.toLowerCase()) !== -1
+                          }
+                          suffixIcon={<DownOutlined />}
+                        />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Form.Item name="topic">
-                      <Select
-                        placeholder="How can we help you?"
-                        options={[{ label: "General", value: "general" }]}
-                      />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[1]}>
+                      <Form.Item name="topic">
+                        <Select
+                          placeholder="How can we help you?"
+                          options={[{ label: "General", value: "general" }]}
+                        />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Form.Item name="message">
-                      <Input.TextArea
-                        placeholder="Message"
-                        autoSize={{ minRows: 5, maxRows: 10 }}
-                      />
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[1]}>
+                      <Form.Item name="message">
+                        <Input.TextArea
+                          placeholder="Message"
+                          autoSize={{ minRows: 5, maxRows: 10 }}
+                        />
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Form.Item noStyle>
-                      <Button
-                        type="primary"
-                        style={{ width: "100%" }}
-                        onClick={handleSubmit}
-                        loading={sentLoading}
-                      >
-                        Submit
-                      </Button>
-                    </Form.Item>
-                  </Col>
+                    <Col {...Span[1]}>
+                      <Form.Item noStyle>
+                        <Button
+                          type="primary"
+                          style={{ width: "100%" }}
+                          onClick={handleSubmit}
+                          loading={sentLoading}
+                        >
+                          Submit
+                        </Button>
+                      </Form.Item>
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Divider style={{ backgroundColor: token.colorBorder }} />
-                  </Col>
+                    <Col {...Span[1]}>
+                      <Divider style={{ backgroundColor: token.colorBorder }} />
+                    </Col>
 
-                  <Col {...Span[1]}>
-                    <Form.Item noStyle>
-                      <Typography.Text>
-                        By submitting this form, you agree to our{" "}
-                        <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/terms-and-conditions">
-                          Terms and Conditions
-                        </Typography.Link>{" "}
-                        and{" "}
-                        <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/privacy-policy">
-                          Privacy Policy
-                        </Typography.Link>
-                      </Typography.Text>
-                    </Form.Item>
-                  </Col>
-                </Row>
-              </Form>
-            </Flex>
+                    <Col {...Span[1]}>
+                      <Form.Item noStyle>
+                        <Typography.Text>
+                          By submitting this form, you agree to our{" "}
+                          <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/terms-and-conditions">
+                            Terms and Conditions
+                          </Typography.Link>{" "}
+                          and{" "}
+                          <Typography.Link href="https://www.stepworkflow.thecloudworlds.com/privacy-policy">
+                            Privacy Policy
+                          </Typography.Link>
+                        </Typography.Text>
+                      </Form.Item>
+                    </Col>
+                  </Row>
+                </Form>
+              </Flex>
+            </BubbleWrap>
           </Col>
         </Row>
       </Flex>

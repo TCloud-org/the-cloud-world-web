@@ -32,8 +32,12 @@ export const ProductMenu = (props: {
     >
       <Row gutter={[16, 16]}>
         {menu.map((menuItem, i) => (
-          <Col {...Span[2]} style={{ width: menuItemWidth }} key={i}>
-            <Flex vertical gap={8}>
+          <Col
+            {...Span[Math.min(menu.length, 2).toString() as keyof typeof Span]}
+            style={{ width: menuItemWidth }}
+            key={i}
+          >
+            <Flex vertical gap={8} className="w-full">
               <Typography.Text
                 strong
                 style={{ marginLeft: 8 }}
