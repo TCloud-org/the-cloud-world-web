@@ -300,8 +300,8 @@ export const AppHeader = () => {
         right
         burgerButtonClassName="hidden"
         width={"100%"}
-        className="top-[64px]"
-        overlayClassName="top-[64px]"
+        className="top-[64px] block lg:hidden"
+        overlayClassName="top-[64px] block lg:hidden"
       >
         <Flex vertical className="bg-white h-full px-2 overflow-auto pb-16">
           {renderItems({ isFlipColor: isFlipColor, menuOpen: menuOpen }).map(

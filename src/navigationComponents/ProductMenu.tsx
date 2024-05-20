@@ -41,7 +41,7 @@ export const ProductMenu = (props: {
               <Typography.Text
                 strong
                 style={{ marginLeft: 8 }}
-                className="text-slate-800 uppercase"
+                className="text-slate-800 uppercase underline lg:no-underline"
               >
                 {menuItem.label}
               </Typography.Text>
