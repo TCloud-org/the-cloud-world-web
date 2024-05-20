@@ -35,7 +35,7 @@ export const BenefitSection = (props: BenefitSectionProps) => {
                 <Typography.Title
                   level={5}
                   style={{ margin: 0, color: token.colorPrimary }}
-                  className="h-10"
+                  className="h-10 2xl:h-6"
                 >
                   {benefit.title}
                 </Typography.Title>

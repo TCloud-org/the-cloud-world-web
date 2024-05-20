@@ -1,8 +1,4 @@
-import {
-  CloseOutlined,
-  PartitionOutlined,
-  SendOutlined,
-} from "@ant-design/icons";
+import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
 import { Header } from "antd/es/layout/layout";
 import { Fade as Hamburger } from "hamburger-react";

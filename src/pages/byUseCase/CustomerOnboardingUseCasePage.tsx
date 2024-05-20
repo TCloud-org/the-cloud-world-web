@@ -1,14 +1,13 @@
-import { Col, Flex, Row, Typography, theme } from "antd";
+import { Col, Flex } from "antd";
 import { Span } from "../../config/layoutConfig";
+import { BenefitSection } from "../../dataDisplayComponents/BenefitSection";
 import { CustomerOnboardingWhyUs } from "../../dataDisplayComponents/CustomerOnboardingWhyUs";
 import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
 import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
-import { LandingSectionHeading } from "../../dataDisplayComponents/LandingSectionHeading";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { WorkflowMockup } from "../../dataDisplayComponents/WorkflowMockup";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
-import { BenefitSection } from "../../dataDisplayComponents/BenefitSection";
 
 const benefits = [
   {
@@ -34,8 +33,6 @@ const benefits = [
 ];
 
 export const CustomerOnboardingUseCasePage = () => {
-  const { token } = theme.useToken();
-
   return (
     <Flex vertical>
       <Flex vertical className="bg-light-img overflow-hidden items-center">

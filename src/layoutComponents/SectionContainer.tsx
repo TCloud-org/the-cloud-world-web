@@ -12,12 +12,11 @@ export const SectionContainer = (props: {
     <Flex
       style={{
         backgroundColor: props.light ? lightColor : undefined,
-        padding: "128px 64px",
         ...props.style,
       }}
       justify="center"
       align="center"
-      className={props.className}
+      className={`px-4 py-24 lg:px-16 lg:py-32 overflow-hidden ${props.className}`}
     >
       {props.children}
     </Flex>

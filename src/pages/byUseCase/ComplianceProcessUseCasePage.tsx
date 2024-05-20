@@ -9,6 +9,8 @@ import {
   BenefitSection,
   BenefitSectionProps,
 } from "../../dataDisplayComponents/BenefitSection";
+import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
+import { ComplianceProcessWhyUs } from "../../dataDisplayComponents/ComplianceProcessWhyUs";
 
 const benefits: BenefitSectionProps["benefits"] = [
   {
@@ -95,6 +97,10 @@ export const ComplianceProcessUseCasePage = () => {
         title="Solutions"
         subtitle="Help businesses achieve compliance faster"
       />
+
+      <ComplianceProcessWhyUs />
+
+      <LandingContactSales />
     </Flex>
   );
 };
