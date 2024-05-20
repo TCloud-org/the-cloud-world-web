@@ -1,31 +1,20 @@
-import { RightOutlined } from "@ant-design/icons";
 import {
   ApiRounded,
   FastForwardRounded,
   MonetizationOnRounded,
   SettingsSuggestRounded,
 } from "@mui/icons-material";
-import {
-  Button,
-  Col,
-  Divider,
-  Flex,
-  Image,
-  Row,
-  Typography,
-  theme,
-} from "antd";
-import { useNavigate } from "react-router-dom";
+import { Col, Divider, Flex, Image, Row, Typography } from "antd";
 import { Span } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
 import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
-import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { PricingButton } from "../dataEntryComponents/PricingButton";
-import { SectionContainer } from "../layoutComponents/SectionContainer";
 import { WorkflowMockup } from "../dataDisplayComponents/WorkflowMockup";
+import { LandingActions } from "../dataEntryComponents/LandingActions";
+import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { Screen } from "../layoutComponents/Screen";
+import { SectionContainer } from "../layoutComponents/SectionContainer";
 
 const tenets: TenetsProps["tenets"] = [
   {
@@ -55,11 +44,6 @@ const tenets: TenetsProps["tenets"] = [
 ];
 
 export const StepWorkflowPage = () => {
-  const { token } = theme.useToken();
-  const navigate = useNavigate();
-
-  const routeToContact = () => navigate("/contact");
-
   return (
     <Flex vertical>
       <Flex vertical className="bg-img overflow-hidden items-center">
@@ -85,30 +69,7 @@ export const StepWorkflowPage = () => {
                 streamline and manage asynchronous processes effortlessly.
               </Typography.Paragraph>
 
-              <Flex align="center" gap={16}>
-                <Flex>
-                  <PricingButton
-                    href="https://www.stepworkflow.thecloudworlds.com"
-                    target="_blank"
-                    variant="solid"
-                  >
-                    Get started
-                  </PricingButton>
-                </Flex>
-
-                <Flex>
-                  <Button
-                    iconPosition="end"
-                    type="link"
-                    icon={<RightOutlined style={{ fontSize: 10 }} />}
-                    style={{ color: token.colorWhite, fontWeight: 600 }}
-                    onClick={routeToContact}
-                    className="link-hover"
-                  >
-                    Contact sales
-                  </Button>
-                </Flex>
-              </Flex>
+              <LandingActions />
             </Flex>
           </Col>
           <Col {...Span[2]}>

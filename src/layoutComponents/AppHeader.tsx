@@ -155,6 +155,7 @@ const flipColor: any = {
   "": true,
   "step-workflow": true,
   "customer-onboarding": false,
+  "email-notification-workflow": true,
 };
 
 export const HeaderHeight = 64;

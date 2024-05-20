@@ -2,7 +2,6 @@ import {
   ApiOutlined,
   ClockCircleOutlined,
   IdcardOutlined,
-  RightOutlined,
   SendOutlined,
 } from "@ant-design/icons";
 import {
@@ -11,12 +10,12 @@ import {
   StoreRounded,
   VerifiedUserRounded,
 } from "@mui/icons-material";
-import { Button, Col, Flex, Image, Row, Typography, theme } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Col, Flex, Image, Row, Typography, theme } from "antd";
 import { Span } from "../config/layoutConfig";
 import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
+import { LandingActions } from "../dataEntryComponents/LandingActions";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { Screen } from "../layoutComponents/Screen";
 
@@ -116,70 +115,51 @@ stepWorkflowClient.triggerEmailNotificationWorkflow(input);`,
 
 export const EmailNotificationWorkflowPage = () => {
   const { token } = theme.useToken();
-  const navigate = useNavigate();
-
-  const routeToContact = () => {
-    navigate("/contact");
-  };
 
   return (
     <Flex vertical>
-      <div style={{ height: HeaderHeight }} />
+      <Flex vertical className="bg-img overflow-hidden items-center">
+        <div style={{ height: HeaderHeight }} />
 
-      <Row gutter={[64, 64]} style={{ padding: "128px 64px" }}>
-        <Col {...Span[2]}>
-          <Flex vertical gap={16}>
-            <Typography.Title level={1} style={{ marginTop: 0, fontSize: 44 }}>
-              Transform your communication landscape: Unleash the power of email
-              automation
-            </Typography.Title>
-            <Typography.Paragraph style={{ fontSize: 18 }}>
-              Engage and delight your customers with personalized email
-              notifications powered by our cutting-edge marketing automation
-              platform. From welcome emails to exclusive offers, stay connected
-              effortlessly and drive meaningful interactions at every
-              touchpoint.
-            </Typography.Paragraph>
-
-            <Flex align="center" gap={16}>
-              <Button
-                type="primary"
-                iconPosition="end"
-                onClick={() =>
-                  window.open(
-                    "https://www.stepworkflow.thecloudworlds.com",
-                    "_blank"
-                  )
-                }
+        <Row
+          gutter={[64, 64]}
+          style={{ padding: "128px 64px" }}
+          className="items-center max-w-screen-2xl"
+        >
+          <Col {...Span[2]}>
+            <Flex vertical gap={16}>
+              <Typography.Title
+                level={1}
+                style={{ marginTop: 0, fontSize: 44, color: "white" }}
               >
-                Get started
-              </Button>
+                Transform your communication landscape: Unleash the power of
+                email automation
+              </Typography.Title>
+              <Typography.Paragraph style={{ fontSize: 18, color: "white" }}>
+                Engage and delight your customers with personalized email
+                notifications powered by our cutting-edge marketing automation
+                platform. From welcome emails to exclusive offers, stay
+                connected effortlessly and drive meaningful interactions at
+                every touchpoint.
+              </Typography.Paragraph>
 
-              <Button
-                iconPosition="end"
-                type="link"
-                icon={<RightOutlined style={{ fontSize: 10 }} />}
-                style={{ color: token.colorPrimary }}
-                onClick={routeToContact}
-              >
-                Contact sales
-              </Button>
+              <LandingActions />
             </Flex>
-          </Flex>
-        </Col>
+          </Col>
 
-        <Col {...Span[2]}>
-          <Screen>
-            <Flex className="px-2">
-              <Image
-                src="https://tcw-images.s3.us-west-2.amazonaws.com/email-workflow.png"
-                preview={false}
-                style={{ borderRadius: token.borderRadiusLG }}
-              />
-            </Flex>
-          </Screen>
-        </Col>
-      </Row>
+          <Col {...Span[2]}>
+            <Screen className="w-[200%]">
+              <Flex className="px-2">
+                <Image
+                  src="https://tcw-images.s3.us-west-2.amazonaws.com/email-workflow.png"
+                  preview={false}
+                  style={{ borderRadius: token.borderRadiusLG }}
+                />
+              </Flex>
+            </Screen>
+          </Col>
+        </Row>
+      </Flex>
 
       <Tenets tenets={tenets} />
 
