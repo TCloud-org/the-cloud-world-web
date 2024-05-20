@@ -53,57 +53,57 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
           {
             label: "By Use Case",
             children: [
-              {
-                label: "Integration Hub",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Notification Management",
-                href: "/products/step-workflow",
-              },
+              // {
+              //   label: "Integration Hub",
+              //   href: "/products/step-workflow",
+              // },
+              // {
+              //   label: "Notification Management",
+              //   href: "/products/step-workflow",
+              // },
               {
                 label: "Customer Onboarding",
                 href: "/solutions/by-use-case/customer-onboarding",
               },
-              {
-                label: "Business Process Automation",
-                href: "/products/step-workflow",
-              },
+              // {
+              //   label: "Business Process Automation",
+              //   href: "/products/step-workflow",
+              // },
               {
                 label: "Compliance Process",
                 href: "/solutions/by-use-case/compliance-process",
               },
             ],
           },
-          {
-            label: "By Industry",
-            children: [
-              {
-                label: "E-commerce",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Healthcare",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Finance",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Manufacturing",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Retail",
-                href: "/products/step-workflow",
-              },
-              {
-                label: "Telecommunications",
-                href: "/products/step-workflow",
-              },
-            ],
-          },
+          // {
+          //   label: "By Industry",
+          //   children: [
+          //     {
+          //       label: "E-commerce",
+          //       href: "/products/step-workflow",
+          //     },
+          //     {
+          //       label: "Healthcare",
+          //       href: "/products/step-workflow",
+          //     },
+          //     {
+          //       label: "Finance",
+          //       href: "/products/step-workflow",
+          //     },
+          //     {
+          //       label: "Manufacturing",
+          //       href: "/products/step-workflow",
+          //     },
+          //     {
+          //       label: "Retail",
+          //       href: "/products/step-workflow",
+          //     },
+          //     {
+          //       label: "Telecommunications",
+          //       href: "/products/step-workflow",
+          //     },
+          //   ],
+          // },
         ]}
       />
     ),
@@ -156,6 +156,7 @@ const flipColor: any = {
   "step-workflow": true,
   "customer-onboarding": false,
   "email-notification-workflow": true,
+  about: true,
 };
 
 export const HeaderHeight = 64;
