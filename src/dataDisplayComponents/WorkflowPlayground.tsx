@@ -21,7 +21,7 @@ const mainSteps = [
   },
 ];
 
-const steps = ["Start", "..."];
+const steps = ["Start", "...", "End"];
 
 const subWorkflows = [1, 2];
 
