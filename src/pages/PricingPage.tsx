@@ -146,6 +146,7 @@ export const PricingPage = () => {
               backgroundColor: "white",
               borderRadius: token.borderRadius,
             }}
+            variant="borderless"
             className="w-full"
             filterOption={(inputValue, option) =>
               option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==

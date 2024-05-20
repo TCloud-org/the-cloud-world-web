@@ -59,7 +59,7 @@ const elevateWith: Elevation[] = [
 export const LandingPage = () => {
   return (
     <Flex vertical>
-      <Flex vertical className="bg-img overflow-hidden">
+      <Flex vertical className="aurora overflow-hidden">
         <div style={{ height: HeaderHeight }} />
         <LandingContainer>
           <Col {...Span[2]}>
