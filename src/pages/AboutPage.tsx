@@ -14,7 +14,7 @@ export const AboutPage = () => {
           <Col {...Span[2]}>
             <PageHeading
               title="Embrace the future of low-code development"
-              description="We are dedicated to empowering startups by providing cutting-edge automation solutions designed to streamline your processes and accelerate your journey from concept to market"
+              description="We are dedicated to empowering startups and enterprises by providing cutting-edge automation solutions designed to streamline your processes and accelerate your journey from concept to market"
             />
           </Col>
 
