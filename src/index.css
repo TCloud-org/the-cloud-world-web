@@ -339,7 +339,14 @@ code {
 
 .bg-about {
   background-image   : url('https://tcw-images.s3.us-west-2.amazonaws.com/about.png');
-  background-size    : cover;
+  background-size    : contain;
+  background-color   : #4312e5;
   background-position: center;
   background-repeat  : no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg-about {
+    background-position: top;
+  }
 }
