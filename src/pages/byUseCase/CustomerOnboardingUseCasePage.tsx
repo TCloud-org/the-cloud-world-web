@@ -1,4 +1,4 @@
-import { Col, Flex } from "antd";
+import { Col, Divider, Flex } from "antd";
 import { Span } from "../../config/layoutConfig";
 import { BenefitSection } from "../../dataDisplayComponents/BenefitSection";
 import { CustomerOnboardingWhyUs } from "../../dataDisplayComponents/CustomerOnboardingWhyUs";
@@ -81,6 +81,8 @@ export const CustomerOnboardingUseCasePage = () => {
       />
 
       <CustomerOnboardingWhyUs />
+
+      <Divider />
 
       <LandingContactSales />
     </Flex>

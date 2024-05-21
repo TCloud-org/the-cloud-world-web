@@ -1,4 +1,4 @@
-import { Col, Flex } from "antd";
+import { Col, Divider, Flex } from "antd";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
 import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
 import { Span } from "../../config/layoutConfig";
@@ -99,6 +99,8 @@ export const ComplianceProcessUseCasePage = () => {
       />
 
       <ComplianceProcessWhyUs />
+
+      <Divider />
 
       <LandingContactSales />
     </Flex>

@@ -10,7 +10,7 @@ import {
   StoreRounded,
   VerifiedUserRounded,
 } from "@mui/icons-material";
-import { Col, Flex, Image, Row, Typography, theme } from "antd";
+import { Col, Divider, Flex, Image, Row, Typography, theme } from "antd";
 import { Span } from "../config/layoutConfig";
 import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
@@ -166,6 +166,8 @@ export const EmailNotificationWorkflowPage = () => {
       {steps.map((step, i) => (
         <EmailStep {...step} key={i} index={i} />
       ))}
+
+      <Divider />
 
       <LandingContactSales description="We're here to help accelerate your business launch. Our platform offers an email notification solution with rapid delivery to maximize your business's operational efficiency and enhance customer experience." />
     </Flex>

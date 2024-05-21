@@ -14,21 +14,25 @@ export const LandingContactSales = (props: {
   your business's customer experience`,
   } = props;
   return (
-    <LandingContainer className="bg-transparent bg-img w-full" gutter={[0, 0]}>
+    <LandingContainer className=" w-full" gutter={[0, 0]}>
       <Flex vertical gap={32} align="center" className="text-center">
-        <Typography.Title level={2} style={{ margin: 0, color: "white" }}>
+        <Typography.Title level={2} style={{ margin: 0 }}>
           {title}
         </Typography.Title>
 
         <Typography.Paragraph
           style={{ textAlign: "center" }}
-          className="text-white text-lg px-0 lg:px-60"
+          className=" text-lg px-0 lg:px-60"
         >
           {description}
         </Typography.Paragraph>
 
         <Flex justify="center">
-          <PricingButton href="/contact" variant="solid">
+          <PricingButton
+            href="/contact"
+            variant="solid"
+            className="bg-slate-800 text-white hover:text-slate-200 hover:bg-slate-800"
+          >
             Speak to our team
           </PricingButton>
         </Flex>

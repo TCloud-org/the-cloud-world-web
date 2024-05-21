@@ -276,7 +276,9 @@ export const AppHeader = () => {
               target="_blank"
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
               className={
-                !isFlipColor ? "rounded-md ring-0 bg-black" : "rounded-md"
+                !isFlipColor
+                  ? "rounded-md ring-0 bg-black hover:text-slate-200"
+                  : "rounded-md"
               }
               variant={!isFlipColor ? undefined : "solid"}
             >

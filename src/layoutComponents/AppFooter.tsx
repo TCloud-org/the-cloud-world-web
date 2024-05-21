@@ -6,10 +6,10 @@ export const AppFooter = () => {
   const { token } = theme.useToken();
 
   return (
-    <Footer style={{ textAlign: "center", background: token.colorBgContainer }}>
+    <Footer style={{ textAlign: "center", background: "black" }}>
       <Flex align="center" gap={8} justify="center">
         <AppLogo />
-        <Typography.Text strong>
+        <Typography.Text strong style={{ color: token.colorWhite }}>
           The Cloud World ©{new Date().getFullYear()}
         </Typography.Text>
       </Flex>

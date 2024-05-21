@@ -118,6 +118,8 @@ export const StepWorkflowPage = () => {
 
       <StepWorkflowLog />
 
+      <Divider />
+
       <LandingContactSales />
     </Flex>
   );
