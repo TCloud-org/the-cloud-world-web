@@ -341,4 +341,5 @@ code {
   background-image   : url('https://tcw-images.s3.us-west-2.amazonaws.com/about.png');
   background-size    : cover;
   background-position: center;
+  background-repeat  : no-repeat;
 }

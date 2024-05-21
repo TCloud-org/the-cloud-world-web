@@ -18,7 +18,7 @@ export const LandingSectionHeading = (props: {
 
       <Typography.Title
         level={2}
-        style={{ marginTop: 0, textAlign: "center", fontSize: "2.75rem" }}
+        style={{ marginTop: 0, textAlign: "center", fontSize: "2.5rem" }}
         className="px-2 lg:px-60"
       >
         {props.subtitle}
