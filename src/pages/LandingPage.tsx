@@ -6,7 +6,7 @@ import {
   RestartAltRounded,
   VisibilityRounded,
 } from "@mui/icons-material";
-import { Col, Flex, Image, Row, Typography } from "antd";
+import { Col, Divider, Flex, Image, Row, Typography } from "antd";
 import { CSSProperties, ReactElement, ReactNode, cloneElement } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
@@ -137,6 +137,8 @@ export const LandingPage = () => {
       <LandingSimpleIntegration />
 
       <LandingFlexibility />
+
+      <Divider />
 
       <LandingContactSales />
     </Flex>
