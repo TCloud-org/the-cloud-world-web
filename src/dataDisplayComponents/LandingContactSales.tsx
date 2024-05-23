@@ -30,7 +30,6 @@ export const LandingContactSales = (props: {
         <Flex justify="center">
           <PricingButton
             href="/contact"
-            variant="solid"
             className="bg-slate-800 text-white hover:text-slate-200 hover:bg-slate-800"
           >
             Speak to our team
