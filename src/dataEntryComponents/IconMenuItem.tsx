@@ -19,7 +19,11 @@ export const IconMenuItem = (props: {
       className="menu-hover"
       style={{ padding: 8, borderRadius: token.borderRadius }}
       onClick={() => {
-        navigate(props.href as string);
+        if (props.href?.startsWith("http")) {
+          window.open(props.href, "_blank");
+        } else {
+          navigate(props.href as string);
+        }
         onOpen(false);
       }}
     >
