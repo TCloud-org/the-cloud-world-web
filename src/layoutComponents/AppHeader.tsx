@@ -141,11 +141,11 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
     ? [
         {
           label: "Docs",
-          href: "",
+          href: "https://www.documentation.thecloudworlds.com",
         },
         {
           label: "Login",
-          href: "",
+          href: "https://stepworkflow.thecloudworlds.com",
         },
       ]
     : []),
