@@ -117,6 +117,15 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
         menuOpen={props.menuOpen}
         menu={[
           {
+            label: "General",
+            children: [
+              {
+                label: "Blog",
+                href: "https://www.blog.thecloudworlds.com",
+              },
+            ],
+          },
+          {
             label: "Company",
             children: [
               {
