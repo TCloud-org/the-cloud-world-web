@@ -60,7 +60,7 @@ export const LandingPage = () => {
     <Flex vertical>
       <Flex vertical className="bg-dark overflow-hidden">
         <div style={{ height: HeaderHeight }} />
-        <LandingContainer>
+        <LandingContainer className="!pb-0">
           <Col {...Span[1]}>
             <PageHeading
               title="Effortless API Optimization Infrastructure"
