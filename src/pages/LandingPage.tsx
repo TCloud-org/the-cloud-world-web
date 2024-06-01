@@ -61,7 +61,7 @@ export const LandingPage = () => {
       <Flex vertical className="bg-dark overflow-hidden">
         <div style={{ height: HeaderHeight }} />
         <LandingContainer className="!pb-0">
-          <Col {...Span[1]}>
+          <Col {...Span[1]} className="z-20">
             <PageHeading
               title="Effortless API Optimization Infrastructure"
               description="Dive into our innovative solutions designed to revolutionize
@@ -71,7 +71,7 @@ export const LandingPage = () => {
               industries."
               className="text-center"
               endDecorator={
-                <Flex justify="center">
+                <Flex justify="center" className="z-10">
                   <div>
                     <PricingButton href="/contact" variant="solid">
                       Request demo
