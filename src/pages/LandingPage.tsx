@@ -16,7 +16,6 @@ import { LandingSimpleIntegration } from "../dataDisplayComponents/LandingSimple
 import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { Screen } from "../layoutComponents/Screen";
 
 interface Elevation {
   icon?: ReactNode;
@@ -59,10 +58,10 @@ const elevateWith: Elevation[] = [
 export const LandingPage = () => {
   return (
     <Flex vertical>
-      <Flex vertical className="aurora overflow-hidden">
+      <Flex vertical className="bg-dark overflow-hidden">
         <div style={{ height: HeaderHeight }} />
         <LandingContainer>
-          <Col {...Span[2]}>
+          <Col {...Span[1]}>
             <PageHeading
               title="Effortless API Optimization Infrastructure"
               description="Dive into our innovative solutions designed to revolutionize
@@ -70,8 +69,9 @@ export const LandingPage = () => {
               Experience the power of optimized API latency and slashed
               maintenance costs, tailored for businesses of all sizes and
               industries."
+              className="text-center"
               endDecorator={
-                <Flex>
+                <Flex justify="center">
                   <div>
                     <PricingButton href="/contact" variant="solid">
                       Request demo
@@ -82,13 +82,14 @@ export const LandingPage = () => {
             />
           </Col>
 
-          <Col {...Span[2]}>
-            <Screen className="w-[150%]">
+          <Col {...Span[1]}>
+            <div className="h-96">
               <Image
-                src="https://tcw-images.s3.us-west-2.amazonaws.com/landing.png"
+                src="https://tcw-images.s3.us-west-2.amazonaws.com/landing-bg.png"
                 preview={false}
+                style={{ borderRadius: 40 }}
               />
-            </Screen>
+            </div>
           </Col>
         </LandingContainer>
       </Flex>

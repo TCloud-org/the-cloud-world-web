@@ -6,12 +6,13 @@ export const PageHeading = (props: {
   description?: string;
   endDecorator?: ReactNode;
   color?: "light" | "dark";
+  className?: string;
 }) => {
   const { token } = theme.useToken();
-  const { color = "light" } = props;
+  const { color = "light", className } = props;
 
   return (
-    <Flex vertical gap={32} className="h-full">
+    <Flex vertical gap={32} className={`h-full ${className}`}>
       <Typography.Title
         level={1}
         style={{
