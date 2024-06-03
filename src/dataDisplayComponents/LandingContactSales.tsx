@@ -1,6 +1,7 @@
 import { Flex, Typography } from "antd";
-import { PricingButton } from "../dataEntryComponents/PricingButton";
+import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingContainer } from "./LandingContainer";
+import { LandingTitle } from "./LandingTitle";
 
 export const LandingContactSales = (props: {
   title?: string;
@@ -16,24 +17,17 @@ export const LandingContactSales = (props: {
   return (
     <LandingContainer className=" w-full" gutter={[0, 0]}>
       <Flex vertical gap={32} align="center" className="text-center">
-        <Typography.Title level={2} style={{ margin: 0 }}>
-          {title}
-        </Typography.Title>
+        <LandingTitle>{title}</LandingTitle>
 
         <Typography.Paragraph
           style={{ textAlign: "center" }}
-          className=" text-lg px-0 lg:px-60"
+          className=" text-lg px-0 lg:px-60 text-washed-purple-500"
         >
           {description}
         </Typography.Paragraph>
 
         <Flex justify="center">
-          <PricingButton
-            href="/contact"
-            className="bg-slate-800 text-white hover:text-slate-200 hover:bg-slate-800"
-          >
-            Speak to our team
-          </PricingButton>
+          <ThemeButton>Speak to our team</ThemeButton>
         </Flex>
       </Flex>
     </LandingContainer>

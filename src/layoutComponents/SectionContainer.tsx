@@ -16,7 +16,7 @@ export const SectionContainer = (props: {
       }}
       justify="center"
       align="center"
-      className={`px-4 py-24 lg:px-16 lg:py-32 overflow-hidden ${props.className}`}
+      className={`px-4 py-24 lg:py-32 overflow-hidden ${props.className}`}
     >
       {props.children}
     </Flex>

@@ -1,58 +1,54 @@
-import { Col, Flex, Row, Typography, theme } from "antd";
-import { Span } from "../config/layoutConfig";
-import { ReactNode } from "react";
+import { Col, Flex, Row, Typography } from "antd";
 import { Gutter } from "antd/es/grid/row";
+import { ReactNode } from "react";
+import { Span } from "../config/layoutConfig";
+import { Step } from "./Step";
 
 export const LandingInfo = (props: {
   position?: "left" | "right";
   section?: string;
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   demonstration?: ReactNode;
   gutter?: Gutter | [Gutter, Gutter];
+  step?: number;
+  action?: ReactNode;
+  className?: string;
 }) => {
-  const { token } = theme.useToken();
+  const { position = "left", gutter = [64, 64], step, className = "" } = props;
 
-  const { position = "left", gutter = [64, 64] } = props;
+  const col = position === "left" ? "flex-col-reverse" : "flex-col";
 
   return (
-    <Row gutter={gutter} className="w-full items-center">
-      {position === "left" && (
-        <Col {...Span[2]} className="flex flex-col">
-          {props.demonstration}
-        </Col>
-      )}
+    <Row
+      gutter={gutter}
+      className={`items-center ${col} lg:flex-row ${className}`}
+    >
+      {position === "left" && <Col {...Span[2]}>{props.demonstration}</Col>}
 
-      <Col
-        {...Span[props.demonstration ? 2 : 1]}
-        className="flex flex-col w-full"
-      >
+      <Col {...Span[props.demonstration ? 2 : 1]}>
         <Flex vertical gap={32}>
-          <Typography.Title
-            level={5}
-            style={{ margin: 0, color: token.colorPrimary, fontSize: "1rem" }}
-          >
+          <h4 className="text-lg font-heading-4 text-white flex items-center gap-4">
+            {step && <Step>{`S${step}`}</Step>}
             {props.section?.toUpperCase()}
-          </Typography.Title>
+          </h4>
 
-          <Typography.Title
-            level={2}
-            style={{ margin: 0, fontSize: "1.75rem" }}
-          >
+          <h2 className="text-[1.875rem] leading-9 font-bold text-white">
             {props.title}
-          </Typography.Title>
+          </h2>
 
-          <Typography.Paragraph style={{ margin: 0, fontSize: "1.25rem" }}>
+          <Typography.Paragraph
+            style={{ margin: 0, fontSize: "1.25rem" }}
+            className="text-washed-purple-800"
+          >
             {props.description}
           </Typography.Paragraph>
+
+          {props.action}
         </Flex>
       </Col>
 
-      {position === "right" && (
-        <Col {...Span[2]} className="flex flex-col">
-          {props.demonstration}
-        </Col>
-      )}
+      {position === "right" && <Col {...Span[2]}>{props.demonstration}</Col>}
     </Row>
   );
 };

@@ -6,7 +6,7 @@ export const AppFooter = () => {
   const { token } = theme.useToken();
 
   return (
-    <Footer style={{ textAlign: "center", background: "black" }}>
+    <Footer className="bg-dark text-center">
       <Flex vertical gap={32}>
         <Flex align="center" gap={8} justify="center">
           <AppLogo />

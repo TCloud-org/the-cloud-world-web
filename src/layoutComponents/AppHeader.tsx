@@ -1,13 +1,12 @@
 import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
-import { Header } from "antd/es/layout/layout";
 import { Fade as Hamburger } from "hamburger-react";
 import { CSSProperties, useEffect, useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
-import { PricingButton } from "../dataEntryComponents/PricingButton";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
+import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
 const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
   {
@@ -200,8 +199,9 @@ export const AppHeader = () => {
   }, []);
 
   const headerScrollStyle: CSSProperties = {
-    background: token.colorBgContainer,
+    background: "#03001499",
     boxShadow: token.boxShadowTertiary,
+    backdropFilter: "blur(24px)",
   };
 
   const headerStyle: CSSProperties = {
@@ -211,100 +211,87 @@ export const AppHeader = () => {
 
   return (
     <>
-      <Header
+      <header
         style={{
-          display: "flex",
-          alignItems: "center",
           position: "fixed",
           overflow: "hidden",
           top: 0,
           zIndex: 999,
+          height: HeaderHeight,
           width: "100%",
-          justifyContent: "space-between",
           transition: "all 0.3s",
           ...(scrollStart || menuOpen ? headerScrollStyle : headerStyle),
         }}
         className="px-2 lg:px-8"
       >
-        <Flex align="center" flex={1}>
+        <Flex justify="space-between" align="center" className="w-full h-full">
+          <Flex align="center" flex={1}>
+            <Flex
+              align="center"
+              gap={8}
+              onClick={() => navigate("/")}
+              style={{ padding: 16, cursor: "pointer" }}
+            >
+              <AppLogo />
+              <Typography.Text strong style={{ color: "white" }}>
+                The Cloud World
+              </Typography.Text>
+            </Flex>
+          </Flex>
+
           <Flex
             align="center"
-            gap={8}
-            onClick={() => navigate("/")}
-            style={{ padding: 16, cursor: "pointer" }}
+            flex={2}
+            justify="center"
+            gap={32}
+            className="hidden"
           >
-            <AppLogo flip={isFlipColor && !menuOpen} />
-            <Typography.Text
-              strong
-              style={{ color: !isFlipColor || menuOpen ? "black" : "white" }}
+            {renderItems({ isFlipColor: true }).map((item, i) => (
+              <div key={i}>
+                {item.render ? (
+                  item.render()
+                ) : (
+                  <a
+                    href={item.href}
+                    style={{
+                      color: "white",
+                    }}
+                    className="link"
+                  >
+                    {item.label}
+                  </a>
+                )}
+              </div>
+            ))}
+          </Flex>
+
+          <Flex flex={1} justify="flex-end" align="center" gap={32}>
+            <a
+              href="https://www.documentation.thecloudworlds.com"
+              target="_blank"
+              className="link hidden lg:flex"
+              rel="noreferrer"
+              style={{ color: "white" }}
             >
-              The Cloud World
-            </Typography.Text>
+              Docs
+            </a>
+            <div className="hidden lg:flex">
+              <ThemeButton href="https://www.stepworkflow.thecloudworlds.com">
+                Login
+              </ThemeButton>
+            </div>
+
+            <div className="block lg:hidden">
+              <Hamburger
+                toggled={menuOpen}
+                toggle={setMenuOpen}
+                size={20}
+                color="white"
+              />
+            </div>
           </Flex>
         </Flex>
-
-        <Flex
-          align="center"
-          flex={2}
-          justify="center"
-          gap={32}
-          className="hidden lg:flex"
-        >
-          {renderItems({ isFlipColor: isFlipColor }).map((item, i) => (
-            <div key={i}>
-              {item.render ? (
-                item.render()
-              ) : (
-                <a
-                  href={item.href}
-                  style={{
-                    color: !isFlipColor ? undefined : "white",
-                  }}
-                  className="link"
-                >
-                  {item.label}
-                </a>
-              )}
-            </div>
-          ))}
-        </Flex>
-
-        <Flex flex={1} justify="flex-end" align="center" gap={32}>
-          <a
-            href="https://www.documentation.thecloudworlds.com"
-            target="_blank"
-            className="link hidden lg:block"
-            rel="noreferrer"
-            style={{ color: !isFlipColor ? undefined : "white" }}
-          >
-            Docs
-          </a>
-          <div className="hidden lg:block">
-            <PricingButton
-              href="https://www.stepworkflow.thecloudworlds.com"
-              target="_blank"
-              style={{ paddingTop: "6px", paddingBottom: "6px" }}
-              className={
-                !isFlipColor
-                  ? "rounded-md ring-0 bg-black hover:text-slate-200"
-                  : "rounded-md"
-              }
-              variant={!isFlipColor ? undefined : "solid"}
-            >
-              Login
-            </PricingButton>
-          </div>
-
-          <div className="block lg:hidden">
-            <Hamburger
-              toggled={menuOpen}
-              toggle={setMenuOpen}
-              size={20}
-              color={!isFlipColor || menuOpen ? undefined : "white"}
-            />
-          </div>
-        </Flex>
-      </Header>
+      </header>
       <Menu
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}
@@ -316,18 +303,19 @@ export const AppHeader = () => {
         className="top-[64px] block lg:hidden"
         overlayClassName="top-[64px] block lg:hidden"
       >
-        <Flex vertical className="bg-white h-full px-2 overflow-auto pb-16">
+        <Flex
+          vertical
+          className="bg-dark/50 h-full px-2 overflow-auto pb-16 backdrop-blur-md"
+        >
           {renderItems({ isFlipColor: isFlipColor, menuOpen: menuOpen }).map(
             (item, i) => (
               <div key={i}>
-                {item.render ? (
-                  item.render()
-                ) : (
+                {item.render ? null : (
                   <div className="mx-4 py-4">
                     <a
                       href={item.href}
                       style={{
-                        color: !isFlipColor || menuOpen ? undefined : "white",
+                        color: "white",
                       }}
                       className="link"
                     >
