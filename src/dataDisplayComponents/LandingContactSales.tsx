@@ -18,7 +18,7 @@ export const LandingContactSales = (props: {
 
         <Typography.Paragraph
           style={{ textAlign: "center" }}
-          className=" text-lg px-0 lg:px-60 text-neutral-7"
+          className=" text-lg px-0 lg:px-60 text-paragraph"
         >
           {description}
         </Typography.Paragraph>
