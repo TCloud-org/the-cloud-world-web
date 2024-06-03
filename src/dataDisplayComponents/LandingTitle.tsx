@@ -11,7 +11,7 @@ export const LandingTitle = (props: {
       style={{
         margin: 0,
       }}
-      className={`!text-washed-purple-400 ${props.className}`}
+      className={`!text-washed-purple-400 text-center ${props.className}`}
     >
       {props.children}
     </Typography.Title>
