@@ -8,11 +8,8 @@ export const LandingContactSales = (props: {
   description?: string;
 }) => {
   const {
-    title = "Connect with an expert",
-    description = `We're here to help accelerate your business launch. Our platform is
-  for companies that want to decouple their backend systems to handle
-  various asynchronous tasks, significantly reducing latency to maximize
-  your business's customer experience`,
+    title = "Still have questions?",
+    description = `We'd love to hear from you`,
   } = props;
   return (
     <LandingContainer className=" w-full" gutter={[0, 0]}>

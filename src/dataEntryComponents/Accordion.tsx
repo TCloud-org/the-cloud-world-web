@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import { ReactNode, useState } from "react";
 
-export const Accordion = (props: { title?: string; answer?: string }) => {
-  const { title, answer } = props;
+export const Accordion = (props: {
+  question?: ReactNode;
+  answer?: ReactNode;
+}) => {
+  const { question, answer } = props;
 
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="w-full lg:w-1/2 py-4 px-8 bg-neutral-12 rounded-lg">
+    <div className="w-full py-4 px-8 bg-neutral-12 rounded-lg">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full items-center text-white text-lg"
       >
-        <span className="font-bold">{title}</span>
+        <span className="font-bold">{question}</span>
         <svg
           className="fill-white shrink-0 ml-8"
           width="16"
@@ -39,7 +42,7 @@ export const Accordion = (props: { title?: string; answer?: string }) => {
         </svg>
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-white text-md ${
+        className={`grid overflow-hidden transition-all duration-200 ease-in-out text-white text-md ${
           accordionOpen
             ? "grid-rows-[1fr] opacity-100 mt-4"
             : "grid-rows-[0fr] opacity-0 mt-0"
