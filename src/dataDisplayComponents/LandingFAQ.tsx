@@ -82,10 +82,10 @@ export const LandingFAQ = () => {
     >
       <Flex>
         <Pill>
-          <HelpOutlineRounded /> FAQ
+          <HelpOutlineRounded /> Got questions?
         </Pill>
       </Flex>
-      <LandingTitle>Frequently Asked Question</LandingTitle>
+      <LandingTitle>We Have The Answers</LandingTitle>
       <Flex vertical gap={32} className="w-full lg:w-[50vw]">
         {faqs.map((faq, i) => (
           <Accordion question={faq.question} answer={faq.answer} key={i} />

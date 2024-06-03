@@ -42,7 +42,7 @@ export const Accordion = (props: {
         </svg>
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-200 ease-in-out text-white text-md ${
+        className={`grid overflow-hidden transition-all duration-200 ease-in-out text-paragraph ${
           accordionOpen
             ? "grid-rows-[1fr] opacity-100 mt-4"
             : "grid-rows-[0fr] opacity-0 mt-0"

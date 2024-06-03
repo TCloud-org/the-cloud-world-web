@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sora: ['Sora', 'sans-serif'],
+      },
       fontSize: {
         'heading-1': '64px',
         'heading-2': '55px',
@@ -22,6 +25,7 @@ module.exports = {
         'paragraph': '400',
       },
       colors: {
+        paragraph: "rgba(203, 203, 232, 0.75)",
         "primary": '#4312e5',
         "hover": 'rgb(241 245 249 / 0.6)',
         "dark": "#030014",

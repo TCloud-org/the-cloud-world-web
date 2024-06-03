@@ -24,7 +24,7 @@ export const LandingCard = (props: {
         </Typography.Text>
         <Typography.Paragraph
           style={{ marginBottom: 0 }}
-          className="text-washed-purple-800 text-lg"
+          className="text-paragraph text-lg"
         >
           {subtitle}
         </Typography.Paragraph>

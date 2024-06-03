@@ -11,7 +11,7 @@ export const LandingTitle = (props: {
       style={{
         margin: 0,
       }}
-      className={`!text-washed-purple-400 text-center ${props.className}`}
+      className={`bg-gradient-to-br from-neutral-4 to-neutral-7 bg-clip-text !text-transparent text-center ${props.className}`}
     >
       {props.children}
     </Typography.Title>

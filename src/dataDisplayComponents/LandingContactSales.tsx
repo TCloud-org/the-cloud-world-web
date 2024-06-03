@@ -9,7 +9,7 @@ export const LandingContactSales = (props: {
 }) => {
   const {
     title = "Still have questions?",
-    description = `We'd love to hear from you`,
+    description = `Let's talk about your potential solutions.`,
   } = props;
   return (
     <LandingContainer className=" w-full" gutter={[0, 0]}>
@@ -18,7 +18,7 @@ export const LandingContactSales = (props: {
 
         <Typography.Paragraph
           style={{ textAlign: "center" }}
-          className=" text-lg px-0 lg:px-60 text-washed-purple-500"
+          className=" text-lg px-0 lg:px-60 text-neutral-7"
         >
           {description}
         </Typography.Paragraph>

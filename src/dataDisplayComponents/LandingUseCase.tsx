@@ -1,7 +1,75 @@
+import { AppsRounded } from "@mui/icons-material";
+import { Col, Row } from "antd";
+import { Span } from "../config/layoutConfig";
+import { LandingTitle } from "./LandingTitle";
+import { Pill } from "./Pill";
+import { SectionContainer } from "./SectionContainer";
+import { UseCaseCard } from "./UseCaseCard";
+
+const useCases = [
+  {
+    title: "Modularize a large system",
+    imageUrl:
+      "https://framerusercontent.com/images/s4rLWzYGkEswPUa4SOL9SvjO9rA.png",
+    description: (
+      <>
+        <p>
+          Imagine you have an API responsible for registering a customer. This
+          API may entail a series of intricate steps, such as validating whether
+          the user is a returning customer, creating a new user profile, or
+          recovering from a legacy account. Additionally, it might involve
+          setting up customer profiles and billing payments through third-party
+          platforms like Stripe.
+        </p>
+        <p>
+          However, bundling a sequence of 5 or more steps into a single API can
+          significantly increase latency, impacting customer experience and
+          raising internal maintenance costs.
+        </p>
+        <p>
+          That's where our platform comes in. Designed to address this very
+          challenge, our solution allows you to orchestrate a sequence of steps
+          seamlessly. By modularizing and orchestrating individual components,
+          you can streamline the process, optimize API performance, and maintain
+          each component more effectively.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Manage a notification system",
+    imageUrl:
+      "https://framerusercontent.com/images/zK8JR7Yjii30gw94qWoYhI5AJUk.svg",
+    description: (
+      <>
+        <p>Coming soon...</p>
+      </>
+    ),
+  },
+];
 export const LandingUseCase = () => {
   return (
-    <div>
-      <h1>Coming soon...</h1>
-    </div>
+    <SectionContainer>
+      <Pill>
+        <AppsRounded /> Use Case
+      </Pill>
+
+      <LandingTitle>Right Solution Right Customer</LandingTitle>
+
+      <div className="relative z-10">
+        <Row gutter={[32, 32]} className="mt-8 px-8">
+          {useCases.map((useCase, i) => (
+            <Col key={i} {...Span[2]} className="flex flex-col">
+              <UseCaseCard
+                imageUrl={useCase.imageUrl}
+                title={useCase.title}
+                description={useCase.description}
+              />
+            </Col>
+          ))}
+        </Row>
+        <div className="absolute left-0 right-0 -top-[10%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-20 -z-10" />
+      </div>
+    </SectionContainer>
   );
 };

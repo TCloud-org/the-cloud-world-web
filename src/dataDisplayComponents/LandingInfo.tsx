@@ -44,7 +44,7 @@ export const LandingInfo = (props: {
 
           <Typography.Paragraph
             style={{ margin: 0, fontSize: "1.25rem" }}
-            className="text-washed-purple-800"
+            className="text-paragraph"
           >
             {props.description}
           </Typography.Paragraph>
