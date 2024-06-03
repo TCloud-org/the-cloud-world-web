@@ -9,8 +9,7 @@ import { UseCaseCard } from "./UseCaseCard";
 const useCases = [
   {
     title: "Modularize a large system",
-    imageUrl:
-      "https://framerusercontent.com/images/s4rLWzYGkEswPUa4SOL9SvjO9rA.png",
+    imageUrl: "https://tcw-images.s3.us-west-2.amazonaws.com/usecase-2.png",
     description: (
       <>
         <p>
@@ -38,8 +37,7 @@ const useCases = [
   },
   {
     title: "Manage a notification system",
-    imageUrl:
-      "https://framerusercontent.com/images/zK8JR7Yjii30gw94qWoYhI5AJUk.svg",
+    imageUrl: "https://tcw-images.s3.us-west-2.amazonaws.com/usecase-2.svg",
     description: (
       <>
         <p>
@@ -84,7 +82,7 @@ export const LandingUseCase = () => {
             </Col>
           ))}
         </Row>
-        <div className="absolute left-0 right-0 -top-[10%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-20 -z-10" />
+        <div className="absolute left-0 right-0 -top-[10%] bottom-0 bg-primary-blue-800 rounded-full blur-[150px] opacity-20 -z-10" />
       </div>
     </SectionContainer>
   );

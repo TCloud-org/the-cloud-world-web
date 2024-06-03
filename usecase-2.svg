@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="264" fill="none">
+    <g filter="url(#a)">
+        <rect width="64" height="64" x="143" y="120" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="143.5" y="120.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="223" y="120" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="223.5" y="120.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="383" y="40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="383.5" y="40.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="303" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="303.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#b)">
+        <rect width="64" height="64" x="223" y="40" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="223.5" y="40.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <g filter="url(#c)">
+        <rect width="64" height="64" x="383" y="120" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="383.5" y="120.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="383" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="383.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="63" y="120" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="63.5" y="120.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="143" y="40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="143.5" y="40.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="223" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="223.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#d)">
+        <rect width="64" height="64" x="303" y="40" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="303.5" y="40.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="143" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="143.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#e)">
+        <rect width="64" height="64" x="303" y="200" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="303.5" y="200.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="143" y="200" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="143.5" y="200.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#f)">
+        <rect width="64" height="64" x="223" y="200" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="223.5" y="200.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <g filter="url(#g)">
+        <rect width="64" height="64" x="63" y="200" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="63.5" y="200.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="-17" y="200" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="-16.5" y="200.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="383" y="200" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="383.5" y="200.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#h)">
+        <rect width="64" height="64" x="63" y="40" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="63.5" y="40.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="63" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="63.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="-17" y="40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="-16.5" y="40.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <g filter="url(#i)">
+        <rect width="64" height="64" x="-17" y="120" fill="#CECEFB" fill-opacity=".05" rx="12" />
+    </g>
+    <rect width="63" height="63" x="-16.5" y="120.5" stroke="#8F67FF" stroke-opacity=".12" rx="11.5" />
+    <rect width="64" height="64" x="-17" y="-40" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="-16.5" y="-39.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <rect width="64" height="64" x="303" y="120" fill="#CECEFB" fill-opacity=".01" rx="12" />
+    <rect width="63" height="63" x="303.5" y="120.5" stroke="#CECEFB" stroke-opacity=".05" rx="11.5" />
+    <defs>
+        <filter id="a" width="64" height="76" x="143" y="108" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="b" width="64" height="76" x="223" y="28" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="c" width="64" height="76" x="383" y="108" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="d" width="64" height="76" x="303" y="28" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="e" width="64" height="76" x="303" y="188" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="f" width="64" height="76" x="223" y="188" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="g" width="64" height="76" x="63" y="188" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="h" width="64" height="76" x="63" y="28" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+        <filter id="i" width="64" height="76" x="-17" y="108" color-interpolation-filters="sRGB"
+            filterUnits="userSpaceOnUse">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feColorMatrix in="SourceAlpha" result="hardAlpha"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+            <feOffset dy="-12" />
+            <feGaussianBlur stdDeviation="12" />
+            <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+            <feColorMatrix values="0 0 0 0 0.623167 0 0 0 0 0.445833 0 0 0 0 1 0 0 0 0.2 0" />
+            <feBlend in2="shape" result="effect1_innerShadow_732_11576" />
+        </filter>
+    </defs>
+</svg>
