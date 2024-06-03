@@ -9,11 +9,11 @@ export const Accordion = (props: {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="w-full py-4 px-8 bg-neutral-12 rounded-lg">
-      <button
-        onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-full items-center text-white text-lg"
-      >
+    <div
+      className="w-full py-4 px-8 bg-neutral-12 rounded-lg cursor-pointer"
+      onClick={() => setAccordionOpen(!accordionOpen)}
+    >
+      <button className="flex justify-between w-full items-center text-white text-lg">
         <span className="font-bold">{question}</span>
         <svg
           className="fill-white shrink-0 ml-8"

@@ -30,7 +30,7 @@ const benefits = [
     ),
   },
   {
-    section: "Saving Time and Energy",
+    section: "Time and Energy Efficiency",
     title:
       "Eliminate all the burdens of managing complex processes and boost productivity by at least 50%",
     description: (

@@ -11,6 +11,21 @@ const faqs = [
       "Yes, we take customer data security seriously at TCW. Our servers are hosted on the largest data center in AWS. We ensure our application is always up-to-date with the latest security patches, and all our plans include SSL encryption to keep your data safe.",
   },
   {
+    question: "Is TCW for beginners? Can non-technical people use it?",
+    answer: (
+      <p>
+        TCW is designed for professionals with intermediate technical skills.
+        However, non-technical people can also easily use and manage a workload
+        of workflows thanks to its intuitive interface.
+        <p className="mt-4">
+          If you are a non-technical user, it may be helpful to seek assistance
+          from an intermediate developer to ensure that you can effectively
+          utilise TCW.
+        </p>
+      </p>
+    ),
+  },
+  {
     question: "Is TCW free? Do I need to sign up to use it?",
     answer: (
       <p>
@@ -52,21 +67,6 @@ const faqs = [
             customer support
           </a>{" "}
           team to initiate the refund process.
-        </p>
-      </p>
-    ),
-  },
-  {
-    question: "Is TCW for beginners? Can non-technical people use it?",
-    answer: (
-      <p>
-        TCW is designed for professionals with intermediate technical skills.
-        However, non-technical people can also easily use and manage a workload
-        of workflows thanks to its intuitive interface.
-        <p className="mt-4">
-          If you are a non-technical user, it may be helpful to seek assistance
-          from an intermediate developer to ensure that you can effectively
-          utilise TCW.
         </p>
       </p>
     ),
