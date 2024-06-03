@@ -1,5 +1,5 @@
 import { HelpOutlineRounded } from "@mui/icons-material";
-import { Flex } from "antd";
+import { Flex, Typography } from "antd";
 import { Accordion } from "../dataEntryComponents/Accordion";
 import { LandingTitle } from "./LandingTitle";
 import { Pill } from "./Pill";
@@ -20,6 +20,23 @@ const faqs = [
           TCW Free Tier, you have access to all basic workflow features without
           any limitations.
         </p>
+      </p>
+    ),
+  },
+  {
+    question: "What types of payment do you accept?",
+    answer: (
+      <p>
+        We process payments through Stripe, which accepts all major debit and
+        credit cards from customers in every country. For more details, you can
+        check out all{" "}
+        <Typography.Link
+          href="https://stripe.com/payments/features#payment-options"
+          target="_blank"
+        >
+          payment options
+        </Typography.Link>{" "}
+        supported by Stripe.
       </p>
     ),
   },
