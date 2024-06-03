@@ -18,6 +18,7 @@ export const LandingInfo = (props: {
   const { position = "left", gutter = [64, 64], step, className = "" } = props;
 
   const col = position === "left" ? "flex-col-reverse" : "flex-col";
+  const demonstrationClassName = "w-screen lg:w-fit";
 
   return (
     <Row
@@ -25,7 +26,7 @@ export const LandingInfo = (props: {
       className={`items-center ${col} lg:flex-row ${className}`}
     >
       {position === "left" && (
-        <Col {...Span[2]} className="w-screen">
+        <Col {...Span[2]} className={demonstrationClassName}>
           {props.demonstration}
         </Col>
       )}
@@ -53,7 +54,7 @@ export const LandingInfo = (props: {
       </Col>
 
       {position === "right" && (
-        <Col {...Span[2]} className="w-screen">
+        <Col {...Span[2]} className={demonstrationClassName}>
           {props.demonstration}
         </Col>
       )}

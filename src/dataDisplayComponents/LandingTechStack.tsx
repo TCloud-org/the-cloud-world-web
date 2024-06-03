@@ -1,3 +1,4 @@
+import { Flex } from "antd";
 import { AWSLogo } from "../svg/AWSLogo";
 import { DockerLogo } from "../svg/DockerLogo";
 import { FigmaLogo } from "../svg/FigmaLogo";
@@ -46,22 +47,24 @@ const stack = [
 
 export const LandingTechStack = () => {
   return (
-    <div className="max-w-screen-2xl ml-auto mr-auto py-12 w-full">
-      <div className="gallery">
-        {stack.map((item, j) => (
-          <div key={j} className="flex justify-center">
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              style={{ fontSize: 64 }}
-              className="text-neutral-6 hover:text-white transition-all duration-300 cursor-pointer"
-            >
-              {item.logo}
-            </a>
-          </div>
-        ))}
+    <Flex className="mt-24 border-t border-t-neutral-11 border-b border-b-neutral-11">
+      <div className="max-w-screen-2xl ml-auto mr-auto py-12 w-full">
+        <div className="gallery">
+          {stack.map((item, j) => (
+            <div key={j} className="flex justify-center">
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                style={{ fontSize: 64 }}
+                className="text-neutral-6 hover:text-white transition-all duration-300 cursor-pointer"
+              >
+                {item.logo}
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Flex>
   );
 };

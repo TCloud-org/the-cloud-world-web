@@ -73,7 +73,7 @@ const benefits = [
 
 export const LandingBenefit = () => {
   const commonColStyles =
-    "py-6 border-b-[4px] border-transparent cursor-pointer hover:bg-neutral-11/30 transition-all duration-300 flex justify-center";
+    "py-6 px-4 border-b-[4px] border-transparent cursor-pointer hover:bg-neutral-11/30 transition-all duration-300 flex justify-start lg:justify-center";
   const firstStyle =
     "rounded-tl-lg rounded-tr-lg lg:rounded-tr-none rounded-bl-none lg:rounded-bl-lg";
   const lastStyle =
@@ -104,7 +104,7 @@ export const LandingBenefit = () => {
 
       <LandingTitle>No Code No Compromise</LandingTitle>
 
-      <Flex className="w-full px-12 pt-20 z-10 relative" gap={32}>
+      <Flex className="w-full px-8 lg:px-12 pt-20 z-10 relative" gap={32}>
         <div className="top-0 left-0 right-0 -bottom-[150%] dot-bg-dark absolute -z-10" />
         <Row
           gutter={[0, 0]}
@@ -126,7 +126,7 @@ export const LandingBenefit = () => {
         </Row>
       </Flex>
 
-      <div className="z-10 w-full px-4 lg:px-16 mt-12">
+      <div className="z-10 w-full px-0 lg:px-16 mt-12">
         <LandingInfo
           className="!items-start"
           title={benefits[benefitIndex].title}
@@ -142,7 +142,7 @@ export const LandingBenefit = () => {
             </div>
           }
           position="right"
-          gutter={[96, 96]}
+          gutter={[64, 64]}
         />
       </div>
     </Flex>
