@@ -24,7 +24,7 @@ export const LandingSmartBranchIntro = () => {
           </div>
         </div>
         <p className="hero-paragraph">
-          Bringing conditional logic to TCSW, all with no-code. You can create
+          Bringing conditional logic to TCW, all with no-code. You can create
           powerful workflows in just a few simple steps.
         </p>
 

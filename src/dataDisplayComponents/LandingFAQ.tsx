@@ -6,13 +6,18 @@ import { Pill } from "./Pill";
 
 const faqs = [
   {
-    question: "Is TCSW free? Do I need to sign up to use it?",
+    question: "Is my data safe and protected?",
+    answer:
+      "Yes, we take customer data security seriously at TCW. Our servers are hosted on the largest data center in AWS. We ensure our application is always up-to-date with the latest security patches, and all our plans include SSL encryption to keep your data safe.",
+  },
+  {
+    question: "Is TCW free? Do I need to sign up to use it?",
     answer: (
       <p>
-        Yes, TCSW offers both free and paid versions.
+        Yes, TCW offers both free and paid versions.
         <p className="mt-4">
-          TCSW Free Tier is free to use and only requires you to sign up. With
-          TCSW Free Tier, you have access to all basic workflow features without
+          TCW Free Tier is free to use and only requires you to sign up. With
+          TCW Free Tier, you have access to all basic workflow features without
           any limitations.
         </p>
       </p>
@@ -35,16 +40,16 @@ const faqs = [
     ),
   },
   {
-    question: "Is TCSW for beginners? Can non-technical people use it?",
+    question: "Is TCW for beginners? Can non-technical people use it?",
     answer: (
       <p>
-        TCSW is designed for professionals with intermediate technical skills.
+        TCW is designed for professionals with intermediate technical skills.
         However, non-technical people can also easily use and manage a workload
         of workflows thanks to its intuitive interface.
         <p className="mt-4">
           If you are a non-technical user, it may be helpful to seek assistance
           from an intermediate developer to ensure that you can effectively
-          utilise TCSW.
+          utilise TCW.
         </p>
       </p>
     ),
