@@ -25,8 +25,11 @@ const faqs = [
         Yes, we offer a refund if you are not satisfied and do not find what
         you're looking for.
         <p className="mt-4">
-          Please contact our customer support team to initiate the refund
-          process.
+          Please contact our{" "}
+          <a href="/contact" className="underline hover:underline">
+            customer support
+          </a>{" "}
+          team to initiate the refund process.
         </p>
       </p>
     ),
