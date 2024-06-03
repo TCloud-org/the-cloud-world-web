@@ -1,8 +1,8 @@
+import { HelpOutlineRounded } from "@mui/icons-material";
 import { Flex } from "antd";
 import { Accordion } from "../dataEntryComponents/Accordion";
 import { LandingTitle } from "./LandingTitle";
 import { Pill } from "./Pill";
-import { HelpRounded } from "@mui/icons-material";
 
 const faqs = [
   {
@@ -60,7 +60,7 @@ export const LandingFAQ = () => {
     >
       <Flex>
         <Pill>
-          <HelpRounded /> FAQ
+          <HelpOutlineRounded /> FAQ
         </Pill>
       </Flex>
       <LandingTitle>Frequently Asked Question</LandingTitle>

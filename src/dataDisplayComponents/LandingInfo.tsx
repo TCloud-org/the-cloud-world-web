@@ -24,7 +24,11 @@ export const LandingInfo = (props: {
       gutter={gutter}
       className={`items-center ${col} lg:flex-row ${className}`}
     >
-      {position === "left" && <Col {...Span[2]}>{props.demonstration}</Col>}
+      {position === "left" && (
+        <Col {...Span[2]} className="w-screen">
+          {props.demonstration}
+        </Col>
+      )}
 
       <Col {...Span[props.demonstration ? 2 : 1]}>
         <Flex vertical gap={32}>
@@ -48,7 +52,11 @@ export const LandingInfo = (props: {
         </Flex>
       </Col>
 
-      {position === "right" && <Col {...Span[2]}>{props.demonstration}</Col>}
+      {position === "right" && (
+        <Col {...Span[2]} className="w-screen">
+          {props.demonstration}
+        </Col>
+      )}
     </Row>
   );
 };
