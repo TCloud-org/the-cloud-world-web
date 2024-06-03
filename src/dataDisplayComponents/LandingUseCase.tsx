@@ -42,7 +42,23 @@ const useCases = [
       "https://framerusercontent.com/images/zK8JR7Yjii30gw94qWoYhI5AJUk.svg",
     description: (
       <>
-        <p>Coming soon...</p>
+        <p>
+          Imagine you have an e-commerce order system. The standard processes in
+          this system include a sequence of steps such as order confirmation,
+          order processing, shipping updates, delivery updates, and feedback
+          requests. During this flow, there are several pending processes like
+          waiting for the order to be prepared and receiving shipping status
+          updates. These pending processes are often unpredictable but can be
+          automated.
+        </p>
+        <p>
+          With our workflow solution, we support a pending state to handle these
+          waits for upcoming notifications. We provide an API that allows other
+          platforms to notify your workflow when changes occur in the current
+          transaction. By integrating with our solution, you save valuable time
+          and resources, reducing the complexity and headaches associated with
+          managing an event-driven architecture.
+        </p>
       </>
     ),
   },
