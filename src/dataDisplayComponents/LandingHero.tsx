@@ -31,7 +31,7 @@ export const LandingHero = () => {
               endDecorator={
                 <Flex justify="center" className="z-10">
                   <div>
-                    <ThemeButton href="/contact">
+                    <ThemeButton href="https://stepworkflow.thecloudworlds.com">
                       Get Started{" "}
                       <span className="text-neutral-8">- It's Free</span>
                     </ThemeButton>
