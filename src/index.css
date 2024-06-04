@@ -539,3 +539,7 @@ code {
   margin-top   : 20px;
   margin-bottom: 20px;
 }
+
+.foot-placeholder::placeholder {
+  color: rgb(141 140 149 / 1);
+}
