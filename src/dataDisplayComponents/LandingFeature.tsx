@@ -1,7 +1,6 @@
 import {
   ApiRounded,
   ArtTrackRounded,
-  BoltRounded,
   ChecklistRtlRounded,
   GroupWorkRounded,
   Groups3Rounded,
@@ -11,11 +10,11 @@ import {
   SecurityRounded,
 } from "@mui/icons-material";
 import { Col, Flex, Row } from "antd";
+import { ReactNode } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingCard } from "./LandingCard";
 import { LandingTitle } from "./LandingTitle";
 import { Pill } from "./Pill";
-import { ReactNode } from "react";
 
 interface Feature {
   icon?: ReactNode;
@@ -91,9 +90,7 @@ export const LandingFeature = () => {
     >
       <Flex vertical gap={48} align="center">
         <Flex>
-          <Pill>
-            <BoltRounded /> Features
-          </Pill>
+          <Pill>Features</Pill>
         </Flex>
 
         <LandingTitle>10+ Core Features for Pros</LandingTitle>

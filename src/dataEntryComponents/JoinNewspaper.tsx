@@ -7,7 +7,7 @@ export const JoinNewspaper = () => {
       className="p-8 border border-neutral-11 backdrop-blur-[5px] w-full rounded-xl"
       style={{ boxShadow: "inset 0 -7px 120px #a48fff1f" }}
     >
-      <Row>
+      <Row gutter={[0, 16]}>
         <Col {...Span[2]} className="flex flex-col items-start">
           <div className="text-lg text-neutral-7 font-semibold">
             Join our newsletter
@@ -17,7 +17,7 @@ export const JoinNewspaper = () => {
           <div className="flex flex-col items-start gap-4">
             <div className="flex gap-4">
               <Input
-                className="bg-neutral-12/50 hover:bg-neutral-12/50 focus:bg-neutral-12/50 border-neutral-10 hover:border-neutral-10 focus:border-neutral-7 text-white foot-placeholder w-[300px]"
+                className="bg-neutral-12/50 hover:bg-neutral-12/50 focus:bg-neutral-12/50 border-neutral-10 hover:border-neutral-10 focus:border-neutral-7 text-white foot-placeholder w-full lg:w-[300px]"
                 size="large"
                 placeholder="Enter your email"
               />

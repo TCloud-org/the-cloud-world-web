@@ -1,5 +1,6 @@
 import { LandingBenefit } from "../dataDisplayComponents/LandingBenefit";
 import { LandingBlog } from "../dataDisplayComponents/LandingBlog";
+import { LandingCallToAction } from "../dataDisplayComponents/LandingCallToAction";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { LandingFAQ } from "../dataDisplayComponents/LandingFAQ";
 import { LandingFeature } from "../dataDisplayComponents/LandingFeature";
@@ -32,6 +33,8 @@ export const LandingPage = () => {
       <LandingBlog />
 
       <LandingFAQ />
+
+      <LandingCallToAction />
 
       <LandingContactSales />
     </div>

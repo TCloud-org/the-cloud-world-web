@@ -1,4 +1,3 @@
-import { AutoAwesomeRounded } from "@mui/icons-material";
 import { Col, Flex, Image } from "antd";
 import { Span } from "../config/layoutConfig";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
@@ -13,17 +12,13 @@ export const LandingHero = () => {
         <Col {...Span[1]} className="z-20">
           <Flex vertical align="center" gap={32}>
             <Flex>
-              <Pill>
-                <AutoAwesomeRounded /> Your perfect workflow
-              </Pill>
+              <Pill>Your perfect workflow</Pill>
             </Flex>
             <PageHeading
               title={
                 <span className="text-center gap-2 bg-gradient-to-r from-neutral-4 to-neutral-6 text-transparent bg-clip-text">
-                  <span className="bg-gradient-to-r from-primary-purple-300 to-primary-blue-500 bg-clip-text text-transparent">
-                    Optimize
-                  </span>{" "}
-                  Your Backend with TCW
+                  <span className="text-gradient">Optimize</span> Your Backend
+                  with TCW
                 </span>
               }
               description="Quick, cost-effective, powerful technique used by Amazon and other leading tech companies"

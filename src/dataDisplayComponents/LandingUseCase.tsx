@@ -1,4 +1,3 @@
-import { AppsRounded } from "@mui/icons-material";
 import { Col, Row } from "antd";
 import { Span } from "../config/layoutConfig";
 import { LandingTitle } from "./LandingTitle";
@@ -64,9 +63,7 @@ const useCases = [
 export const LandingUseCase = () => {
   return (
     <SectionContainer>
-      <Pill>
-        <AppsRounded /> Use Case
-      </Pill>
+      <Pill>Use Case</Pill>
 
       <LandingTitle>Right Solution Right Customer</LandingTitle>
 

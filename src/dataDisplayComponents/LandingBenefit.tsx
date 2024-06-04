@@ -1,4 +1,3 @@
-import { VerifiedRounded } from "@mui/icons-material";
 import { Col, Flex, Image, Row } from "antd";
 import { useState } from "react";
 import { createSpan } from "../config/layoutConfig";
@@ -98,9 +97,7 @@ export const LandingBenefit = () => {
       className="py-16 ml-auto mr-auto max-w-screen-2xl mt-32"
       gap={32}
     >
-      <Pill>
-        <VerifiedRounded /> Guarantees
-      </Pill>
+      <Pill>Guarantees</Pill>
 
       <LandingTitle>No Code No Compromise</LandingTitle>
 

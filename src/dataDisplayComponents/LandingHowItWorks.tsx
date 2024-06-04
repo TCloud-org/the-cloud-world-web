@@ -1,4 +1,4 @@
-import { ArrowRightAltRounded, ChecklistRtlRounded } from "@mui/icons-material";
+import { ArrowRightAltRounded } from "@mui/icons-material";
 import { Flex, Image } from "antd";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingInfo } from "./LandingInfo";
@@ -14,9 +14,7 @@ export const LandingHowItWorks = () => {
       className="py-16 ml-auto mr-auto max-w-screen-2xl"
       gap={32}
     >
-      <Pill>
-        <ChecklistRtlRounded /> How It Works
-      </Pill>
+      <Pill>How It Works</Pill>
 
       <LandingTitle>Get Started in 3 Simple Steps</LandingTitle>
 

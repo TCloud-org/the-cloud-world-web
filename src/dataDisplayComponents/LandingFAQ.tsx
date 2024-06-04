@@ -1,4 +1,3 @@
-import { HelpOutlineRounded } from "@mui/icons-material";
 import { Flex, Typography } from "antd";
 import { Accordion } from "../dataEntryComponents/Accordion";
 import { LandingTitle } from "./LandingTitle";
@@ -81,9 +80,7 @@ export const LandingFAQ = () => {
       gap={32}
     >
       <Flex>
-        <Pill>
-          <HelpOutlineRounded /> Got questions?
-        </Pill>
+        <Pill>Got questions?</Pill>
       </Flex>
       <LandingTitle>We Have The Answers</LandingTitle>
       <Flex vertical gap={32} className="w-full lg:w-[50vw]">

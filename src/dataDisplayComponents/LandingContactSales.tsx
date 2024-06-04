@@ -1,7 +1,7 @@
 import { Flex, Typography } from "antd";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
-import { LandingContainer } from "./LandingContainer";
 import { LandingTitle } from "./LandingTitle";
+import { SectionContainer } from "./SectionContainer";
 
 export const LandingContactSales = (props: {
   title?: string;
@@ -12,8 +12,8 @@ export const LandingContactSales = (props: {
     description = `Let's talk about your potential solutions.`,
   } = props;
   return (
-    <LandingContainer className=" w-full" gutter={[0, 0]}>
-      <Flex vertical gap={32} align="center" className="text-center">
+    <SectionContainer>
+      <Flex vertical gap={32} align="center" className="text-center pb-16">
         <LandingTitle>{title}</LandingTitle>
 
         <Typography.Paragraph
@@ -27,6 +27,6 @@ export const LandingContactSales = (props: {
           <ThemeButton href="/contact">Speak to our team</ThemeButton>
         </Flex>
       </Flex>
-    </LandingContainer>
+    </SectionContainer>
   );
 };
