@@ -44,7 +44,7 @@ export const LandingHero = () => {
           preview={false}
           className="rounded-[40px]"
         />
-        <div className="absolute left-0 right-0 -top-[50%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-40 -z-10" />
+        <div className="absolute left-0 right-0 -top-[15%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-40 -z-10" />
       </Flex>
     </Flex>
   );
