@@ -15,10 +15,10 @@ export const PageHeading = (props: {
     <Flex
       vertical
       gap={32}
-      className={`h-full max-w-screen-lg ml-auto mr-auto ${className}`}
+      className={`h-full max-w-screen-md ml-auto mr-auto ${className}`}
     >
       <LandingTitle>{props.title}</LandingTitle>
-      <Typography.Paragraph className="!text-paragraph !text-[20px]">
+      <Typography.Paragraph className="!text-[20px] text-neutral-6">
         {props.description}
       </Typography.Paragraph>
 

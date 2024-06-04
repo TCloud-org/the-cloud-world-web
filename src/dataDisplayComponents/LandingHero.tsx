@@ -17,11 +17,19 @@ export const LandingHero = () => {
             <PageHeading
               title={
                 <span className="text-center gap-2 bg-gradient-to-r from-neutral-4 to-neutral-6 text-transparent bg-clip-text">
-                  <span className="text-gradient">Optimize</span> Your Backend
-                  with TCW
+                  <span className="text-gradient">Optimize</span> your API with
+                  Step Workflow
                 </span>
               }
-              description="Quick, cost-effective, powerful technique used by Amazon and other leading tech companies"
+              description={
+                <span>
+                  Revolutionize your backend architecture and streamline complex
+                  system processes with{" "}
+                  <span className="text-gradient">Step Workflow</span>.
+                  Experience the power of highly optimized API latency and
+                  slashed maintenance costs.
+                </span>
+              }
               className="text-center"
               endDecorator={
                 <Flex justify="center" className="z-10">
