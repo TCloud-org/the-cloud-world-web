@@ -21,7 +21,7 @@ export const LandingBlog = () => {
           className="w-full rounded-3xl backdrop-blur-[5px] border border-neutral-11 p-20"
           style={{ boxShadow: "inset 0 -7px 120px #a48fff1f" }}
         >
-          <Row gutter={[32, 32]}>
+          <Row gutter={[64, 64]}>
             <Col {...Span[2]}>
               <div className="flex flex-col gap-4">
                 <div className="bg-gradient-to-br from-washed-purple-100 to-washed-purple-500 bg-clip-text text-transparent font-sora">
