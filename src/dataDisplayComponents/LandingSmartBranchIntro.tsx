@@ -4,7 +4,7 @@ import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
 export const LandingSmartBranchIntro = () => {
   return (
-    <div className="page-section">
+    <div className="page-section font-sora">
       <div className="container _2">
         <div className="image _2 w-embed">
           <video
