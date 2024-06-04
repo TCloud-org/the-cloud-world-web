@@ -31,9 +31,9 @@ export const LandingSmartBranchIntro = () => {
         <Flex className="mt-6">
           <ThemeButton
             trailing={<ArrowRightAltRounded />}
-            href="https://documentation.thecloudworlds.com/step-workflow"
+            href="https://www.stepworkflow.thecloudworlds.com"
           >
-            Learn more
+            Sign up
           </ThemeButton>
         </Flex>
       </div>

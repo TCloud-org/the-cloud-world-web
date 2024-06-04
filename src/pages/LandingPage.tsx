@@ -9,6 +9,7 @@ import { LandingSmartBranchIntro } from "../dataDisplayComponents/LandingSmartBr
 import { LandingTechStack } from "../dataDisplayComponents/LandingTechStack";
 import { LandingUseCase } from "../dataDisplayComponents/LandingUseCase";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { LandingPricing } from "../dataDisplayComponents/LandingPricing";
 
 export const LandingPage = () => {
   return (
@@ -28,6 +29,8 @@ export const LandingPage = () => {
       <LandingUseCase />
 
       <LandingHowItWorks />
+
+      {/* <LandingPricing /> */}
 
       <LandingBlog />
 

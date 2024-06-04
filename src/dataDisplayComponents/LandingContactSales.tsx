@@ -24,7 +24,7 @@ export const LandingContactSales = (props: {
         </Typography.Paragraph>
 
         <Flex justify="center">
-          <ThemeButton>Speak to our team</ThemeButton>
+          <ThemeButton href="/contact">Speak to our team</ThemeButton>
         </Flex>
       </Flex>
     </LandingContainer>

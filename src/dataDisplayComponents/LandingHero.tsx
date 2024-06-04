@@ -1,10 +1,10 @@
-import { ArrowRightAltRounded, AutoAwesomeRounded } from "@mui/icons-material";
+import { AutoAwesomeRounded } from "@mui/icons-material";
 import { Col, Flex, Image } from "antd";
 import { Span } from "../config/layoutConfig";
+import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingContainer } from "./LandingContainer";
 import { PageHeading } from "./PageHeading";
 import { Pill } from "./Pill";
-import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
 export const LandingHero = () => {
   return (

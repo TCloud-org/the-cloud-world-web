@@ -20,7 +20,7 @@ export const LandingBlog = () => {
     <SectionContainer>
       <div className="px-12 w-full">
         <div
-          className="w-full rounded-3xl backdrop-blur-[5px] border border-neutral-11 p-20"
+          className="w-full rounded-3xl backdrop-blur-[5px] border border-neutral-11 py-4 lg:p-20"
           style={{ boxShadow: "inset 0 -7px 120px #a48fff1f" }}
         >
           <Row gutter={[64, 64]}>
@@ -53,11 +53,11 @@ export const LandingBlog = () => {
               </div>
             </Col>
 
-            <Col {...Span[2]}>
+            <Col {...Span[2]} className="flex flex-col gap-12">
               {blogs.map((blog, i) => (
                 <a
                   key={i}
-                  className="flex gap-10 cursor-pointer w-full"
+                  className="flex flex-col lg:flex-row gap-10 cursor-pointer w-full"
                   href={`https://www.blog.thecloudworlds.com/${blog.id}`}
                   target="_blank"
                   rel="noreferrer"
