@@ -1,4 +1,4 @@
-import { Flex, Typography } from "antd";
+import { Flex } from "antd";
 import { Accordion } from "../dataEntryComponents/Accordion";
 import { LandingTitle } from "./LandingTitle";
 import { Pill } from "./Pill";
@@ -44,12 +44,14 @@ const faqs = [
         We process payments through Stripe, which accepts all major debit and
         credit cards from customers in every country. For more details, you can
         check out all{" "}
-        <Typography.Link
+        <a
           href="https://stripe.com/payments/features#payment-options"
           target="_blank"
+          rel="noreferrer"
+          className="text-neutral-6 hover:text-white transition-all duration-300 underline hover:underline"
         >
           payment options
-        </Typography.Link>{" "}
+        </a>{" "}
         supported by Stripe.
       </p>
     ),
@@ -62,7 +64,10 @@ const faqs = [
         you're looking for.
         <p className="mt-4">
           Please contact our{" "}
-          <a href="/contact" className="underline hover:underline">
+          <a
+            href="/contact"
+            className="text-neutral-6 hover:text-white transition-all duration-300 underline hover:underline"
+          >
             customer support
           </a>{" "}
           team to initiate the refund process.

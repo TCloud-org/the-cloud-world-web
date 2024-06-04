@@ -8,11 +8,7 @@ export const AppFooter = () => {
 
   return (
     <Footer className="bg-dark text-center border-t border-t-neutral-12">
-      <Flex
-        vertical
-        gap={32}
-        className="max-w-screen-2xl ml-auto mr-auto px-4 lg:px-12"
-      >
+      <Flex vertical gap={32} className="max-w-screen-2xl ml-auto mr-auto">
         <JoinNewspaper />
         <Flex align="center" gap={8} justify="center">
           <AppLogo />
