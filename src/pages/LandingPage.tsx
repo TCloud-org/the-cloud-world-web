@@ -4,7 +4,7 @@ import { LandingContactSales } from "../dataDisplayComponents/LandingContactSale
 import { LandingFAQ } from "../dataDisplayComponents/LandingFAQ";
 import { LandingFeature } from "../dataDisplayComponents/LandingFeature";
 import { LandingHowItWorks } from "../dataDisplayComponents/LandingHowItWorks";
-import { LandingMain } from "../dataDisplayComponents/LandingMain";
+import { LandingHero } from "../dataDisplayComponents/LandingHero";
 import { LandingSmartBranchIntro } from "../dataDisplayComponents/LandingSmartBranchIntro";
 import { LandingTechStack } from "../dataDisplayComponents/LandingTechStack";
 import { LandingUseCase } from "../dataDisplayComponents/LandingUseCase";
@@ -15,7 +15,7 @@ export const LandingPage = () => {
     <div className="bg-dark overflow-hidden">
       <div style={{ height: HeaderHeight }} />
 
-      <LandingMain />
+      <LandingHero />
 
       <LandingTechStack />
 

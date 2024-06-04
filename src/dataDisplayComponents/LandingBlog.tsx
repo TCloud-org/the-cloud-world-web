@@ -1,6 +1,8 @@
 import { Col, Flex, Row } from "antd";
 import { SectionContainer } from "./SectionContainer";
 import { Span } from "../config/layoutConfig";
+import { ThemeButton } from "../dataEntryComponents/ThemeButton";
+import { ArrowRightAltRounded } from "@mui/icons-material";
 
 const blogs = [
   {
@@ -39,6 +41,15 @@ export const LandingBlog = () => {
                   Insights from The Cloud World: exploring the intersection of
                   automation and business
                 </div>
+
+                <Flex>
+                  <ThemeButton
+                    trailing={<ArrowRightAltRounded />}
+                    href="https://www.blog.thecloudworlds.com"
+                  >
+                    Learn more
+                  </ThemeButton>
+                </Flex>
               </div>
             </Col>
 

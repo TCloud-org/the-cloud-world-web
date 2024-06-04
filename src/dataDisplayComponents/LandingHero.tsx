@@ -1,12 +1,12 @@
 import { ArrowRightAltRounded, AutoAwesomeRounded } from "@mui/icons-material";
 import { Col, Flex, Image } from "antd";
 import { Span } from "../config/layoutConfig";
-import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
-import { PageHeading } from "../dataDisplayComponents/PageHeading";
-import { Pill } from "../dataDisplayComponents/Pill";
+import { LandingContainer } from "./LandingContainer";
+import { PageHeading } from "./PageHeading";
+import { Pill } from "./Pill";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
-export const LandingMain = () => {
+export const LandingHero = () => {
   return (
     <Flex vertical gap={64}>
       <LandingContainer className="!pb-0">
@@ -20,27 +20,20 @@ export const LandingMain = () => {
             <PageHeading
               title={
                 <span className="text-center gap-2 bg-gradient-to-r from-neutral-4 to-neutral-6 text-transparent bg-clip-text">
-                  Effortless{" "}
                   <span className="bg-gradient-to-r from-primary-purple-300 to-primary-blue-500 bg-clip-text text-transparent">
-                    API Optimization
+                    Optimize
                   </span>{" "}
-                  Infrastructure
+                  Your Backend with TCW
                 </span>
               }
-              description="Dive into our innovative solutions designed to revolutionize
-              your onboarding and streamline asynchronous processes.
-              Experience the power of optimized API latency and slashed
-              maintenance costs, tailored for businesses of all sizes and
-              industries."
+              description="Quick, cost-effective, powerful technique used by Amazon and other leading tech companies"
               className="text-center"
               endDecorator={
                 <Flex justify="center" className="z-10">
                   <div>
-                    <ThemeButton
-                      trailing={<ArrowRightAltRounded />}
-                      href="/contact"
-                    >
-                      Request demo
+                    <ThemeButton href="/contact">
+                      Get Started{" "}
+                      <span className="text-neutral-8">- It's Free</span>
                     </ThemeButton>
                   </div>
                 </Flex>
