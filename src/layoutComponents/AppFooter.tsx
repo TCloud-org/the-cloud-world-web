@@ -5,7 +5,53 @@ import { Span } from "../config/layoutConfig";
 import { FooterLink } from "../dataEntryComponents/FooterLink";
 import { JoinNewspaper } from "../dataEntryComponents/JoinNewspaper";
 import { LinkTreeLogo } from "../svg/LinkTreeLogo";
+import { AppLogo } from "../dataDisplayComponents/AppLogo";
 
+const tools = [
+  {
+    label: "Product",
+    children: [
+      {
+        href: "#Features",
+        label: "Features",
+      },
+      {
+        href: "/pricing",
+        label: "Pricing",
+      },
+    ],
+  },
+  {
+    label: "Support",
+    children: [
+      {
+        href: "/contact",
+        label: "Contact",
+      },
+    ],
+  },
+  {
+    label: "Resources",
+    children: [
+      {
+        href: "/about",
+        label: "About",
+      },
+      {
+        href: "https://www.blog.thecloudworlds.com",
+        label: "Blog",
+      },
+      {
+        href: "https://stepworkflow.thecloudworlds.com/terms-and-conditions",
+        label: "Terms",
+      },
+      {
+        href: "https://stepworkflow.thecloudworlds.com/privacy-policy",
+        label: "Privacy Policy",
+      },
+    ],
+  },
+];
 const socials = [
   {
     href: "https://www.facebook.com/profile.php?id=61558007322573",
@@ -24,11 +70,41 @@ const socials = [
     children: <LinkTreeLogo />,
   },
 ];
+
 export const AppFooter = () => {
   return (
     <Footer className="bg-dark text-center">
       <Flex vertical gap={32} className="max-w-screen-2xl ml-auto mr-auto">
         <JoinNewspaper />
+
+        <Row gutter={[0, 8]}>
+          <Col {...Span[2]}>
+            <div className="flex items-center gap-2">
+              <AppLogo width={48} />
+              <div className="font-bold text-white text-lg">
+                The Cloud World
+              </div>
+            </div>
+          </Col>
+
+          <Col {...Span[2]}>
+            <Row className="pt-2">
+              {tools.map((tool, i) => (
+                <Col span={8} className="flex justify-start" key={i}>
+                  <div className="flex flex-col gap-2 items-start">
+                    <div className="text-white font-semibold">{tool.label}</div>
+                    {tool.children.map((item, j) => (
+                      <FooterLink href={item.href} key={`${i}-${j}`}>
+                        {item.label}
+                      </FooterLink>
+                    ))}
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+
         <Row className="pt-8 pb-16 border-t border-t-neutral-10">
           <Col {...Span[2]}>
             <div className="flex items-center gap-8">
@@ -57,7 +133,7 @@ export const AppFooter = () => {
           <Col {...Span[2]}>
             <div className="flex items-center justify-end gap-3">
               {socials.map((social, i) => (
-                <FooterLink href={social.href} key={i}>
+                <FooterLink href={social.href} key={i} target="_blank">
                   {social.children}
                 </FooterLink>
               ))}

@@ -8,6 +8,17 @@ import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
+export const scrollToHash = () => {
+  const hash = window.location.hash.slice(1);
+
+  if (hash) {
+    const element = document.getElementById(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+};
+
 const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
   {
     label: "Products",
@@ -52,57 +63,16 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
           {
             label: "By Use Case",
             children: [
-              // {
-              //   label: "Integration Hub",
-              //   href: "/products/step-workflow",
-              // },
-              // {
-              //   label: "Notification Management",
-              //   href: "/products/step-workflow",
-              // },
               {
                 label: "Customer Onboarding",
                 href: "/solutions/by-use-case/customer-onboarding",
               },
-              // {
-              //   label: "Business Process Automation",
-              //   href: "/products/step-workflow",
-              // },
               {
                 label: "Compliance Process",
                 href: "/solutions/by-use-case/compliance-process",
               },
             ],
           },
-          // {
-          //   label: "By Industry",
-          //   children: [
-          //     {
-          //       label: "E-commerce",
-          //       href: "/products/step-workflow",
-          //     },
-          //     {
-          //       label: "Healthcare",
-          //       href: "/products/step-workflow",
-          //     },
-          //     {
-          //       label: "Finance",
-          //       href: "/products/step-workflow",
-          //     },
-          //     {
-          //       label: "Manufacturing",
-          //       href: "/products/step-workflow",
-          //     },
-          //     {
-          //       label: "Retail",
-          //       href: "/products/step-workflow",
-          //     },
-          //     {
-          //       label: "Telecommunications",
-          //       href: "/products/step-workflow",
-          //     },
-          //   ],
-          // },
         ]}
       />
     ),
@@ -175,6 +145,10 @@ export const AppHeader = () => {
   const { token } = theme.useToken();
   const [scrollStart, setScrollStart] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    scrollToHash();
+  }, []);
 
   useEffect(() => {
     setMenuOpen(false);

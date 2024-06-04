@@ -16,6 +16,10 @@ body {
   scrollbar-width    : thin;
 }
 
+html {
+  scroll-padding-top: 6rem;
+}
+
 .ant-row {
   margin-right: 0 !important;
   margin-left : 0 !important;
