@@ -18,7 +18,7 @@ export const PageHeading = (props: {
       className={`h-full max-w-screen-lg ml-auto mr-auto ${className}`}
     >
       <LandingTitle>{props.title}</LandingTitle>
-      <Typography.Paragraph className="!text-paragraph !text-[18px]">
+      <Typography.Paragraph className="!text-paragraph !text-[20px]">
         {props.description}
       </Typography.Paragraph>
 
