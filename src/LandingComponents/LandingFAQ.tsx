@@ -30,9 +30,9 @@ const faqs = [
       <p>
         Yes, TCW offers both free and paid versions.
         <p className="mt-4">
-          TCW Free Tier is free to use and only requires you to sign up. With
-          TCW Free Tier, you have access to all basic workflow features without
-          any limitations.
+          TCW Lite is free to use and only requires you to sign up. With TCW
+          Lite, you have access to all basic workflow features without any
+          limitations.
         </p>
       </p>
     ),
