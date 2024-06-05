@@ -240,12 +240,14 @@ export const AppHeader = () => {
           </Flex>
 
           <Flex flex={1} justify="flex-end" align="center" gap={32}>
+            <a href="/pricing" className="link hidden lg:flex !text-white">
+              Pricing
+            </a>
             <a
               href="https://www.documentation.thecloudworlds.com"
               target="_blank"
-              className="link hidden lg:flex"
+              className="link hidden lg:flex !text-white"
               rel="noreferrer"
-              style={{ color: "white" }}
             >
               Docs
             </a>
