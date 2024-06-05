@@ -566,6 +566,10 @@ code {
   background-image: linear-gradient(379deg, rgb(244, 216, 255) 30.90456644144144%, rgb(131, 104, 242) 100%);
 }
 
+.glass {
+  box-shadow: rgba(164, 143, 255, 0.12) 0px -7px 120px 0px inset;
+}
+
 #tsparticles {
   position: absolute;
   top     : 0;
