@@ -140,7 +140,7 @@ export const PricingPlanTable = () => {
           </p>
         </div>
 
-        <div className="text-neutral-6 flex flex-col w-full glass-bar py-8 ml-auto mr-auto max-w-screen-lg">
+        <div className="text-description flex flex-col w-full glass-bar py-8 ml-auto mr-auto max-w-screen-lg">
           <div className="px-4">
             <Row
               className="w-full border backdrop-blur-lg rounded-lg mb-4 px-4"
