@@ -1,19 +1,11 @@
-import {
-  Col,
-  Divider,
-  Form,
-  Input,
-  Row,
-  Typography,
-  message,
-  theme,
-} from "antd";
+import { Col, Divider, Form, Input, Row, Typography, message } from "antd";
 import axios from "axios";
+import { ContactInfo } from "../ContactComponents/ContactInfo";
+import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
+import { LandingTitle } from "../LandingComponents/LandingTitle";
 import { CompanySizes, Countries } from "../config/businessConfig";
 import { Span } from "../config/layoutConfig";
 import { wosContactMe } from "../config/wosEndpointConfig";
-import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
-import { LandingTitle } from "../LandingComponents/LandingTitle";
 import { Pill } from "../dataDisplayComponents/Pill";
 import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { FooterLink } from "../dataEntryComponents/FooterLink";
@@ -21,10 +13,8 @@ import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { ThemeInput } from "../dataEntryComponents/ThemeInput";
 import { ThemeSelect } from "../dataEntryComponents/ThemeSelect";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { ContactInfo } from "../ContactComponents/ContactInfo";
 
 export const ContactPage = () => {
-  const { token } = theme.useToken();
   const [messageApi, contextHolder] = message.useMessage();
   const [form] = Form.useForm();
 
@@ -51,7 +41,7 @@ export const ContactPage = () => {
                     How can we help you?
                   </LandingTitle>
 
-                  <p className="text-white !font-sora">
+                  <p className="text-white !font-sora text-base">
                     Feel free to get in touch with us however you please. For
                     form and email inquiries, we usually reply within 24 hours.
                   </p>
