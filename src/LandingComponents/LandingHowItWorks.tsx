@@ -3,8 +3,8 @@ import { Flex, Image } from "antd";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingInfo } from "./LandingInfo";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
-import { SyntaxHighlighter } from "./SyntaxHighlighter";
+import { Pill } from "../dataDisplayComponents/Pill";
+import { SyntaxHighlighter } from "../dataDisplayComponents/SyntaxHighlighter";
 
 export const LandingHowItWorks = () => {
   return (

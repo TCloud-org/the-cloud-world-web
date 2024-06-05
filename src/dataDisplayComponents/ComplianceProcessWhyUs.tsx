@@ -1,7 +1,7 @@
 import { Flex } from "antd";
 import { SectionContainer } from "../layoutComponents/SectionContainer";
-import { LandingSectionHeading } from "./LandingSectionHeading";
-import { LandingInfo } from "./LandingInfo";
+import { LandingSectionHeading } from "../LandingComponents/LandingSectionHeading";
+import { LandingInfo } from "../LandingComponents/LandingInfo";
 import { WorkflowMockup } from "./WorkflowMockup";
 import LineConnector from "./LineConnector";
 import { WorkflowPlayground } from "./WorkflowPlayground";

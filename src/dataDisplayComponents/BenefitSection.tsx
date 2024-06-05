@@ -1,7 +1,7 @@
 import { Col, Flex, Row, Typography, theme } from "antd";
 import { Span } from "../config/layoutConfig";
-import { LandingSectionHeading } from "./LandingSectionHeading";
-import { LandingContainer } from "./LandingContainer";
+import { LandingSectionHeading } from "../LandingComponents/LandingSectionHeading";
+import { LandingContainer } from "../LandingComponents/LandingContainer";
 
 export interface BenefitSectionProps {
   benefits?: { title?: string; description?: string }[];

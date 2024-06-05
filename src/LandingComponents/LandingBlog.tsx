@@ -1,9 +1,9 @@
 import { Col, Flex, Row } from "antd";
-import { SectionContainer } from "./SectionContainer";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 import { Span } from "../config/layoutConfig";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { ArrowRightAltRounded } from "@mui/icons-material";
-import { GlassContainer } from "./GlassContainer";
+import { GlassContainer } from "../dataDisplayComponents/GlassContainer";
 
 const blogs = [
   {

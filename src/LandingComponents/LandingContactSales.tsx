@@ -1,7 +1,7 @@
 import { Flex, Typography } from "antd";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingTitle } from "./LandingTitle";
-import { SectionContainer } from "./SectionContainer";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 
 export const LandingContactSales = (props: {
   title?: string;

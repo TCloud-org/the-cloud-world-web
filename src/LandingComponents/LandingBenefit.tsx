@@ -1,10 +1,10 @@
 import { Col, Flex, Image, Row } from "antd";
 import { useState } from "react";
 import { createSpan } from "../config/layoutConfig";
-import { LandingInfo } from "./LandingInfo";
+import { Pill } from "../dataDisplayComponents/Pill";
+import { Step } from "../dataDisplayComponents/Step";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
-import { Step } from "./Step";
+import { LandingInfo } from "./LandingInfo";
 
 const benefits = [
   {

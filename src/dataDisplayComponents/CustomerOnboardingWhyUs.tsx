@@ -1,7 +1,7 @@
 import { Flex } from "antd";
 import { SectionContainer } from "../layoutComponents/SectionContainer";
-import { LandingInfo } from "./LandingInfo";
-import { LandingSectionHeading } from "./LandingSectionHeading";
+import { LandingInfo } from "../LandingComponents/LandingInfo";
+import { LandingSectionHeading } from "../LandingComponents/LandingSectionHeading";
 import { WorkflowMockup } from "./WorkflowMockup";
 
 export const CustomerOnboardingWhyUs = () => {

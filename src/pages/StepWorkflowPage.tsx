@@ -6,7 +6,7 @@ import {
 } from "@mui/icons-material";
 import { Col, Divider, Flex, Image, Row, Typography } from "antd";
 import { Span } from "../config/layoutConfig";
-import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { LandingContactSales } from "../LandingComponents/LandingContactSales";
 import { StepWorkflowEntity } from "../dataDisplayComponents/StepWorkflowEntity";
 import { StepWorkflowLog } from "../dataDisplayComponents/StepWorkflowLog";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";

@@ -31,7 +31,7 @@ export const ThemeButton = (props: {
       onClick={handleClick}
     >
       <div
-        className={`text-washed-purple-500 px-4 py-1 bg-gradient-to-b from-[#030014] to-[#201F30] rounded-lg justify-center items-center gap-2.5 inline-flex ${disabled ? "text-neutral-7" : ""}`}
+        className={`w-full text-washed-purple-500 px-4 py-1 bg-gradient-to-b from-[#030014] to-[#201F30] rounded-lg justify-center items-center gap-2.5 inline-flex ${disabled ? "text-neutral-7" : ""}`}
       >
         {props.leading}
         <div

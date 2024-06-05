@@ -1,8 +1,8 @@
 import { Col, Flex } from "antd";
 import { Span } from "../config/layoutConfig";
-import { LandingContainer } from "../dataDisplayComponents/LandingContainer";
-import { LandingInfo } from "../dataDisplayComponents/LandingInfo";
-import { LandingSectionHeading } from "../dataDisplayComponents/LandingSectionHeading";
+import { LandingContainer } from "../LandingComponents/LandingContainer";
+import { LandingInfo } from "../LandingComponents/LandingInfo";
+import { LandingSectionHeading } from "../LandingComponents/LandingSectionHeading";
 import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { SectionContainer } from "../layoutComponents/SectionContainer";

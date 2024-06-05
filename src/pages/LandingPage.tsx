@@ -1,14 +1,14 @@
-import { LandingBenefit } from "../dataDisplayComponents/LandingBenefit";
-import { LandingBlog } from "../dataDisplayComponents/LandingBlog";
-import { LandingCallToAction } from "../dataDisplayComponents/LandingCallToAction";
-import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
-import { LandingFAQ } from "../dataDisplayComponents/LandingFAQ";
-import { LandingFeature } from "../dataDisplayComponents/LandingFeature";
-import { LandingHero } from "../dataDisplayComponents/LandingHero";
-import { LandingHowItWorks } from "../dataDisplayComponents/LandingHowItWorks";
-import { LandingSmartBranchIntro } from "../dataDisplayComponents/LandingSmartBranchIntro";
-import { LandingTechStack } from "../dataDisplayComponents/LandingTechStack";
-import { LandingUseCase } from "../dataDisplayComponents/LandingUseCase";
+import { LandingBenefit } from "../LandingComponents/LandingBenefit";
+import { LandingBlog } from "../LandingComponents/LandingBlog";
+import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
+import { LandingContactSales } from "../LandingComponents/LandingContactSales";
+import { LandingFAQ } from "../LandingComponents/LandingFAQ";
+import { LandingFeature } from "../LandingComponents/LandingFeature";
+import { LandingHero } from "../LandingComponents/LandingHero";
+import { LandingHowItWorks } from "../LandingComponents/LandingHowItWorks";
+import { LandingSmartBranchIntro } from "../LandingComponents/LandingSmartBranchIntro";
+import { LandingTechStack } from "../LandingComponents/LandingTechStack";
+import { LandingUseCase } from "../LandingComponents/LandingUseCase";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 
 export const LandingPage = () => {

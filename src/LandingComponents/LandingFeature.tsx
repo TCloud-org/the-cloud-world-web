@@ -14,7 +14,7 @@ import { ReactNode } from "react";
 import { Span } from "../config/layoutConfig";
 import { LandingCard } from "./LandingCard";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
+import { Pill } from "../dataDisplayComponents/Pill";
 
 interface Feature {
   icon?: ReactNode;

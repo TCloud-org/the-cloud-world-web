@@ -9,6 +9,26 @@ const root = ReactDOM.createRoot(
 root.render(
   <ConfigProvider
     theme={{
+      components: {
+        Input: {
+          colorBgContainer: "rgb(22 20 39 / 0.5)",
+          hoverBorderColor: "rgb(40 38 55 / 1)",
+          activeBorderColor: "rgb(141 140 149 / 1)",
+          colorText: "white",
+          colorTextPlaceholder: "rgb(141 140 149 / 1)",
+          colorBorder: "rgb(40 38 55 / 1)",
+        },
+        Select: {
+          optionSelectedColor: "white",
+          optionSelectedBg: "rgb(70 69 83 / 0.5)",
+          optionActiveBg: "rgb(70 69 83 / 0.5)",
+          colorText: "white",
+          colorBgContainer: "rgb(22 20 39 / 0.5)",
+          colorPrimaryHover: "rgb(40 38 55 / 1)",
+          colorBorder: "rgb(40 38 55 / 1)",
+          colorPrimary: "rgb(141 140 149 / 1)",
+        },
+      },
       token: {
         colorPrimary: "#4312e5",
         boxShadow: "0 30px 60px 0 rgba(90, 116, 148, 0.15)",

@@ -1,6 +1,6 @@
 import { Col, Divider, Flex } from "antd";
 import { HeaderHeight } from "../../layoutComponents/AppHeader";
-import { LandingContainer } from "../../dataDisplayComponents/LandingContainer";
+import { LandingContainer } from "../../LandingComponents/LandingContainer";
 import { Span } from "../../config/layoutConfig";
 import { PageHeading } from "../../dataDisplayComponents/PageHeading";
 import { PricingButton } from "../../dataEntryComponents/PricingButton";
@@ -9,7 +9,7 @@ import {
   BenefitSection,
   BenefitSectionProps,
 } from "../../dataDisplayComponents/BenefitSection";
-import { LandingContactSales } from "../../dataDisplayComponents/LandingContactSales";
+import { LandingContactSales } from "../../LandingComponents/LandingContactSales";
 import { ComplianceProcessWhyUs } from "../../dataDisplayComponents/ComplianceProcessWhyUs";
 
 const benefits: BenefitSectionProps["benefits"] = [

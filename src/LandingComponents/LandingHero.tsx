@@ -2,8 +2,8 @@ import { Col, Flex, Image } from "antd";
 import { Span } from "../config/layoutConfig";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingContainer } from "./LandingContainer";
-import { PageHeading } from "./PageHeading";
-import { Pill } from "./Pill";
+import { PageHeading } from "../dataDisplayComponents/PageHeading";
+import { Pill } from "../dataDisplayComponents/Pill";
 
 export const LandingHero = () => {
   return (

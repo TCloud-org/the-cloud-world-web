@@ -1,9 +1,9 @@
 import { Col, Row } from "antd";
 import { Span } from "../config/layoutConfig";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
-import { SectionContainer } from "./SectionContainer";
-import { UseCaseCard } from "./UseCaseCard";
+import { Pill } from "../dataDisplayComponents/Pill";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
+import { UseCaseCard } from "../dataDisplayComponents/UseCaseCard";
 
 const useCases = [
   {

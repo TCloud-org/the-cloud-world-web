@@ -2,7 +2,7 @@ import { Col, Flex, Row, Typography } from "antd";
 import { Gutter } from "antd/es/grid/row";
 import { ReactNode } from "react";
 import { Span } from "../config/layoutConfig";
-import { Step } from "./Step";
+import { Step } from "../dataDisplayComponents/Step";
 
 export const LandingInfo = (props: {
   position?: "left" | "right";

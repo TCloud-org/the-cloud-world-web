@@ -1,7 +1,7 @@
 import { Flex } from "antd";
 import { Accordion } from "../dataEntryComponents/Accordion";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
+import { Pill } from "../dataDisplayComponents/Pill";
 
 const faqs = [
   {

@@ -1,9 +1,9 @@
 import { SecondaryButton } from "../dataEntryComponents/SecondaryButton";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
-import { GlassContainer } from "./GlassContainer";
+import { GlassContainer } from "../dataDisplayComponents/GlassContainer";
 import { LandingTitle } from "./LandingTitle";
-import { Pill } from "./Pill";
-import { SectionContainer } from "./SectionContainer";
+import { Pill } from "../dataDisplayComponents/Pill";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 
 export const LandingCallToAction = () => {
   return (

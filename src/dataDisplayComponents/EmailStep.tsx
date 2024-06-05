@@ -3,7 +3,7 @@ import { Col, Flex, Typography, theme } from "antd";
 import { Fragment, ReactNode } from "react";
 import { createSpan } from "../config/layoutConfig";
 import { AnimatedCard } from "./AnimatedCard";
-import { LandingContainer } from "./LandingContainer";
+import { LandingContainer } from "../LandingComponents/LandingContainer";
 import { SyntaxHighlighter } from "./SyntaxHighlighter";
 
 export interface ParagraphPoint {

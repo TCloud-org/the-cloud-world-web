@@ -13,7 +13,7 @@ import {
 import { Col, Divider, Flex, Image, Row, Typography, theme } from "antd";
 import { Span } from "../config/layoutConfig";
 import { EmailStep, EmailStepProps } from "../dataDisplayComponents/EmailStep";
-import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { LandingContactSales } from "../LandingComponents/LandingContactSales";
 import { Tenets, TenetsProps } from "../dataDisplayComponents/Tenets";
 import { LandingActions } from "../dataEntryComponents/LandingActions";
 import { HeaderHeight } from "../layoutComponents/AppHeader";

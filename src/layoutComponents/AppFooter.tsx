@@ -3,7 +3,7 @@ import { Col, Flex, Row, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import { Span } from "../config/layoutConfig";
 import { FooterLink } from "../dataEntryComponents/FooterLink";
-import { JoinNewspaper } from "../dataEntryComponents/JoinNewspaper";
+import { JoinNewsletter } from "../dataEntryComponents/JoinNewsletter";
 import { LinkTreeLogo } from "../svg/LinkTreeLogo";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
 
@@ -80,7 +80,7 @@ export const AppFooter = () => {
   return (
     <Footer className="bg-dark text-center">
       <Flex vertical gap={32} className="max-w-screen-2xl ml-auto mr-auto">
-        <JoinNewspaper />
+        <JoinNewsletter />
 
         <Row gutter={[0, 8]}>
           <Col {...Span[2]}>

@@ -1,14 +1,14 @@
 import { Col, Row } from "antd";
 import { createSpan } from "../config/layoutConfig";
-import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
-import { LandingTitle } from "../dataDisplayComponents/LandingTitle";
+import { LandingContactSales } from "../LandingComponents/LandingContactSales";
+import { LandingTitle } from "../LandingComponents/LandingTitle";
 import { Pill } from "../dataDisplayComponents/Pill";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { LandingFAQ } from "../dataDisplayComponents/LandingFAQ";
-import { LandingCallToAction } from "../dataDisplayComponents/LandingCallToAction";
+import { LandingFAQ } from "../LandingComponents/LandingFAQ";
+import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
 
 export enum ProductTierType {
   LITE = "LITE",

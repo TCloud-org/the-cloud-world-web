@@ -1,6 +1,6 @@
 import { Flex, Typography } from "antd";
 import { ReactNode } from "react";
-import { LandingTitle } from "./LandingTitle";
+import { LandingTitle } from "../LandingComponents/LandingTitle";
 
 export const PageHeading = (props: {
   title?: ReactNode;

@@ -1,10 +1,11 @@
-import { Button, Col, Input, Row } from "antd";
-import { Span } from "../config/layoutConfig";
-import { useState } from "react";
+import { Button, Col, Row } from "antd";
 import axios from "axios";
+import { useState } from "react";
 import { AMS_SUBSCRIBE_NEWSLETTER_ENDPOINT } from "../config/amsEndpointConfig";
+import { Span } from "../config/layoutConfig";
+import { ThemeInput } from "./ThemeInput";
 
-export const JoinNewspaper = () => {
+export const JoinNewsletter = () => {
   const [email, setEmail] = useState<string>("");
   const [subscribed, setSubscribed] = useState<string>("NOT_SUBSCRIBED");
 
@@ -28,9 +29,8 @@ export const JoinNewspaper = () => {
     return (
       <>
         <div className="flex gap-4">
-          <Input
-            className="bg-neutral-12/50 hover:bg-neutral-12/50 focus:bg-neutral-12/50 border-neutral-10 hover:border-neutral-10 focus:border-neutral-7 text-white foot-placeholder w-full lg:w-[300px]"
-            size="large"
+          <ThemeInput
+            className="lg:w-[300px]"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
