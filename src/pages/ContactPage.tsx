@@ -160,9 +160,7 @@ export const ContactPage = () => {
                       </Col>
 
                       <Col {...Span[1]}>
-                        <Divider
-                          style={{ backgroundColor: token.colorBorder }}
-                        />
+                        <Divider className="bg-neutral-10" />
                       </Col>
 
                       <Col {...Span[1]}>
