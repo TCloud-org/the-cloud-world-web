@@ -7,7 +7,7 @@ import { PageHeading } from "../dataDisplayComponents/PageHeading";
 
 export const LandingHero = () => {
   return (
-    <Flex vertical gap={64}>
+    <Flex vertical gap={64} className="lighting-bg">
       <LandingContainer className="!pb-0">
         <Col {...Span[1]} className="z-20">
           <Flex vertical align="center" gap={32}>
@@ -50,7 +50,7 @@ export const LandingHero = () => {
           preview={false}
           className="rounded-[40px]"
         />
-        <div className="absolute left-0 right-0 -top-[15%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-40 -z-10" />
+        <div className="absolute left-0 right-0 -top-[15%] bottom-0 bg-[#5000B5] rounded-full blur-[150px] opacity-30 -z-10" />
       </Flex>
     </Flex>
   );
