@@ -97,12 +97,12 @@ export const PricingPage = () => {
 
       <LandingFAQ />
 
+      <LandingCallToAction />
+
       <LandingContactSales
         title="Have questions about pricing?"
         description="We're here to help. Contact us to learn more about pricing"
       />
-
-      <LandingCallToAction />
     </div>
   );
 };
