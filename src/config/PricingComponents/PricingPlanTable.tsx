@@ -120,7 +120,7 @@ export const PricingPlanTable = () => {
       if (value) {
         return <CheckRounded />;
       } else {
-        return <HorizontalRuleRounded className="text-neutral-8/80" />;
+        return <HorizontalRuleRounded className="opacity-30" />;
       }
     }
 
