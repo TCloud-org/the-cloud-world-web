@@ -2,8 +2,8 @@ import { Col, Flex, Image } from "antd";
 import { Span } from "../config/layoutConfig";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingContainer } from "./LandingContainer";
-import { PageHeading } from "../dataDisplayComponents/PageHeading";
 import { Pill } from "../dataDisplayComponents/Pill";
+import { PageHeading } from "../dataDisplayComponents/PageHeading";
 
 export const LandingHero = () => {
   return (
@@ -33,12 +33,10 @@ export const LandingHero = () => {
               className="text-center"
               endDecorator={
                 <Flex justify="center" className="z-10">
-                  <div>
-                    <ThemeButton href="https://stepworkflow.thecloudworlds.com">
-                      Get Started{" "}
-                      <span className="text-neutral-8">- It's Free</span>
-                    </ThemeButton>
-                  </div>
+                  <ThemeButton href="https://stepworkflow.thecloudworlds.com">
+                    Get Started{" "}
+                    <span className="text-neutral-8">- It's Free</span>
+                  </ThemeButton>
                 </Flex>
               }
             />

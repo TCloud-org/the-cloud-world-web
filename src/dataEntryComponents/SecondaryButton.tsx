@@ -31,7 +31,7 @@ export const SecondaryButton = (props: {
       onClick={handleClick}
     >
       <div
-        className={`text-washed-purple-500 px-4 py-1 bg-dark rounded-lg justify-center items-center gap-2.5 inline-flex ${disabled ? "text-neutral-7" : ""}`}
+        className={`w-full h-full text-washed-purple-500 px-4 py-1 bg-dark rounded-lg justify-center items-center gap-2.5 inline-flex ${disabled ? "text-neutral-7" : ""}`}
       >
         {props.leading}
         <div className={`text-gradient ${disabled ? "from-neutral-7" : ""}`}>
