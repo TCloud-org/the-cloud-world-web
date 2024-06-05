@@ -9,6 +9,7 @@ import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { LandingFAQ } from "../LandingComponents/LandingFAQ";
 import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
+import { PricingPlanTable } from "../config/PricingComponents/PricingPlanTable";
 
 export enum ProductTierType {
   LITE = "LITE",
@@ -23,10 +24,10 @@ const plans = [
     price: `Free for everyone`,
     features: [
       "Up to 3000 transitions",
-      "Limited access to our RESTful Step Workflow APIs",
+      "RESTful Step Workflow APIs",
       "Tracking",
-      "1 day workflow task retention",
-      "Invite up to 5 collaborators",
+      "1 day workflow job retention",
+      "Up to 5 collaborators",
       "Customer support",
     ],
   },
@@ -37,11 +38,10 @@ const plans = [
     emphasized: true,
     plus: "Everything in Lite, plus:",
     features: [
-      "Full access to our RESTful Step Workflow APIs",
       "Querying, batching, and analytics",
       "Up to 60 days workflow job retention",
       "Increased workflow concurrent processing",
-      "Invite up to 50 collaborators",
+      "Up to 50 collaborators",
       "Ticket support",
       "Early access to new features",
     ],
@@ -55,7 +55,7 @@ const plans = [
       "Up to 120 days workflow job retention",
       "Maximized workflow concurrent processing",
       "Proactive monitoring",
-      "Invite unlimited collaborators",
+      "Unlimited collaborators",
     ],
     action: "Or talk to our sales team",
     contact: "https://thecloudworlds.com/contact",
@@ -87,8 +87,7 @@ export const PricingPage = () => {
       <div className="py-16 px-4 ml-auto mr-auto max-w-screen-2xl">
         <Row
           gutter={[priceGap, priceGap]}
-          style={{ padding: priceGap }}
-          className="mt-16 max-w-screen-2xl"
+          className="mt-16 max-w-screen-2xl py-8 px-2 lg:px-8"
         >
           {plans.map((plan, i) => (
             <Col {...createSpan(8)} key={i}>
@@ -97,6 +96,8 @@ export const PricingPage = () => {
           ))}
         </Row>
       </div>
+
+      <PricingPlanTable />
 
       <LandingFAQ />
 

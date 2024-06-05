@@ -591,3 +591,7 @@ code {
 .lighting-bg {
   background-image: url("https://tcw-images.s3.us-west-2.amazonaws.com/lighting.png");
 }
+
+.text-description {
+  color: rgba(203, 203, 232, .75);
+}
