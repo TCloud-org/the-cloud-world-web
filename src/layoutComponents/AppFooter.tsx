@@ -42,6 +42,10 @@ const tools = [
         label: "Blog",
       },
       {
+        href: "https://www.documentation.thecloudworlds.com",
+        label: "Documentation",
+      },
+      {
         href: "https://stepworkflow.thecloudworlds.com/terms-and-conditions",
         label: "Terms",
       },
@@ -52,6 +56,7 @@ const tools = [
     ],
   },
 ];
+
 const socials = [
   {
     href: "https://www.facebook.com/profile.php?id=61558007322573",

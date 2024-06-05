@@ -9,10 +9,11 @@ export const LandingCallToAction = () => {
   return (
     <SectionContainer>
       <GlassContainer>
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 px-4 lg:px-0">
           <Pill>Ready to try?</Pill>
           <LandingTitle className="!text-white font-sora">
-            Activate TCW for your team
+            Activate <span className="text-gradient">Step Workflow</span> for
+            your team
           </LandingTitle>
 
           <div className="flex flex-col gap-4 items-center">
