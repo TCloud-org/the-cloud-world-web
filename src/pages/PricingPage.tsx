@@ -1,5 +1,4 @@
-import { Col, Modal, Row } from "antd";
-import { useState } from "react";
+import { Col, Row } from "antd";
 import { createSpan } from "../config/layoutConfig";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
 import { LandingTitle } from "../dataDisplayComponents/LandingTitle";
@@ -7,8 +6,9 @@ import { Pill } from "../dataDisplayComponents/Pill";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
 import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
-import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { LandingFAQ } from "../dataDisplayComponents/LandingFAQ";
+import { LandingCallToAction } from "../dataDisplayComponents/LandingCallToAction";
 
 export enum ProductTierType {
   LITE = "LITE",
@@ -62,8 +62,6 @@ const plans = [
 const priceGap = 32;
 
 export const PricingPage = () => {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-
   return (
     <div className="bg-dark">
       <div className="relative py-32">
@@ -83,7 +81,7 @@ export const PricingPage = () => {
         </SectionContainer>
       </div>
 
-      <div className="py-16 px-4">
+      <div className="py-16 px-4 ml-auto mr-auto max-w-screen-2xl">
         <Row
           gutter={[priceGap, priceGap]}
           style={{ padding: priceGap }}
@@ -97,22 +95,14 @@ export const PricingPage = () => {
         </Row>
       </div>
 
+      <LandingFAQ />
+
       <LandingContactSales
         title="Have questions about pricing?"
         description="We're here to help. Contact us to learn more about pricing"
       />
 
-      <Modal
-        title="Price calculator"
-        centered
-        open={modalOpen}
-        onOk={() => setModalOpen(false)}
-        onCancel={() => setModalOpen(false)}
-        okButtonProps={{ style: { display: "none" } }}
-        cancelButtonProps={{ style: { display: "none" } }}
-      >
-        <PriceCalculator />
-      </Modal>
+      <LandingCallToAction />
     </div>
   );
 };

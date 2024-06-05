@@ -13,7 +13,7 @@ export const LandingContactSales = (props: {
   } = props;
   return (
     <SectionContainer>
-      <Flex vertical gap={32} align="center" className="text-center pb-16">
+      <Flex vertical gap={32} align="center" className="text-center">
         <LandingTitle>{title}</LandingTitle>
 
         <Typography.Paragraph

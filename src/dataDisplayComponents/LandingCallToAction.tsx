@@ -11,7 +11,7 @@ export const LandingCallToAction = () => {
       <GlassContainer>
         <div className="flex flex-col items-center gap-8 px-4 lg:px-0">
           <Pill>Ready to try?</Pill>
-          <LandingTitle className="!text-white font-sora">
+          <LandingTitle className="!text-white font-sora max-w-[60vw] lg:max-w-[40vw]">
             Activate <span className="text-gradient">Step Workflow</span> for
             your team
           </LandingTitle>
