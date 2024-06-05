@@ -1,28 +1,13 @@
-import { CalculatorOutlined } from "@ant-design/icons";
-import {
-  AutoComplete,
-  Button,
-  Col,
-  Flex,
-  Modal,
-  Row,
-  Typography,
-  theme,
-} from "antd";
+import { Col, Flex, Modal, Row } from "antd";
 import { useState } from "react";
 import { LandingContactSales } from "../dataDisplayComponents/LandingContactSales";
+import { LandingTitle } from "../dataDisplayComponents/LandingTitle";
+import { Pill } from "../dataDisplayComponents/Pill";
 import { PricingTier } from "../dataDisplayComponents/PricingTier";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
+import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { PriceCalculator } from "../dataEntryComponents/PriceCalculator";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-
-const options = [
-  {
-    value: "Step Workflow",
-  },
-  {
-    value: "Email Notification",
-  },
-];
 
 export enum ProductTierType {
   FREE_TIER = "FREE_TIER",
@@ -106,87 +91,33 @@ const plans = [
 const priceGap = 16;
 
 export const PricingPage = () => {
-  const { token } = theme.useToken();
-
-  const [value, setValue] = useState<string>("Step Workflow");
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   return (
-    <Flex vertical>
-      <Flex
-        vertical
-        align="center"
-        className="px-16 py-32 relative bg-light-img"
-      >
+    <div className="bg-dark">
+      <div className="relative py-32">
+        <StarsBackground />
+
         <div style={{ height: HeaderHeight }} />
 
-        <Flex vertical className="lg:px-64" gap={16} align="center">
-          <Typography.Title
-            level={3}
-            style={{ marginTop: 0 }}
-            className="text-center"
-          >
-            Compare our plans and find yours
-          </Typography.Title>
+        <SectionContainer>
+          <div className="flex flex-col gap-8 items-center max-w-screen-md px-2">
+            <Pill>Pricing</Pill>
 
-          <Typography.Paragraph
-            style={{ padding: "0 16px", textAlign: "center" }}
-          >
-            Select from best plans, ensuring a perfect match for your business.
-            Need more or less? Customize your subscription for a seamless fit
-          </Typography.Paragraph>
+            <LandingTitle className="z-10 !text-white">
+              <span className="text-gradient">Upgrade</span> to have access to
+              our full suite, and more.
+            </LandingTitle>
+          </div>
+        </SectionContainer>
+      </div>
 
-          <AutoComplete
-            options={options}
-            placeholder="Search products"
-            value={value}
-            onChange={setValue}
-            allowClear
-            style={{
-              backgroundColor: "white",
-              borderRadius: token.borderRadius,
-            }}
-            variant="borderless"
-            className="w-full"
-            filterOption={(inputValue, option) =>
-              option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
-              -1
-            }
-          />
-        </Flex>
-
-        <Button
-          icon={<CalculatorOutlined />}
-          type="link"
-          className="absolute bottom-4 right-4"
-          onClick={() => setModalOpen(true)}
-        >
-          Price Calculator
-        </Button>
-      </Flex>
-
-      <div className="bg-slate-900 py-20 sm:py-32 px-4">
-        <Flex
-          justify="center"
-          vertical
-          align="center"
-          gap={32}
-          className="text-center"
-        >
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Pricing for everyone
-          </h2>
-
-          <Typography.Paragraph className="text-slate-400 text-lg">
-            It doesn’t matter what size your business is, our software works for
-            everyone.
-          </Typography.Paragraph>
-        </Flex>
+      <div className="py-16 px-4">
         <Flex justify="center">
           <Row
             gutter={[priceGap, priceGap]}
             style={{ padding: priceGap }}
-            className="mt-16 xl:max-w-7xl"
+            className="mt-16 max-w-screen-2xl"
           >
             {plans.map((plan, i) => (
               <Col
@@ -216,6 +147,6 @@ export const PricingPage = () => {
       >
         <PriceCalculator />
       </Modal>
-    </Flex>
+    </div>
   );
 };

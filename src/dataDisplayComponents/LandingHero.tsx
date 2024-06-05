@@ -23,9 +23,9 @@ export const LandingHero = () => {
               }
               description={
                 <span>
-                  Revolutionize your backend architecture and streamline complex
-                  system processes with{" "}
-                  <span className="text-gradient">Step Workflow</span>.
+                  Revolutionize your backend architecture and modularize
+                  distributed applications with{" "}
+                  <span className="text-gradient"> visual workflows</span>.
                   Experience the power of highly optimized API latency and
                   slashed maintenance costs.
                 </span>
