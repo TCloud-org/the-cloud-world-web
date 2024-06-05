@@ -145,6 +145,7 @@ export const ContactPage = () => {
                       <Col {...Span[1]}>
                         <Form.Item name="message">
                           <Input.TextArea
+                            size="large"
                             placeholder="Message"
                             autoSize={{ minRows: 5, maxRows: 10 }}
                           />
