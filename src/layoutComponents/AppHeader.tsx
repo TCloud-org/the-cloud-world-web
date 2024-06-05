@@ -173,30 +173,18 @@ export const AppHeader = () => {
   }, []);
 
   const headerScrollStyle: CSSProperties = {
-    background: "#03001499",
     boxShadow: token.boxShadowTertiary,
     backdropFilter: "blur(24px)",
   };
 
-  const headerStyle: CSSProperties = {
-    background: "transparent",
-    boxShadow: "none",
-  };
-
   return (
-    <>
+    <div className="flex justify-center w-full fixed top-0 z-[999]">
       <header
         style={{
-          position: "fixed",
-          overflow: "hidden",
-          top: 0,
-          zIndex: 999,
           height: HeaderHeight,
-          width: "100%",
-          transition: "all 0.3s",
-          ...(scrollStart || menuOpen ? headerScrollStyle : headerStyle),
+          ...(scrollStart || menuOpen ? headerScrollStyle : {}),
         }}
-        className="px-2 lg:px-8"
+        className="px-2 lg:px-8 glass-bar transition-all duration-300 overflow-hidden fixed w-[93.5%] lg:w-[92.5%] max-w-screen-2xl ml-auto mr-auto mt-4"
       >
         <Flex justify="space-between" align="center" className="w-full h-full">
           <Flex align="center" flex={1}>
@@ -276,8 +264,8 @@ export const AppHeader = () => {
         right
         burgerButtonClassName="hidden"
         width={"100%"}
-        className="top-[64px] block lg:hidden"
-        overlayClassName="top-[64px] block lg:hidden"
+        className="top-[96px] block lg:hidden glass-bar"
+        overlayClassName="top-[96px] block lg:hidden"
       >
         <Flex
           vertical
@@ -304,6 +292,6 @@ export const AppHeader = () => {
           )}
         </Flex>
       </Menu>
-    </>
+    </div>
   );
 };

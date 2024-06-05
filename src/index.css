@@ -570,6 +570,13 @@ code {
   box-shadow: rgba(164, 143, 255, 0.12) 0px -7px 120px 0px inset;
 }
 
+.glass-bar {
+  border          : 1px solid rgba(206, 206, 251, 0.06);
+  background-color: rgba(206, 206, 251, 0.04);
+  backdrop-filter : blur(16px);
+  border-radius   : 12px;
+}
+
 #tsparticles {
   position: absolute;
   top     : 0;

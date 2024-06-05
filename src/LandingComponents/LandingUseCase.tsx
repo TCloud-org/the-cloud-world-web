@@ -68,7 +68,7 @@ export const LandingUseCase = () => {
       <LandingTitle>Right Solution Right Customer</LandingTitle>
 
       <div className="relative z-10">
-        <Row gutter={[32, 32]} className="mt-8 px-8">
+        <Row gutter={[32, 32]} className="mt-8 px-0 lg:px-8">
           {useCases.map((useCase, i) => (
             <Col key={i} {...Span[2]} className="flex flex-col">
               <UseCaseCard

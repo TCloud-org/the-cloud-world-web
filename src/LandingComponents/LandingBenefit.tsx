@@ -101,17 +101,14 @@ export const LandingBenefit = () => {
 
       <LandingTitle>No Code No Compromise</LandingTitle>
 
-      <Flex className="w-full px-8 lg:px-12 pt-20 z-10 relative" gap={32}>
+      <Flex className="w-full px-4 lg:px-12 pt-20 z-10 relative" gap={32}>
         <div className="top-0 left-0 right-0 -bottom-[150%] dot-bg-dark absolute -z-10" />
-        <Row
-          gutter={[0, 0]}
-          className="border rounded-lg border-neutral-10 bg-neutral-12 text-white w-full z-10"
-        >
+        <Row gutter={[0, 0]} className="glass-bar text-white w-full z-10">
           {benefits.map((benefit, i) => (
             <Col
               {...createSpan(8)}
               key={i}
-              className={`${commonColStyles} ${getClassName(i)} ${benefitIndex === i ? "!border-primary-purple-700" : ""}`}
+              className={`${commonColStyles} ${getClassName(i)} ${benefitIndex === i ? "!border-primary-purple-900" : ""}`}
               onClick={() => setBenefitIndex(i)}
             >
               <div className="flex items-center gap-4 text-white font-semibold text-lg px-2">

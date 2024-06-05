@@ -84,9 +84,8 @@ export const LandingFeature = () => {
     <Flex
       vertical
       align="center"
-      style={{ padding: "128px 16px" }}
       gap={64}
-      className="bg-dark max-w-screen-2xl ml-auto mr-auto"
+      className="bg-dark max-w-screen-2xl ml-auto mr-auto py-32 px-0 lg:px-8"
     >
       <Flex vertical gap={48} align="center">
         <Flex>
