@@ -6,7 +6,7 @@ export const PricingTier = (props: { data: any }) => {
   const { data } = props;
 
   const emphasized = data.emphasized;
-  const actionHref = "https://stepworkflow.thecloudworlds.com";
+  const actionHref = `https://stepworkflow.thecloudworlds.com?product=STEP_WORKFLOW&tier=${data.key}`;
 
   return (
     <div className={`flex items-center justify-center h-[110%]`}>
