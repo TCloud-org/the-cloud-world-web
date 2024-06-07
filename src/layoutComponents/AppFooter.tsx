@@ -28,6 +28,10 @@ const tools = [
         href: "/contact",
         label: "Contact",
       },
+      {
+        href: "https://thecloudworld.supahub.com/b/feature-requests",
+        label: "Feature Request",
+      },
     ],
   },
   {
