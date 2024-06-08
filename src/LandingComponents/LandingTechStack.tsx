@@ -6,6 +6,7 @@ import { GithubLogo } from "../svg/GithubLogo";
 import { MySQLLogo } from "../svg/MySQLLogo";
 import { ReactLogo } from "../svg/ReactLogo";
 import { StripeLogo } from "../svg/StripeLogo";
+import { NetlifyLogo } from "../svg/NetlifyLogo";
 
 const stack = [
   {
@@ -42,6 +43,11 @@ const stack = [
     logo: <FigmaLogo />,
     title: "Figma",
     href: "https://www.figma.com",
+  },
+  {
+    logo: <NetlifyLogo />,
+    title: "Netlify",
+    href: "https://www.netlify.com",
   },
 ];
 

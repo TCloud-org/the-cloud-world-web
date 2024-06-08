@@ -78,7 +78,7 @@ export const PricingPage = () => {
 
             <LandingTitle className="z-10 !text-white">
               <span className="text-gradient">Upgrade</span> to have access to
-              our full suite, and more.
+              our full suite, and more
             </LandingTitle>
           </div>
         </SectionContainer>

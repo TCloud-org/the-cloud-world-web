@@ -375,7 +375,7 @@ code {
   --d     : 35s;
   --w     : 200px;
   --gap   : calc(0.2 * var(--w));
-  --n     : 7;
+  --n     : 8;
   --slow-d: 70s;
 
   display              : grid;
@@ -435,6 +435,10 @@ code {
   animation-delay: calc((1 - 7) / var(--n) * var(--d));
 }
 
+.gallery>div:nth-child(8) {
+  animation-delay: calc((1 - 8) / var(--n) * var(--d));
+}
+
 .gallery:hover>div {
   animation-play-state: paused;
 }
@@ -446,7 +450,7 @@ code {
   }
 
   16.68% {
-    transform: translate(calc((7 - 1 + (7 - 2) * 0.2) * 100%));
+    transform: translate(calc((8 - 1 + (8 - 2) * 0.2) * 100%));
   }
 }
 
@@ -592,6 +596,33 @@ code {
   background-image: url("https://tcw-images.s3.us-west-2.amazonaws.com/lighting.png");
 }
 
+.lighting-bg-2 {
+  background-image: url("https://utfs.io/f/272de90c-e34e-4dc2-a136-cccb841de6c3-2tjcxn.png");
+}
+
 .text-description {
   color: rgba(203, 203, 232, .75);
+}
+
+.glass-card {
+  border                 : 1px solid rgba(206, 206, 251, 0.05);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter        : blur(16px);
+  border-radius          : 12px;
+  box-shadow             : inset 0px -12px 40px 0px rgba(206, 206, 251, 0.05);
+  padding                : 20px 24px;
+}
+
+.team-layer-1 {
+  border          : 1px solid rgba(206, 206, 251, 0.1);
+  background-color: rgba(206, 206, 251, 0.02);
+  width           : 100%;
+  border-radius   : 20px;
+  padding         : 8px;
+}
+
+.team-layer-2 {
+  border       : 1px solid rgba(206, 206, 251, 0.12);
+  border-radius: 12px;
+  box-shadow   : rgba(206, 206, 251, 0.1) 0px 0px 20px 0px inset;
 }

@@ -1,7 +1,7 @@
 import { FacebookRounded, LinkedIn, X } from "@mui/icons-material";
 import { Col, Flex, Row, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
-import { Span } from "../config/layoutConfig";
+import { Span, createSpan } from "../config/layoutConfig";
 import { FooterLink } from "../dataEntryComponents/FooterLink";
 import { JoinNewsletter } from "../dataEntryComponents/JoinNewsletter";
 import { LinkTreeLogo } from "../svg/LinkTreeLogo";
@@ -22,6 +22,19 @@ const tools = [
     ],
   },
   {
+    label: "Company",
+    children: [
+      {
+        href: "/about",
+        label: "About",
+      },
+      {
+        href: "https://thecloudworld.supahub.com/roadmap",
+        label: "Our Roadmap",
+      },
+    ],
+  },
+  {
     label: "Support",
     children: [
       {
@@ -37,10 +50,6 @@ const tools = [
   {
     label: "Resources",
     children: [
-      {
-        href: "/about",
-        label: "About",
-      },
       {
         href: "https://www.blog.thecloudworlds.com",
         label: "Blog",
@@ -87,7 +96,7 @@ export const AppFooter = () => {
         <JoinNewsletter />
 
         <Row gutter={[0, 8]}>
-          <Col {...Span[2]}>
+          <Col {...createSpan(8)}>
             <div className="flex items-center gap-2">
               <AppLogo width={48} />
               <div className="font-bold text-white text-lg">
@@ -96,10 +105,21 @@ export const AppFooter = () => {
             </div>
           </Col>
 
-          <Col {...Span[2]}>
-            <Row className="pt-2">
+          <Col {...createSpan(16)}>
+            <Row className="pt-2" gutter={[16, 16]}>
               {tools.map((tool, i) => (
-                <Col span={8} className="flex justify-start" key={i}>
+                <Col
+                  {...{
+                    xs: 12,
+                    sm: 12,
+                    md: 12,
+                    lg: 24 / tools.length,
+                    xl: 24 / tools.length,
+                    xxl: 24 / tools.length,
+                  }}
+                  className="flex justify-start w-full"
+                  key={i}
+                >
                   <div className="flex flex-col gap-2 items-start">
                     <div className="text-white font-semibold">{tool.label}</div>
                     {tool.children.map((item, j) => (

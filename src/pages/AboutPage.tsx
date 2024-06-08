@@ -1,75 +1,181 @@
-import { Col, Flex } from "antd";
-import { Span } from "../config/layoutConfig";
-import { LandingContainer } from "../LandingComponents/LandingContainer";
-import { LandingInfo } from "../LandingComponents/LandingInfo";
-import { LandingSectionHeading } from "../LandingComponents/LandingSectionHeading";
-import { PageHeading } from "../dataDisplayComponents/PageHeading";
+import {
+  AutoFixHighRounded,
+  DeveloperBoardRounded,
+  GitHub,
+  LinkedIn,
+  SignalCellularAltRounded,
+  X,
+} from "@mui/icons-material";
+import { Col, Row } from "antd";
+import { LandingTitle } from "../LandingComponents/LandingTitle";
+import { Span, createSpan } from "../config/layoutConfig";
+import { Pill } from "../dataDisplayComponents/Pill";
+import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
+import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { SectionContainer } from "../layoutComponents/SectionContainer";
+import { cloneElement } from "react";
+import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
 
-const principles = [
+const missions = [
   {
-    section: "Customer first approach",
-    title: "Obsess over customer experience",
-    description:
-      "We prioritize your needs, preferences, and feedback to tailor our solutions to your specific requirements. Your success is our success, and we are committed to delivering exceptional value and service at every touchpoint.",
+    icon: <AutoFixHighRounded />,
+    description: (
+      <p>
+        <span className="text-white">Craft a winning solution</span> that not
+        only draws in more customers but also saves you a ton of maintenance
+        costs.
+      </p>
+    ),
   },
   {
-    section: "Innovation excellence",
-    title: "Stay up to date with the latest technology",
-    description:
-      "We thrive on innovation and creativity, constantly pushing the boundaries to deliver cutting-edge solutions that meet the evolving needs of your business. Our team of experts is dedicated to staying ahead of the curve, leveraging the latest technologies and methodologies to drive innovation and create game-changing solutions that propel your business forward.",
+    icon: <DeveloperBoardRounded />,
+    description: (
+      <p>
+        <span className="text-white">Compute your resources</span> with
+        lightning-fast speed, ultra-sleek design, and mind-blowingly
+        effectiveness.
+      </p>
+    ),
   },
   {
-    section: "Simplicity and Consistency",
-    title: "Keep things simple and consistent",
-    description:
-      "We believe in keeping things simple and straightforward. We strive for consistency across our products, ensuring a seamless experience for our customers.",
+    icon: <SignalCellularAltRounded />,
+    description: (
+      <p>
+        <span className="text-white">Scale your product</span> with robustness
+        and speed, helping you deliver more features for your customers faster.
+      </p>
+    ),
   },
+];
+
+const team = [
   {
-    section: "Cost Efficiency",
-    title: "Strive to save you the most",
-    description:
-      "Our customers' resources are precious, which is why we are committed to delivering solutions that help them save both time and money.",
+    name: "Tung Dinh",
+    imageUrl:
+      "https://utfs.io/f/a4803614-e76c-49ca-a261-7f15d2ea664a-85kop.png",
+    bio: "Transitioning from a UW CS undergraduate to a Software Engineer at Amazon, his impactful contributions drive the integration of cutting-edge technology, dedicated to tackling the most intricate challenges in cloud computing.",
+    position: "Founder & CEO",
+    social: [
+      {
+        href: "https://www.linkedin.com/in/tungxd96",
+        icon: <LinkedIn />,
+      },
+      {
+        href: "https://x.com/tungxd301",
+        icon: <X />,
+      },
+      {
+        href: "https://github.com/tungxd96",
+        icon: <GitHub />,
+      },
+    ],
   },
 ];
 
 export const AboutPage = () => {
   return (
-    <Flex vertical>
-      <Flex vertical className="bg-about overflow-hidden">
+    <div className="bg-dark">
+      <div className="relative py-32">
+        <StarsBackground />
+
         <div style={{ height: HeaderHeight }} />
 
-        <LandingContainer>
-          <Col {...Span[2]}>
-            <PageHeading
-              title="Embrace the future of low-code development"
-              description="We are dedicated to empowering startups and enterprises by providing cutting-edge automation solutions designed to streamline your processes and accelerate your journey from concept to market"
-            />
-          </Col>
+        <SectionContainer>
+          <div className="flex flex-col gap-8 items-center max-w-screen-md px-2">
+            <Pill>This is The Cloud World</Pill>
 
-          <Col {...Span[2]}></Col>
-        </LandingContainer>
-      </Flex>
+            <LandingTitle className="z-10 !text-white">
+              <span className="text-gradient">Optimize</span> your cloud
+              architecture at scale
+            </LandingTitle>
+          </div>
+        </SectionContainer>
+      </div>
 
       <SectionContainer>
-        <Flex
-          vertical
-          gap={128}
-          justify="center"
-          align="center"
-          className="w-full max-w-screen-2xl"
-        >
-          <LandingSectionHeading
-            title="Our 4 core principles"
-            subtitle="We're committed to empowering your success every step of the way"
-          />
+        <Row gutter={[32, 32]} className="px-4 lg:px-12">
+          <Col {...createSpan(8)} className="flex flex-col items-center">
+            <div className="text-[#e5e5f9] text-[44px]">What we do</div>
+          </Col>
 
-          {principles.map((principle, i) => (
-            <LandingInfo key={i} {...principle} gutter={[64, 0]} />
-          ))}
-        </Flex>
+          <Col {...createSpan(16)} className="flex flex-col items-start ">
+            <p className="text-lg text-description">
+              At our core, we are dedicated to driving positive change by
+              developing and implementing innovative solutions that empower your
+              cloud architecture. We aim to address pressing challenges and
+              create lasting impact across various domains such as financial,
+              healthcare, education, e-commerce, and beyond.
+            </p>
+          </Col>
+        </Row>
       </SectionContainer>
-    </Flex>
+
+      <SectionContainer className="lighting-bg-2 px-4 lg:px-12">
+        <Row gutter={[32, 32]} className="w-full">
+          {missions.map((mission, i) => (
+            <Col {...createSpan(8)} key={i} className="flex flex-col">
+              <div className="glass-card flex gap-6 h-full">
+                <div className="text-white">{mission.icon}</div>
+                <p className="text-description text-base">
+                  {mission.description}
+                </p>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="flex flex-col gap-12 items-center px-4 lg:px-12">
+          <Pill>Meet the team</Pill>
+
+          <Row gutter={[32, 32]} className="w-full justify-center">
+            {team.map((member, i) => (
+              <Col {...Span[2]} key={i} className="flex flex-col">
+                <div className="team-layer-1 h-full">
+                  <div className="team-layer-2 p-12 flex flex-col gap-4">
+                    <div className="flex gap-4 items-start">
+                      <img
+                        alt={member.name}
+                        src={member.imageUrl}
+                        className="rounded-full w-12 h-12"
+                      />
+                      <p className="text-white text-lg font-semibold">
+                        {member.name}
+                        <p className="text-base text-description font-normal">
+                          {member.position}
+                        </p>
+                      </p>
+                    </div>
+
+                    <p className="text-base text-description font-normal">
+                      {member.bio}
+                    </p>
+
+                    <div className="flex gap-4 mt-1">
+                      {member.social.map((item, j) => (
+                        <a
+                          key={`${i}-${j}`}
+                          href={item.href}
+                          className="text-description hover:!text-white transition-all duration-300 rounded-full h-8 w-8 flex justify-center items-center border border-[#CBCBE8BF] bg-[#02031C66] hover:!bg-[#02031C8F] hover:border-white"
+                        >
+                          {cloneElement(item.icon, {
+                            style: {
+                              fontSize: 16,
+                            },
+                          })}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </SectionContainer>
+
+      <LandingCallToAction />
+    </div>
   );
 };
