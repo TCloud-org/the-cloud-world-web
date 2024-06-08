@@ -4,10 +4,12 @@ import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { LandingContainer } from "./LandingContainer";
 import { Pill } from "../dataDisplayComponents/Pill";
 import { PageHeading } from "../dataDisplayComponents/PageHeading";
+import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 
 export const LandingHero = () => {
   return (
-    <Flex vertical gap={64} className="lighting-bg">
+    <Flex vertical gap={64} className="relative">
+      <StarsBackground />
       <LandingContainer className="!pb-0">
         <Col {...Span[1]} className="z-20">
           <Flex vertical align="center" gap={32}>
