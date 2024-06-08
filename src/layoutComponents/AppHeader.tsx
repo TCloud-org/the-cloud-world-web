@@ -112,6 +112,10 @@ const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
     ),
   },
   {
+    label: "About",
+    href: "/about",
+  },
+  {
     label: "Pricing",
     href: "/pricing",
   },
@@ -228,6 +232,9 @@ export const AppHeader = () => {
           </Flex>
 
           <Flex flex={1} justify="flex-end" align="center" gap={32}>
+            <a href="/about" className="link hidden lg:flex !text-white">
+              About
+            </a>
             <a href="/pricing" className="link hidden lg:flex !text-white">
               Pricing
             </a>
