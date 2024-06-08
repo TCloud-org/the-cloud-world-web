@@ -91,7 +91,7 @@ const socials = [
 
 export const AppFooter = () => {
   return (
-    <Footer className="bg-dark text-center">
+    <Footer className="bg-dark">
       <Flex vertical gap={32} className="max-w-screen-2xl ml-auto mr-auto">
         <JoinNewsletter />
 
@@ -134,7 +134,10 @@ export const AppFooter = () => {
           </Col>
         </Row>
 
-        <Row className="pt-8 pb-16 border-t border-t-neutral-10">
+        <Row
+          className="pt-8 pb-16 border-t border-t-neutral-10"
+          gutter={[16, 16]}
+        >
           <Col {...Span[2]}>
             <div className="flex items-center gap-8">
               <Flex align="center" gap={8} justify="center">
@@ -160,7 +163,7 @@ export const AppFooter = () => {
           </Col>
 
           <Col {...Span[2]}>
-            <div className="flex items-center justify-end gap-3">
+            <div className="flex items-center justify-start lg:justify-end gap-3">
               {socials.map((social, i) => (
                 <FooterLink href={social.href} key={i} target="_blank">
                   {social.children}
