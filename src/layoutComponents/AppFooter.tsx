@@ -1,11 +1,12 @@
-import { FacebookRounded, LinkedIn, X } from "@mui/icons-material";
+import { FacebookRounded, Instagram, LinkedIn, X } from "@mui/icons-material";
 import { Col, Flex, Row, Typography } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import { Span, createSpan } from "../config/layoutConfig";
+import { AppLogo } from "../dataDisplayComponents/AppLogo";
 import { FooterLink } from "../dataEntryComponents/FooterLink";
 import { JoinNewsletter } from "../dataEntryComponents/JoinNewsletter";
 import { LinkTreeLogo } from "../svg/LinkTreeLogo";
-import { AppLogo } from "../dataDisplayComponents/AppLogo";
+import { TiktokLogo } from "../svg/TiktokLogo";
 
 const tools = [
   {
@@ -82,6 +83,14 @@ const socials = [
   {
     href: "https://www.linkedin.com/company/101706949",
     children: <LinkedIn />,
+  },
+  {
+    href: "https://www.instagram.com/thecloudworldofficial",
+    children: <Instagram />,
+  },
+  {
+    href: "https://www.tiktok.com/@thecloudworldofficial",
+    children: <TiktokLogo />,
   },
   {
     href: "https://linktr.ee/thecloudworld",
