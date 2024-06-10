@@ -10,7 +10,7 @@ export const Accordion = (props: {
 
   return (
     <div
-      className="w-full py-4 px-8 bg-neutral-12 rounded-lg cursor-pointer"
+      className="w-full py-4 px-8 glass-bar rounded-lg cursor-pointer"
       onClick={() => setAccordionOpen(!accordionOpen)}
     >
       <button className="flex justify-between w-full items-center text-white text-lg">

@@ -1,11 +1,9 @@
-import { PartitionOutlined, SendOutlined } from "@ant-design/icons";
 import { Flex, Typography, theme } from "antd";
 import { Fade as Hamburger } from "hamburger-react";
 import { CSSProperties, useEffect, useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppLogo } from "../dataDisplayComponents/AppLogo";
-import { ProductsDropdown } from "../dataEntryComponents/ProductsDropdown";
 import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 
 export const scrollToHash = () => {
@@ -20,104 +18,112 @@ export const scrollToHash = () => {
 };
 
 const renderItems = (props: { isFlipColor?: boolean; menuOpen?: boolean }) => [
-  {
-    label: "Products",
-    render: () => (
-      <ProductsDropdown
-        title="Products"
-        isFlipColor={props.isFlipColor && !props.menuOpen}
-        menuOpen={props.menuOpen}
-        menu={[
-          {
-            label: "Optimization",
-            children: [
-              {
-                label: "Step Workflow",
-                href: "/products/step-workflow",
-                icon: <PartitionOutlined />,
-              },
-            ],
-          },
-          {
-            label: "Automation",
-            children: [
-              {
-                label: "Email Notification Workflow",
-                href: "/products/email-notification-workflow",
-                icon: <SendOutlined />,
-              },
-            ],
-          },
-        ]}
-      />
-    ),
-  },
-  {
-    label: "Solutions",
-    render: () => (
-      <ProductsDropdown
-        title="Solutions"
-        isFlipColor={props.isFlipColor && !props.menuOpen}
-        menuOpen={props.menuOpen}
-        menu={[
-          {
-            label: "By Use Case",
-            children: [
-              {
-                label: "Customer Onboarding",
-                href: "/solutions/by-use-case/customer-onboarding",
-              },
-              {
-                label: "Compliance Process",
-                href: "/solutions/by-use-case/compliance-process",
-              },
-            ],
-          },
-        ]}
-      />
-    ),
-  },
-  {
-    label: "Resources",
-    render: () => (
-      <ProductsDropdown
-        title="Resources"
-        isFlipColor={props.isFlipColor && !props.menuOpen}
-        menuOpen={props.menuOpen}
-        menu={[
-          {
-            label: "General",
-            children: [
-              {
-                label: "Blog",
-                href: "https://www.blog.thecloudworlds.com",
-              },
-            ],
-          },
-          {
-            label: "Company",
-            children: [
-              {
-                label: "About us",
-                href: "/about",
-              },
-              {
-                label: "Contact us",
-                href: "/contact",
-              },
-            ],
-          },
-        ]}
-      />
-    ),
-  },
+  // {
+  //   label: "Products",
+  //   render: () => (
+  //     <ProductsDropdown
+  //       title="Products"
+  //       isFlipColor={props.isFlipColor && !props.menuOpen}
+  //       menuOpen={props.menuOpen}
+  //       menu={[
+  //         {
+  //           label: "Optimization",
+  //           children: [
+  //             {
+  //               label: "Step Workflow",
+  //               href: "/products/step-workflow",
+  //               icon: <PartitionOutlined />,
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           label: "Automation",
+  //           children: [
+  //             {
+  //               label: "Email Notification Workflow",
+  //               href: "/products/email-notification-workflow",
+  //               icon: <SendOutlined />,
+  //             },
+  //           ],
+  //         },
+  //       ]}
+  //     />
+  //   ),
+  // },
+  // {
+  //   label: "Solutions",
+  //   render: () => (
+  //     <ProductsDropdown
+  //       title="Solutions"
+  //       isFlipColor={props.isFlipColor && !props.menuOpen}
+  //       menuOpen={props.menuOpen}
+  //       menu={[
+  //         {
+  //           label: "By Use Case",
+  //           children: [
+  //             {
+  //               label: "Customer Onboarding",
+  //               href: "/solutions/by-use-case/customer-onboarding",
+  //             },
+  //             {
+  //               label: "Compliance Process",
+  //               href: "/solutions/by-use-case/compliance-process",
+  //             },
+  //           ],
+  //         },
+  //       ]}
+  //     />
+  //   ),
+  // },
+  // {
+  //   label: "Resources",
+  //   render: () => (
+  //     <ProductsDropdown
+  //       title="Resources"
+  //       isFlipColor={props.isFlipColor && !props.menuOpen}
+  //       menuOpen={props.menuOpen}
+  //       menu={[
+  //         {
+  //           label: "General",
+  //           children: [
+  //             {
+  //               label: "Blog",
+  //               href: "https://www.blog.thecloudworlds.com",
+  //             },
+  //           ],
+  //         },
+  //         {
+  //           label: "Company",
+  //           children: [
+  //             {
+  //               label: "About us",
+  //               href: "/about",
+  //             },
+  //             {
+  //               label: "Contact us",
+  //               href: "/contact",
+  //             },
+  //           ],
+  //         },
+  //       ]}
+  //     />
+  //   ),
+  // },
   {
     label: "About",
     href: "/about",
   },
   {
+    label: "Features",
+    href: "/#Features",
+  },
+  {
     label: "Pricing",
     href: "/pricing",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
   },
   ...(props.menuOpen
     ? [
@@ -199,7 +205,7 @@ export const AppHeader = () => {
               style={{ padding: 16, cursor: "pointer" }}
             >
               <AppLogo />
-              <Typography.Text strong style={{ color: "white" }}>
+              <Typography.Text strong className="text-white">
                 The Cloud World
               </Typography.Text>
             </Flex>
@@ -210,38 +216,25 @@ export const AppHeader = () => {
             flex={2}
             justify="center"
             gap={32}
-            className="hidden"
+            className="hidden lg:flex"
           >
             {renderItems({ isFlipColor: true }).map((item, i) => (
               <div key={i}>
-                {item.render ? (
-                  item.render()
-                ) : (
-                  <a
-                    href={item.href}
-                    style={{
-                      color: "white",
-                    }}
-                    className="link"
-                  >
-                    {item.label}
-                  </a>
-                )}
+                <a
+                  href={item.href}
+                  className="link !text-paragraph !text-sm nav-link"
+                >
+                  {item.label}
+                </a>
               </div>
             ))}
           </Flex>
 
           <Flex flex={1} justify="flex-end" align="center" gap={32}>
-            <a href="/about" className="link hidden lg:flex !text-white">
-              About
-            </a>
-            <a href="/pricing" className="link hidden lg:flex !text-white">
-              Pricing
-            </a>
             <a
               href="https://www.documentation.thecloudworlds.com"
               target="_blank"
-              className="link hidden lg:flex !text-white"
+              className="link hidden lg:flex !text-paragraph !text-sm nav-link"
               rel="noreferrer"
             >
               Docs
@@ -281,19 +274,14 @@ export const AppHeader = () => {
           {renderItems({ isFlipColor: isFlipColor, menuOpen: menuOpen }).map(
             (item, i) => (
               <div key={i}>
-                {item.render ? null : (
-                  <div className="mx-4 py-4">
-                    <a
-                      href={item.href}
-                      style={{
-                        color: "white",
-                      }}
-                      className="link"
-                    >
-                      {item.label}
-                    </a>
-                  </div>
-                )}
+                <div className="mx-4 py-4">
+                  <a
+                    href={item.href}
+                    className="link !text-paragraph !text-sm nav-link"
+                  >
+                    {item.label}
+                  </a>
+                </div>
               </div>
             )
           )}

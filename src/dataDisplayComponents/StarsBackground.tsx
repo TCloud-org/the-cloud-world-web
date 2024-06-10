@@ -10,7 +10,6 @@ export const StarsBackground = () => {
 
   useEffect(() => {
     initParticlesEngine(async (engine: any) => {
-      console.log(engine);
       await loadStarsPreset(engine);
     }).then(() => {
       setInit(true);

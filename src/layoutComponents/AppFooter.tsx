@@ -61,7 +61,7 @@ const tools = [
       },
       {
         href: "https://stepworkflow.thecloudworlds.com/terms-and-conditions",
-        label: "Terms",
+        label: "Terms of Service",
       },
       {
         href: "https://stepworkflow.thecloudworlds.com/privacy-policy",

@@ -1,3 +1,4 @@
+import { CheckRounded } from "@mui/icons-material";
 import { Col, Divider, Form, Input, Row, Typography, message } from "antd";
 import axios from "axios";
 import { ContactInfo } from "../ContactComponents/ContactInfo";
@@ -13,6 +14,37 @@ import { ThemeButton } from "../dataEntryComponents/ThemeButton";
 import { ThemeInput } from "../dataEntryComponents/ThemeInput";
 import { ThemeSelect } from "../dataEntryComponents/ThemeSelect";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import { LandingFAQ } from "../LandingComponents/LandingFAQ";
+
+const topics = [
+  {
+    label: "General Inquiries",
+    value: "general",
+  },
+  {
+    label: "Career Inquiries",
+    value: "career",
+  },
+  {
+    label: "Business Inquiries",
+    value: "business",
+  },
+  {
+    label: "Technical Inquiries",
+    value: "technical",
+  },
+  {
+    label: "Partnership Inquiries",
+    value: "partnership",
+  },
+];
+
+const supports = [
+  "General support",
+  "Business support",
+  "Technical support",
+  "Partnership support",
+];
 
 export const ContactPage = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -45,6 +77,21 @@ export const ContactPage = () => {
                     Feel free to get in touch with us however you please. For
                     form and email inquiries, we usually reply within 24 hours.
                   </p>
+
+                  <div className="flex flex-col gap-4">
+                    {supports
+                      .sort((a, b) => a.localeCompare(b))
+                      .map((support, i) => (
+                        <div
+                          className="flex items-center gap-2 text-white font-sora"
+                          key={i}
+                        >
+                          <CheckRounded />
+
+                          <p>{support}</p>
+                        </div>
+                      ))}
+                  </div>
                 </div>
               </Col>
 
@@ -127,7 +174,9 @@ export const ContactPage = () => {
                         <Form.Item name="topic">
                           <ThemeSelect
                             placeholder="How can we help you?"
-                            options={[{ label: "General", value: "general" }]}
+                            options={topics.sort((a, b) =>
+                              a.label.localeCompare(b.label)
+                            )}
                           />
                         </Form.Item>
                       </Col>
@@ -183,6 +232,8 @@ export const ContactPage = () => {
         </div>
 
         <ContactInfo />
+
+        <LandingFAQ />
 
         <LandingCallToAction />
       </div>
