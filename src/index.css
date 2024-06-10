@@ -120,7 +120,7 @@ code {
 }
 
 .dot-bg-dark {
-  background      : #030014;
+  background      : #02031d;
   background-image: radial-gradient(#282637 1px, transparent 0);
   background-size : 20px 20px;
 }
@@ -397,12 +397,12 @@ code {
 
 .gallery:before {
   left      : 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), #030014);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #02031d);
 }
 
 .gallery:after {
   right     : 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #030014);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #02031d);
 }
 
 .gallery>div {

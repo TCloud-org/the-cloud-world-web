@@ -24,7 +24,7 @@ export const StarsBackground = () => {
 
   const options = {
     background: {
-      color: "#030014",
+      color: "#02031d",
     },
     fullScreen: {
       enable: false,
