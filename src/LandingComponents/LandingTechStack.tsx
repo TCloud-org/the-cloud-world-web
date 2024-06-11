@@ -1,18 +1,17 @@
-import { Flex } from "antd";
+import { useEffect, useRef } from "react";
 import { AWSLogo } from "../svg/AWSLogo";
 import { DockerLogo } from "../svg/DockerLogo";
-import { FigmaLogo } from "../svg/FigmaLogo";
 import { GithubLogo } from "../svg/GithubLogo";
+import { KafkaLogo } from "../svg/KafkaLogo";
 import { MySQLLogo } from "../svg/MySQLLogo";
-import { ReactLogo } from "../svg/ReactLogo";
-import { StripeLogo } from "../svg/StripeLogo";
 import { NetlifyLogo } from "../svg/NetlifyLogo";
+import { StripeLogo } from "../svg/StripeLogo";
 
 const stack = [
   {
-    logo: <ReactLogo />,
-    title: "React.js",
-    href: "https://react.dev",
+    logo: <KafkaLogo />,
+    title: "Apache Kafka",
+    href: "https://kafka.apache.org",
   },
   {
     logo: <AWSLogo />,
@@ -40,11 +39,6 @@ const stack = [
     href: "https://www.mysql.com",
   },
   {
-    logo: <FigmaLogo />,
-    title: "Figma",
-    href: "https://www.figma.com",
-  },
-  {
     logo: <NetlifyLogo />,
     title: "Netlify",
     href: "https://www.netlify.com",
@@ -52,12 +46,40 @@ const stack = [
 ];
 
 export const LandingTechStack = () => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const scroller = scrollerRef.current;
+      if (!scroller) return;
+
+      const scrollerInner = scroller.querySelector(
+        ".scroller__inner"
+      ) as HTMLElement & { children: HTMLCollection };
+      if (!scrollerInner) return;
+
+      const scrollerContent = Array.from(scrollerInner.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true) as HTMLElement;
+        duplicatedItem.setAttribute("aria-hidden", "true");
+        scrollerInner.appendChild(duplicatedItem);
+      });
+
+      scroller.setAttribute("data-animated", "true");
+    }
+  }, []);
+
   return (
-    <Flex className="mt-24 border-t border-t-neutral-11 border-b border-b-neutral-11">
-      <div className="max-w-screen-2xl ml-auto mr-auto py-12 w-full">
-        <div className="gallery">
+    <div className="mt-24 border-t border-t-neutral-11 border-b border-b-neutral-11">
+      <div
+        className="max-w-screen-2xl ml-auto mr-auto py-8 scroller"
+        data-speed="medium"
+        ref={scrollerRef}
+      >
+        <ul className="tag-list scroller__inner">
           {stack.map((item, j) => (
-            <div key={j} className="flex justify-center">
+            <li key={j} className="flex justify-center items-center">
               <a
                 href={item.href}
                 target="_blank"
@@ -67,10 +89,10 @@ export const LandingTechStack = () => {
               >
                 {item.logo}
               </a>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </Flex>
+    </div>
   );
 };
