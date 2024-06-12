@@ -61,7 +61,7 @@ export const LandingBlog = () => {
               >
                 <img
                   alt={blog.id}
-                  src="https://tcw-images.s3.us-west-2.amazonaws.com/default-blog-img.png"
+                  src="https://utfs.io/f/1b2b53bb-bf0c-42d9-b3c0-4ee772ad33a4-9p834s.png"
                   className="rounded-xl w-[150px] h-[150px] object-cover"
                 />
 

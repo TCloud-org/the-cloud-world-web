@@ -48,7 +48,7 @@ export const LandingHero = () => {
 
       <Flex className="relative z-10 max-w-screen-2xl ml-auto mr-auto px-16">
         <Image
-          src="https://tcw-images.s3.us-west-2.amazonaws.com/landing-bg-v2.png"
+          src="https://utfs.io/f/c60b9703-71ab-4b83-b014-ec2114311ba8-ga7ua.png"
           preview={false}
           className="rounded-[40px]"
         />

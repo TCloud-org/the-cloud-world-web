@@ -28,7 +28,7 @@ export const LandingHowItWorks = () => {
           demonstration={
             <div className="relative z-10">
               <Image
-                src="https://tcw-images.s3.us-west-2.amazonaws.com/create-graph.png"
+                src="https://utfs.io/f/02cc62dc-4467-4bb8-9aa3-fbdbb890e3db-77i4al.png"
                 preview={false}
                 className="rounded-[40px]"
               />
@@ -56,7 +56,7 @@ export const LandingHowItWorks = () => {
           demonstration={
             <div className="relative z-10">
               <Image
-                src="https://tcw-images.s3.us-west-2.amazonaws.com/landing-step-2.png"
+                src="https://utfs.io/f/cca9e070-e443-479f-819b-64f581e6a87c-5qw7x5.png"
                 preview={false}
                 className="rounded-[40px]"
               />

@@ -128,7 +128,7 @@ export const LandingBenefit = () => {
           demonstration={
             <div className="relative z-10 hidden lg:block w-[150%]">
               <Image
-                src="https://tcw-images.s3.us-west-2.amazonaws.com/landing-benefit-1.png"
+                src="https://utfs.io/f/343e7c9c-759e-4861-8c82-d0048caf241b-yo9glh.png"
                 preview={false}
                 className="rounded-[40px]"
               />

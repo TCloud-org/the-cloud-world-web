@@ -8,7 +8,8 @@ import { UseCaseCard } from "../dataDisplayComponents/UseCaseCard";
 const useCases = [
   {
     title: "Modularize a large system",
-    imageUrl: "https://tcw-images.s3.us-west-2.amazonaws.com/usecase-2.png",
+    imageUrl:
+      "https://utfs.io/f/36be3663-71a8-4a6d-aeb5-db80ef9548fa-1gg99g.png",
     description: (
       <>
         <p>
@@ -36,7 +37,8 @@ const useCases = [
   },
   {
     title: "Manage a notification system",
-    imageUrl: "https://tcw-images.s3.us-west-2.amazonaws.com/usecase-2.svg",
+    imageUrl:
+      "https://utfs.io/f/454f1f2f-63f8-4826-b3a9-ab915bf9aa32-1gg99h.svg",
     description: (
       <>
         <p>

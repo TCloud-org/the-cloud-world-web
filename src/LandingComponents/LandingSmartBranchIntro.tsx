@@ -12,7 +12,7 @@ export const LandingSmartBranchIntro = () => {
             autoPlay
             playsInline
             muted
-            src="https://tcw-images.s3.us-west-2.amazonaws.com/smart-branch.mp4"
+            src="https://utfs.io/f/7146b140-6752-487e-b901-b76dfa07c101-yl99nq.mp4"
           />
         </div>
         <div className="mb-6">
