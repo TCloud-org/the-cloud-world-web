@@ -45,6 +45,12 @@ const features: PricingFeature[] = [
     enterprise: true,
   },
   {
+    feature: "Retry, rerun, transition, and close",
+    lite: false,
+    pro: true,
+    enterprise: true,
+  },
+  {
     feature:
       "Tracking (e.g., exception log, change log, entity per state, etc.)",
     lite: true,

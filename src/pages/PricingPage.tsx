@@ -38,6 +38,7 @@ const plans = [
     emphasized: true,
     plus: "Everything in Lite, plus:",
     features: [
+      "Retry, rerun, transition, and close",
       "Querying, batching, and analytics",
       "Up to 60 days workflow job retention",
       "Increased workflow concurrent processing",
