@@ -9,9 +9,9 @@ export const PricingTier = (props: { data: any }) => {
   const actionHref = `https://stepworkflow.thecloudworlds.com?product=STEP_WORKFLOW&tier=${data.key}`;
 
   return (
-    <div className={`flex items-center justify-center h-[110%]`}>
+    <div className={`flex items-center justify-center h-full lg:h-[110%]`}>
       <div
-        className={`backdrop-blur-[5px] rounded-3xl p-10 !font-sora w-full gap-12 flex flex-col border ${emphasized ? "h-full" : "h-[90%]"}`}
+        className={`backdrop-blur-[5px] rounded-3xl p-10 !font-sora w-full gap-12 flex flex-col border ${emphasized ? "h-full" : "h-full lg:h-[90%]"}`}
         style={{
           borderColor: "rgba(131, 104, 242, 0.3)",
           boxShadow: !emphasized
