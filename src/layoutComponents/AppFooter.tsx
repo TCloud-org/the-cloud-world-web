@@ -100,7 +100,7 @@ const socials = [
 
 export const AppFooter = () => {
   return (
-    <Footer className="bg-dark">
+    <Footer className="bg-dark px-4 lg:px-12">
       <Flex vertical gap={32} className="max-w-screen-2xl ml-auto mr-auto">
         <JoinNewsletter />
 
