@@ -37,7 +37,7 @@ export const LandingHero = () => {
                 <Flex justify="center" className="z-10">
                   <ThemeButton href="https://stepworkflow.thecloudworlds.com">
                     Get Started{" "}
-                    <span className="text-neutral-8">- It's Free</span>
+                    <span className="text-neutral-8">- It's Free (Beta)</span>
                   </ThemeButton>
                 </Flex>
               }
