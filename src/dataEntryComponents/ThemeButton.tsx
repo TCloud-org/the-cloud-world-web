@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 export const ThemeButton = (props: {
   onClick?: () => void;
@@ -14,6 +15,12 @@ export const ThemeButton = (props: {
   const { disabled, href, onClick = () => {}, className = "" } = props;
 
   const handleClick = () => {
+    ReactGA.send({
+      hitType: "button",
+      page: window.location.href,
+      title: "Action",
+    });
+
     if (href) {
       if (href.startsWith("http")) {
         window.open(href, "_blank");

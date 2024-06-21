@@ -13,8 +13,9 @@ import { Pill } from "../dataDisplayComponents/Pill";
 import { SectionContainer } from "../dataDisplayComponents/SectionContainer";
 import { StarsBackground } from "../dataDisplayComponents/StarsBackground";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
-import { cloneElement } from "react";
+import { cloneElement, useEffect } from "react";
 import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
+import ReactGA from "react-ga4";
 
 const missions = [
   {
@@ -73,6 +74,14 @@ const team = [
 ];
 
 export const AboutPage = () => {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/about",
+      title: "About",
+    });
+  }, []);
+
   return (
     <div className="bg-dark">
       <div className="relative py-32">

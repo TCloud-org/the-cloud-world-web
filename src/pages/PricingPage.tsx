@@ -10,6 +10,8 @@ import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { LandingFAQ } from "../LandingComponents/LandingFAQ";
 import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
 import { PricingPlanTable } from "../config/PricingComponents/PricingPlanTable";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 export enum ProductTierType {
   LITE = "LITE",
@@ -66,6 +68,14 @@ const plans = [
 const priceGap = 32;
 
 export const PricingPage = () => {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/pricing",
+      title: "Pricing",
+    });
+  }, []);
+
   return (
     <div className="bg-dark">
       <div className="relative py-32">

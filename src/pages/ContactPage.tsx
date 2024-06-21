@@ -15,6 +15,8 @@ import { ThemeInput } from "../dataEntryComponents/ThemeInput";
 import { ThemeSelect } from "../dataEntryComponents/ThemeSelect";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
 import { LandingFAQ } from "../LandingComponents/LandingFAQ";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 const topics = [
   {
@@ -47,6 +49,14 @@ const supports = [
 ];
 
 export const ContactPage = () => {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/contact",
+      title: "Contact",
+    });
+  }, []);
+
   const [messageApi, contextHolder] = message.useMessage();
   const [form] = Form.useForm();
 
