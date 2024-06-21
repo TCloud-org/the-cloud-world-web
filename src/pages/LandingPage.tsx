@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { LandingBenefit } from "../LandingComponents/LandingBenefit";
 import { LandingBlog } from "../LandingComponents/LandingBlog";
 import { LandingCallToAction } from "../LandingComponents/LandingCallToAction";
@@ -10,8 +11,17 @@ import { LandingSmartBranchIntro } from "../LandingComponents/LandingSmartBranch
 import { LandingTechStack } from "../LandingComponents/LandingTechStack";
 import { LandingUseCase } from "../LandingComponents/LandingUseCase";
 import { HeaderHeight } from "../layoutComponents/AppHeader";
+import ReactGA from "react-ga4";
 
 export const LandingPage = () => {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/",
+      title: "Landing",
+    });
+  }, []);
+
   return (
     <div className="bg-dark overflow-hidden">
       <div style={{ height: HeaderHeight }} />

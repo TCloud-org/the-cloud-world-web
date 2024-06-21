@@ -13,8 +13,11 @@ import { StepWorkflowPage } from "./pages/StepWorkflowPage";
 import { EmailNotificationWorkflowPage } from "./pages/EmailNotificationWorkflowPage";
 import { CustomerOnboardingUseCasePage } from "./pages/byUseCase/CustomerOnboardingUseCasePage";
 import { ComplianceProcessUseCasePage } from "./pages/byUseCase/ComplianceProcessUseCasePage";
+import ReactGA from "react-ga4";
 
 function App() {
+  ReactGA.initialize("G-1RNNB36HBF");
+
   const Wrapper = () => {
     const { token } = theme.useToken();
     return (
