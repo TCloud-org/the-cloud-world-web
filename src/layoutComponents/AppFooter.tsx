@@ -43,7 +43,7 @@ const tools = [
         label: "Contact",
       },
       {
-        href: "https://thecloudworld.supahub.com/b/feature-requests",
+        href: "https://thecloudworld.supahub.com/b/requests",
         label: "Feature Request",
       },
     ],
